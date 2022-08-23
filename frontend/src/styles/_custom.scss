@@ -1,0 +1,17 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.navbar {
+  
+  .container {
+    display: flex;
+    // gap: 500px;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: green;
+    }
+  }
+}
+
+
