@@ -1,0 +1,69 @@
+.navSection {
+  background-color: #12314a;
+  color: #fefeff;
+
+  .iconRow {
+    color: white;
+    display: flex;
+
+    .facebook {
+      background-color: #3b5899;
+      color: white;
+      padding: 13px 18px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #379cf4;
+      }
+    }
+    .twitter {
+      background-color: #3b8bcb;
+      padding: 13px 18px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #379cf4;
+      }
+    }
+    .instagram {
+      background-color: #474746;
+      padding: 13px 18px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #379cf4;
+      }
+    }
+    .google {
+      background-color: #d6463d;
+      padding: 13px 18px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #379cf4;
+      }
+    }
+  }
+}
+.navCol {
+  display: flex;
+  flex-direction: column;
+
+  .navPara {
+    margin-top: 15px;
+  }
+}
+
+.navPara3 {
+  margin-top: 15px;
+}
+
+.anchor {
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.link{
+    text-decoration: none
+}
+
