@@ -1,1 +1,24 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+//Global css
+.heading1 {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #13304a;
+}
+
+.heading2 {
+  overflow: hidden;
+  font-size: 16px;
+  color: #13304a;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+// for a tag
+.link {
+  text-decoration: none;
+}

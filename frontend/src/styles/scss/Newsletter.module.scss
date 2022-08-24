@@ -1,0 +1,19 @@
+.newsLetter {
+  background-color: #eff3f6;
+  padding: 100px 0;
+}
+
+.headingDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkBoxDiv {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: #13304a;
+  font-size: 12px;
+  gap: 12px;
+}
