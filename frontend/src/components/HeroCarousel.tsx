@@ -4,6 +4,7 @@ import img1 from "../../public/images/1.jpeg";
 import img2 from "../../public/images/2.jpeg";
 import img3 from "../../public/images/3.jpeg";
 
+
 const HeroCarousel = () => {
   return (
     <div>

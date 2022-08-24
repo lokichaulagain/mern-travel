@@ -8,8 +8,8 @@ const AboutSection = () => {
       <div className="container px-5">
         <div className="px-5">
           <div className={styles.headingDiv}>
-            <span className="heading1">NEWSLETTER</span>
-            <span className="heading2">Subscribe now to our newsletter</span>
+            <span className="heading1">ABOUT US</span>
+            <span className="heading2">We live for the nature</span>
           </div>
           <div className="row px-3">
             <div className="col col-lg-3.5">
@@ -26,7 +26,9 @@ const AboutSection = () => {
               dicta placeat.Lorem ipsum dolor, sit amet consectetur adipisicing
               elit. Vel incidunt id tempore molestiae
               <br />
-              <a  className="link"  href="">Read more</a>
+              <a className="link" href="">
+                Read more
+              </a>
             </div>
 
             <div className="col col-lg-5">
