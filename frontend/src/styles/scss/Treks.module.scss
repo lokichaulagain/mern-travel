@@ -1,0 +1,43 @@
+//TrekCategoryNavbar
+.navWrapper {
+  background-color: #eef2f6;
+}
+
+//TrekServiceSection
+.serviceWrapper {
+  background-color: #eef2f6;
+}
+
+.serviceIcon {
+  font-size: 50px;
+  cursor: pointer;
+  color: #369df4;
+}
+
+// TrekCardWrapper
+.wrapper {
+  background-color: #eef2f6;
+  .card {
+    border: none;
+  }
+}
+
+// trekContactusCard
+.contactusWrapper {
+  background-color: #eef2f6;
+}
+
+//Treks page Image Section
+.pageWrapper {
+  background-image: linear-gradient(
+      rgba(96, 105, 136, 0.7),
+      rgba(4, 9, 30, 0.7)
+    ),
+    url("../../../public/images/teamImg.jpg");
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
