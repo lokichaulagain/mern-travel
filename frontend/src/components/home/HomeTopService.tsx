@@ -1,10 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAmbulance } from "@fortawesome/free-solid-svg-icons";
-import styles from "../styles/scss/TopService.module.scss";
-import "../styles/scss/TopService.module.scss";
+// import styles from "../styles/scss/TopService.module.scss";
+import styles from "../../styles/scss/Home.module.scss"
+// import "../styles/scss/TopService.module.scss";
 
-const TopService = () => {
+
+const HomeTopService = () => {
   return (
     <div className={`${styles.topService} container-fluid`}>
       <div className="container px-5">
@@ -132,4 +134,4 @@ const TopService = () => {
   );
 };
 
-export default TopService;
+export default HomeTopService;

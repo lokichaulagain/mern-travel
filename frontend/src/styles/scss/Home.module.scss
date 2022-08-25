@@ -1,3 +1,37 @@
+//HomeAboutSection
+.aboutSection {
+  background-color: #eff3f6;
+  padding: 100px 0px;
+}
+
+.headingDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//HomeNewsLetter Service
+.newsLetter {
+  background-color: #eff3f6;
+  padding: 100px 0;
+}
+
+.headingDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkBoxDiv {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: #13304a;
+  font-size: 12px;
+  gap: 12px;
+}
+
+//HomeTopService
 .topService {
   background-color: #fefeff;
   padding: 120px 0px;
@@ -43,7 +77,7 @@
 
   &:hover {
     transform: scale(0.9);
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 }
 
@@ -105,3 +139,49 @@
   color: #53626f;
   font-size: 8px;
 }
+
+// HomePage
+.pageWrapper {
+  background-image: url("../../../public/images/teamImg.jpg");
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+//HomeCardCover
+.centerCardWrapper {
+  background-image: url("../../../public/images/im1.jpg");
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+
+.heading {
+  font-size: 55px;
+  color: white;
+  font-weight: 800;
+}
+
+.para {
+  color: white;
+}
+
+.buttonRow {
+  display: flex;
+}
+
+.bottom2 {
+  color: white;
+  border-color: white;
+
+  &:hover {
+    border-color: #379cf4;
+    color: white;
+  }
+}
+
+
+// Home Center Hover Card
+

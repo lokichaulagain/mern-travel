@@ -1,8 +1,8 @@
 import React from "react";
-import Accordion from "./Accordion";
-import styles from "../styles/scss/AboutSection.module.scss";
+import Accordion from "../Accordion";
+import styles from "../../styles/scss/Home.module.scss"
 
-const AboutSection = () => {
+const HomeAboutSection = () => {
   return (
     <div className={`${styles.aboutSection} container-fluid`}>
       <div className="container px-5">
@@ -41,4 +41,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default HomeAboutSection;

@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "../styles/scss/Newsletter.module.scss";
+// import styles from "../styles/scss/Newsletter.module.scss";
+import styles from "../../styles/scss/Home.module.scss"
 
-const NewsLetter = () => {
+const HomeNewsLetter = () => {
   return (
     <div className={`${styles.newsLetter} container-fluid`}>
       <div className="container px-5">
@@ -56,4 +57,4 @@ const NewsLetter = () => {
   );
 };
 
-export default NewsLetter;
+export default HomeNewsLetter;

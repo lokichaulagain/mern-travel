@@ -1,23 +1,26 @@
 import React from "react";
-import AboutSection from "../components/AboutSection";
-import CardCarousel from "../components/CardCarousel";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import NewsLetter from "../components/NewsLetter";
-
-import TopService from "../components/TopService";
+import HomeAboutSection from "../components/home/HomeAboutSection";
+import HomeTopService from "../components/home/HomeTopService";
+import HomeNewsLetter from "../components/home/HomeNewsLetter";
+import styles from "../styles/scss/Home.module.scss";
+import HomeHoverCard from "../components/home/HomeHoverCard";
 
 const Home = () => {
   return (
-    <div className="home-page">
+    <div className={`${styles.pageWrapper}`}>
       <Navbar />
-      {/* <HeroCarousel /> */}
-      {/* <CardCarousel /> */}
-      <AboutSection />
-      <TopService />
-      <NewsLetter />
+      <HomeAboutSection />
+      {/* style="width: 18rem;" */}
+
+      <div className="container-fluid">
+        <HomeHoverCard/>
+      </div>
+     
+      <HomeTopService />
+      <HomeNewsLetter />
       <Footer />
-      {/* <CardCarousel /> */}
     </div>
   );
 };
