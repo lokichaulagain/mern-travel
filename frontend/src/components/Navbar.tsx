@@ -6,10 +6,10 @@ import styles from "../styles/scss/Navbar.module.scss";
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-dark"
+      className="navbar navbar-expand-lg bg-dark "
       style={{ height: "100px" }}
     >
-      <div className="container">
+      <div className="container ">
         <Image src={Logo} alt="" width={220} height={100} />
         <button
           className="navbar-toggler"

@@ -103,8 +103,6 @@ const TreksCard = () => {
 
         {/*  */}
 
-        {/* style={{display:"flex",flexDirection:"row"}} */}
-
         {/* Icon and text */}
         <div className="container px-5">
           <div className="row">
@@ -119,7 +117,6 @@ const TreksCard = () => {
               </div>
             </div>
 
-
             <div
               className="col"
               style={{ display: "flex", alignItems: "center", gap: "20px" }}
@@ -130,7 +127,6 @@ const TreksCard = () => {
                 <p>We always lived inside our amazing nature</p>
               </div>
             </div>
-
 
             <div
               className="col"
@@ -144,6 +140,8 @@ const TreksCard = () => {
             </div>
           </div>
         </div>
+
+        {/*  */}
       </div>
     </div>
   );
