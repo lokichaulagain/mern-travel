@@ -34,3 +34,27 @@
 .link {
   text-decoration: none;
 }
+
+// Sectional component=====
+.sHeading {
+  font-weight: 800;
+}
+
+.sSubHeading {
+  display: flex;
+}
+
+.sButton {
+  font-size: 18px;
+  background-color: #369df4;
+  border-color: #369df4;
+
+  &:hover {
+    background-color: #369df4;
+    border-color: #369df4;
+    box-shadow: rgba($black, 0.075);
+    box-shadow: -1px 8px 10px 4px rgba(54, 157, 244, 0.16);
+    -webkit-box-shadow: -1px 8px 10px 4px rgba(54, 157, 244, 0.16);
+    -moz-box-shadow: -1px 8px 10px 4px rgba(54, 157, 244, 0.16);
+  }
+}

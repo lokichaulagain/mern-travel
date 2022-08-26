@@ -1,6 +1,10 @@
-//TrekCategoryNavbar
+//TrekCategoryNavbar===================
 .navWrapper {
   background-color: #eef2f6;
+
+  .h5 {
+    font-weight: 700;
+  }
 }
 
 //TrekServiceSection
@@ -14,7 +18,7 @@
   color: #369df4;
 }
 
-// TrekCardWrapper
+// TrekCardWrapper===============================
 .wrapper {
   background-color: #eef2f6;
   .card {
@@ -22,7 +26,24 @@
   }
 }
 
-// trekContactusCard
+.smallCard {
+  background-color: #12314a;
+
+  .h5 {
+    color: #369df4;
+  }
+
+  .h6 {
+    color: whitesmoke;
+  }
+}
+
+.cardLink {
+  color: #369df4;
+  cursor: pointer;
+}
+
+// trekContactusCard=================================
 .contactusWrapper {
   background-color: #eef2f6;
 }

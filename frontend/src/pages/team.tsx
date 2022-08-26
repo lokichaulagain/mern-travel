@@ -10,6 +10,7 @@ export default function Team() {
     <div>
       <Navbar />
       <TeamMemberCard />
+
       <TeamContactusCard />
       <TeamServiceSection />
       <Footer />

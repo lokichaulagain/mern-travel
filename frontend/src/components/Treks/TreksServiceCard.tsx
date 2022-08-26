@@ -1,10 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAmbulance } from "@fortawesome/free-solid-svg-icons";
 import styles from "../../styles/scss/Treks.module.scss";
+import TreksContactusCard from "./TreksContactusCard";
 
 const TreksServiceCard = () => {
   return (
     <div className={`${styles.serviceWrapper} py-5`}>
+      
       <div className="container py-5 px-5">
         <div className="container px-5">
           <div className="card-group px-3">

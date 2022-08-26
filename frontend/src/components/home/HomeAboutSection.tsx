@@ -1,6 +1,6 @@
 import React from "react";
 import Accordion from "../Accordion";
-import styles from "../../styles/scss/Home.module.scss"
+import styles from "../../styles/scss/Home.module.scss";
 
 const HomeAboutSection = () => {
   return (
@@ -8,8 +8,8 @@ const HomeAboutSection = () => {
       <div className="container px-5">
         <div className="px-5">
           <div className={styles.headingDiv}>
-            <span className="heading1">ABOUT US</span>
-            <span className="heading2">We live for the nature</span>
+            <span className=" h2 sHeading">ABOUT US</span>
+            <span className=" h6 py-4 sSubHeading">We live for the nature</span>
           </div>
           <div className="row px-3">
             <div className="col col-lg-3.5">

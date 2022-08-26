@@ -6,11 +6,13 @@ import HomeTopService from "../components/home/HomeTopService";
 import HomeNewsLetter from "../components/home/HomeNewsLetter";
 import styles from "../styles/scss/Home.module.scss";
 import HomeHoverCard from "../components/home/HomeHoverCard";
+import HomeSection1 from "../components/home/HomeSection1";
 
 const Home = () => {
   return (
     <div className={`${styles.pageWrapper}`}>
       <Navbar />
+      <HomeSection1/>
       <HomeAboutSection />
       {/* style="width: 18rem;" */}
 
