@@ -1,20 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import img1 from "../../../public/images/1.jpeg";
-import styles from "../../styles/scss/Team.module.scss";
 import person1 from "../../../public/person/1.avif";
-import person2 from "../../../public/person/2.avif";
-import person3 from "../../../public/person/3.avif";
-import person4 from "../../../public/person/4.avif";
+import styles from "../../styles/scss/team/TeamMemberCard.module.scss";
 
 const TeamMemberCard = () => {
   return (
-    <div className={`${styles.wrapper} container px-5`}>
-      <div className="container px-5">
+    <div className="container py-5 px-5">
+      <div className="container pt-4 px-5">
         <div className="row px-3">
           {/* Card1 */}
-          <div className="col-6 mb-5">
-            <div className="d-flex position-relative">
+          <div className=" col-6 mb-5  ">
+            <div className=" d-flex shadow-sm ">
               <Image
                 src={person1}
                 className={`${styles.teamImg}  flex-shrink-0 me-3`}
@@ -22,14 +18,15 @@ const TeamMemberCard = () => {
               />
 
               <div className="col-7">
-                <h3>Lokendra Chaulagain</h3>
-                <h6>MERN Dtack Developer</h6>
-                <p>
+                <h3 className="h3">Lokendra Chaulagain</h3>
+                <h6 className="h6">MERN Dtack Developer</h6>
+                <p className={` ${styles.para}`}>
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
-                <a href="#" className="stretched-link">
+
+                <a className={styles.link} href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>
@@ -38,7 +35,7 @@ const TeamMemberCard = () => {
           {/* Card2 */}
 
           <div className="col-6">
-            <div className="d-flex position-relative">
+            <div className=" d-flex shadow-sm ">
               <Image
                 src={person1}
                 className={`${styles.teamImg}  flex-shrink-0 me-3`}
@@ -47,14 +44,14 @@ const TeamMemberCard = () => {
 
               {/* </div> */}
               <div className="col-7">
-                <h3>Lokendra Chaulagain</h3>
-                <h6>MERN Dtack Developer</h6>
-                <p>
+                <h3 className="h3">Lokendra Chaulagain</h3>
+                <h6 className="h6">MERN Dtack Developer</h6>
+                <p className={` ${styles.para}`}>
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
-                <a href="#" className="stretched-link">
+                <a className={styles.link} href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>
@@ -64,21 +61,21 @@ const TeamMemberCard = () => {
           {/* Card3 */}
 
           <div className="col-6">
-            <div className="d-flex position-relative">
+            <div className="d-flex shadow-sm ">
               <Image
                 src={person1}
                 className={`${styles.teamImg}  flex-shrink-0 me-3`}
                 alt="..."
               />
               <div className="col-7">
-                <h3>Lokendra Chaulagain</h3>
-                <h6>MERN Dtack Developer</h6>
-                <p>
+                <h3 className="h3">Lokendra Chaulagain</h3>
+                <h6 className="h6">MERN Dtack Developer</h6>
+                <p className={` ${styles.para}`}>
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
-                <a href="#" className="stretched-link">
+                <a className={styles.link} href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>
@@ -86,23 +83,22 @@ const TeamMemberCard = () => {
           </div>
 
           {/* Card4 */}
-
           <div className="col-6">
-            <div className="d-flex position-relative">
+            <div className="d-flex shadow-sm ">
               <Image
                 src={person1}
                 className={`${styles.teamImg}  flex-shrink-0 me-3`}
                 alt="..."
               />
               <div className="col-7">
-                <h3>Lokendra Chaulagain</h3>
-                <h6>MERN Dtack Developer</h6>
-                <p>
+                <h3 className="h3">Lokendra Chaulagain</h3>
+                <h6 className="h6">MERN Dtack Developer</h6>
+                <p className={` ${styles.para}`}>
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
-                <a href="#" className="stretched-link">
+                <a className={styles.link} href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>

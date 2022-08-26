@@ -45,17 +45,10 @@
     }
   }
 }
+
 .navCol {
   display: flex;
   flex-direction: column;
-
-  .navPara {
-    margin-top: 15px;
-  }
-}
-
-.navPara3 {
-  margin-top: 15px;
 }
 
 .anchor {
@@ -63,7 +56,14 @@
   cursor: pointer;
 }
 
-.link{
-    text-decoration: none
+.link {
+  text-decoration: none;
 }
 
+.para {
+  color: rgb(212, 211, 211);
+}
+
+.copy {
+  color: rgb(238, 237, 237);
+}

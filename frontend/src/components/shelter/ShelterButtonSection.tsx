@@ -1,25 +1,38 @@
 import React from "react";
+import styles from "../../styles/scss/shelter/ShelterButtonSection.module.scss";
 
-const ShelterSection3 = () => {
+const ShelterButtonSection = () => {
   return (
     <div>
       {/* 4 button  */}
-      <div className="container px-4">
+      <div className="container px-4 d-flex justify-content-center">
         <div className="row p-5">
           <div className="col p-5 gap-5">
-            <button type="button" className="btn btn-primary mx-3 btn-lg">
+            <button
+              type="button"
+              className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
+            >
               Large button
             </button>
 
-            <button type="button" className="btn btn-primary mx-3 btn-lg">
+            <button
+              type="button"
+              className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
+            >
               Large button
             </button>
 
-            <button type="button" className="btn btn-primary  mx-3 btn-lg">
+            <button
+              type="button"
+              className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
+            >
               Large button
             </button>
 
-            <button type="button" className="btn btn-primary  mx-3 btn-lg">
+            <button
+              type="button"
+              className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
+            >
               Large button
             </button>
           </div>
@@ -40,8 +53,8 @@ const ShelterSection3 = () => {
             </div>
 
             <div className="col">
-              <h1>CRODA DEL LAGO REFUGE</h1>
-              <h5>Nevegal Mountain</h5>
+              <h2 className="h2 ">CRODA DEL LAGO REFUGE</h2>
+              <h6 className="h6 pt-2 pb-4" >Nevegal Mountain</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                 eiusmod tempor incididunt utlabore et dolore magna aliqua.
@@ -76,4 +89,4 @@ const ShelterSection3 = () => {
   );
 };
 
-export default ShelterSection3;
+export default ShelterButtonSection;

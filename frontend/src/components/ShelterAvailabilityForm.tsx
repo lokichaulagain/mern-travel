@@ -1,4 +1,4 @@
-import styles from "../styles/scss/ShelterAvailabilityForm.module.scss";
+import styles from '../styles/scss/shelter/ShelterAvailabilityForm.module.scss'
 
 const ShelterAvailabilityForm = () => {
   return (

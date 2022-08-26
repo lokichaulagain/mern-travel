@@ -58,3 +58,26 @@
     -moz-box-shadow: -1px 8px 10px 4px rgba(54, 157, 244, 0.16);
   }
 }
+
+//Button
+.myButton {
+  background-color: #369df4;
+  color: whitesmoke;
+  border: none;
+  border-radius: none;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.03);
+    transition: transform .3s;
+    background-color: #369df4;
+    color: whitesmoke;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0px 0px 3px 1px rgba(55, 157, 245, 0.79);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(55, 157, 245, 0.79);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(55, 157, 245, 0.79);
+  }
+}

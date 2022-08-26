@@ -1,32 +1,13 @@
-// TeamMemberCard
-.wrapper {
-  padding-top: 90px;
-  padding-bottom: 100px;
 
-  .card {
-    border: none;
-  }
-}
 
-.teamImg {
-  object-fit: cover;
-}
 
-// TeamContactusCard
-.contactusWrapper {
-  z-index: 1;
-}
 
-//TeamServiceSection
-.serviceWrapper {
-  background-color: #eef2f6;
-}
 
-.serviceIcon {
-  font-size: 50px;
-  cursor: pointer;
-  color: #369df4;
-}
 
 ///page==============
-
+.pageBg {
+  background-image: url("../../../public/images/teamImg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
