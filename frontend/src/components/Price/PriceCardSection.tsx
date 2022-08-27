@@ -1,38 +1,172 @@
-import React from "react";
+import styles from "../../styles/scss/price/PriceCardSection.module.scss";
 
 const PriceCardSection = () => {
   return (
-    <div className="container px-5">
-      <div className="container px-5">
+    <div className="container py-5 px-5">
+      <div className="container py-4 px-5">
         <div className="row px-3">
-          <div className="col">
-            <div className="card text-center">
-              <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+          <div className="col-4 pb-5">
+            {/* card1 */}
+            <div className="card text-center shadow-lg border-0">
+              <div className="card-body p-5">
+                <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+
+                <p className="h3 pt-3">
+                  $ <span className={`${styles.money} h1 fw-bold`}>100</span>
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
-                <h4>sdkjbfdb</h4>
+
+                <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  Per half day
+                </p>
+                <li className={`${styles.li} `}>Dedicated guide</li>
+                <li className={`${styles.li} pt-3`}>Great experience</li>
+                <li className={`${styles.li} pt-3`}>Cheap prices</li>
+                <li className={`${styles.li} pt-3`}>English language</li>
+                <li className={`${styles.li} pt-3`}>Italian language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Equipment included</li>
               </div>
             </div>
           </div>
 
-          <div className="col"></div>
-          <div className="col"></div>
+          {/* card2 */}
+          <div className="col-4">
+            <div className="card text-center shadow-lg border-0">
+              <div className="card-body p-5">
+                <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+
+                <p className="h3 pt-3">
+                  $ <span className={`${styles.money} h1 fw-bold`}>100</span>
+                </p>
+
+                <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  Per half day
+                </p>
+                <li className={`${styles.li} `}>Dedicated guide</li>
+                <li className={`${styles.li} pt-3`}>Great experience</li>
+                <li className={`${styles.li} pt-3`}>Cheap prices</li>
+                <li className={`${styles.li} pt-3`}>English language</li>
+                <li className={`${styles.li} pt-3`}>Italian language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Equipment included</li>
+              </div>
+            </div>
+          </div>
+
+          {/* card3 */}
+          <div className="col-4">
+            <div className="card text-center shadow-lg border-0">
+              <div className="card-body p-5">
+                <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+
+                <p className="h3 pt-3">
+                  $ <span className={`${styles.money} h1 fw-bold`}>100</span>
+                </p>
+
+                <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  Per half day
+                </p>
+                <li className={`${styles.li} `}>Dedicated guide</li>
+                <li className={`${styles.li} pt-3`}>Great experience</li>
+                <li className={`${styles.li} pt-3`}>Cheap prices</li>
+                <li className={`${styles.li} pt-3`}>English language</li>
+                <li className={`${styles.li} pt-3`}>Italian language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Equipment included</li>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-4">
+            <div className="card text-center shadow-lg border-0">
+              <div className="card-body p-5">
+                <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+
+                <p className="h3 pt-3">
+                  $ <span className={`${styles.money} h1 fw-bold`}>100</span>
+                </p>
+
+                <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  Per half day
+                </p>
+                <li className={`${styles.li} `}>Dedicated guide</li>
+                <li className={`${styles.li} pt-3`}>Great experience</li>
+                <li className={`${styles.li} pt-3`}>Cheap prices</li>
+                <li className={`${styles.li} pt-3`}>English language</li>
+                <li className={`${styles.li} pt-3`}>Italian language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Equipment included</li>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div className="col-4">
+            <div className="card text-center shadow-lg border-0">
+              <div className="card-body p-5">
+                <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+
+                <p className="h3 pt-3">
+                  $ <span className={`${styles.money} h1 fw-bold`}>100</span>
+                </p>
+
+                <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  Per half day
+                </p>
+                <li className={`${styles.li} `}>Dedicated guide</li>
+                <li className={`${styles.li} pt-3`}>Great experience</li>
+                <li className={`${styles.li} pt-3`}>Cheap prices</li>
+                <li className={`${styles.li} pt-3`}>English language</li>
+                <li className={`${styles.li} pt-3`}>Italian language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Equipment included</li>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div className="col-4">
+            <div className="card text-center shadow-lg border-0">
+              <div className="card-body p-5">
+                <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+
+                <p className="h3 pt-3">
+                  $ <span className={`${styles.money} h1 fw-bold`}>100</span>
+                </p>
+
+                <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  Per half day
+                </p>
+                <li className={`${styles.li} `}>Dedicated guide</li>
+                <li className={`${styles.li} pt-3`}>Great experience</li>
+                <li className={`${styles.li} pt-3`}>Cheap prices</li>
+                <li className={`${styles.li} pt-3`}>English language</li>
+                <li className={`${styles.li} pt-3`}>Italian language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Spanish language</li>
+                <li className={`${styles.li} pt-3`}>Equipment included</li>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
         </div>
       </div>
     </div>

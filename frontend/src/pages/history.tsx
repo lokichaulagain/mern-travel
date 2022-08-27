@@ -1,16 +1,18 @@
 import React from "react";
 import Footer from "../components/Footer";
 import HeroComponent from "../components/HeroComponent";
-import HistoryComponent1 from "../components/History/HistoryComponent1";
+import HistorySection1 from "../components/History/HistorySection1";
 import Navbar from "../components/Navbar";
+import styles from "../styles/scss/history/History.module.scss";
 
 export default function History() {
   return (
     <div>
-      <Navbar />
-      <HeroComponent />
-      <HistoryComponent1/>
-
+      <div className={`${styles.bg}`}>
+        <Navbar />
+        <HeroComponent />
+      </div>
+      <HistorySection1 />
       <Footer />
     </div>
   );
