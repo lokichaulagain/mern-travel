@@ -1,4 +1,4 @@
-import styles from "../../styles/scss/SingleTrek.module.scss"
+import styles from "../../styles/scss/singleTrek/SingleTrek.module.scss"
 
 const SingleTrekCenterContent = () => {
   return (

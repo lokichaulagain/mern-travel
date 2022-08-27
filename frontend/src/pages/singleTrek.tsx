@@ -2,22 +2,23 @@ import React from "react";
 import Footer from "../components/Footer";
 import HeroComponent from "../components/HeroComponent";
 import Navbar from "../components/Navbar";
-import SingleTrekCenterContent from "../components/SingleTrek/singleTrekCenterContent";
+import SingleTrekCenterContent from "../components/SingleTrek/SingleTrekCenterContent";
 import SingleTrekComponent1 from "../components/SingleTrek/SingleTrekComponent1";
-import styles from "../styles/scss/SingleTrek.module.scss";
+import SingleTrekSection2 from "../components/SingleTrek/SingleTrekSection2";
+import SingleTrekSection3 from "../components/SingleTrek/SingleTrekSection3";
+import styles from "../styles/scss/singleTrek/SingleTrek.module.scss";
 
 export default function singleTrek() {
   return (
     <div>
-      <Navbar />
-      <div className={`${styles.centerImg} centerImage`}>
+      <div className={`${styles.bg}`}>
+        <Navbar />
         <HeroComponent />
-      </div>
-      <SingleTrekComponent1 />
-      <div className={`${styles.centerImg} centerImage`}>
+        <SingleTrekComponent1 />
         <SingleTrekCenterContent />
       </div>
-
+      <SingleTrekSection2 />
+      <SingleTrekSection3/>
       <Footer />
     </div>
   );

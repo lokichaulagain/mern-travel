@@ -8,12 +8,12 @@
   font-size: 90px;
 }
 
-.centerImg {
+.bg {
   background-image: linear-gradient(
       rgba(96, 105, 136, 0.7),
       rgba(4, 9, 30, 0.7)
     ),
-    url("../../../public/images/trek.jpg");
+    url("../../../../public/images/trek.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
