@@ -1,8 +1,4 @@
-
-import styles from "../../styles/scss/history/HistorySection1.module.scss"
-
-
-
+import styles from "../../styles/scss/history/HistorySection1.module.scss";
 
 const HistorySection1 = () => {
   return (
@@ -24,22 +20,20 @@ const HistorySection1 = () => {
 
               <div className="col-4 loki">
                 <h3 className="he fw-bold hTitle">1985</h3>
-                <h6 className="h6 hPara fw-semibold " >Foundation</h6>
+                <h6 className="h6 hPara fw-semibold ">Foundation</h6>
               </div>
             </div>
-
-
-
-
 
             <div className="row py-3 loki">
               <div className="col-4 ">
                 <h3 className="he fw-bold hTitle">1990</h3>
-                <h6 className="h6 hPara fw-semibold" >Association</h6>
+                <h6 className="h6 hPara fw-semibold">Association</h6>
               </div>
 
               <div className="col-8">
-              <h4 className="h4 hHeading fw-bold">Join of country association</h4>
+                <h4 className="h4 hHeading fw-bold">
+                  Join of country association
+                </h4>
                 <p className=" hPara fw-normal lh-lg pt-2">
                   Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                   eiusmod tempor incididunt utlabore et dolore magna aliqua.
@@ -48,9 +42,6 @@ const HistorySection1 = () => {
                 </p>
               </div>
             </div>
-
-
-
 
             <div className="row py-3">
               <div className="col-8">
@@ -65,22 +56,18 @@ const HistorySection1 = () => {
 
               <div className="col-4 loki">
                 <h3 className="he fw-bold hTitle">2002</h3>
-                <h6 className="h6 hPara fw-semibold" >Expansion</h6>
+                <h6 className="h6 hPara fw-semibold">Expansion</h6>
               </div>
             </div>
-
-
-
-
 
             <div className="row py-3">
               <div className="col-4 loki">
                 <h3 className="he fw-bold hTitle">2010</h3>
-                <h6 className="h6 hPara fw-semibold" >Complete online</h6>
+                <h6 className="h6 hPara fw-semibold">Complete online</h6>
               </div>
 
               <div className="col-8">
-              <h4 className="h4 hHeading fw-bold">Group fondation</h4>
+                <h4 className="h4 hHeading fw-bold">Group fondation</h4>
                 <p className=" hPara fw-normal lh-lg pt-2">
                   Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                   eiusmod tempor incididunt utlabore et dolore magna aliqua.
@@ -89,67 +76,45 @@ const HistorySection1 = () => {
                 </p>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
           </div>
 
           {/* Right side */}
           <div className="col-4">
-            <p>Alive by</p>
-            <div className="container" style={{ display: "flex" }}>
-              <span className="h2">25</span>
-              <span>Years</span>
+            <p className="fw-semibold hColor ">Alive by</p>
+            <div className="container">
+              <h1 className="h1 fw-bold hColor">
+                25 <span className="h6 tinySpan">Years</span>
+              </h1>
             </div>
-            <hr />
+            <hr className="pt-3" />
 
-            <p>Traks length</p>
-            <div className="container" style={{ display: "flex" }}>
-              <span className="h2">8000</span>
-              <span>km</span>
+            <p className="fw-semibold hColor ">Treks length</p>
+            <div className="container">
+              <h1 className="h1 fw-bold hColor">
+                8000 <span className="h6 tinySpan">km</span>
+              </h1>
             </div>
-            <hr />
+            <hr className="pt-3"  />
 
-            <p>Alive by</p>
-            <div className="container" style={{ display: "flex" }}>
-              <span className="h2 ">25</span>
-              <span>+</span>
+            <p className="fw-semibold hColor ">Team members</p>
+            <div className="container">
+              <h1 className="h1 fw-bold hColor">
+                110 <span className="h6 tinySpan">+</span>
+              </h1>
             </div>
+            <hr className="pt-3"  />
+
             {/* Single item carousel */}
-
-            <hr />
+            <div className="row">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem non itaque commodi perferendis reprehenderit
+              repudiandae voluptate laborum labore quae cum maxime fugit
+              dignissimos maiores libero nemo, nihil odit voluptatem voluptates
+              sequi culpa magnam possimus voluptas incidunt iure. Officiis
+              delectus qui vel eveniet voluptas dignissimos obcaecati! Inventore
+              iste, veritatis odit provident hic non similique quasi ratione
+     
+            </div>
           </div>
         </div>
       </div>
