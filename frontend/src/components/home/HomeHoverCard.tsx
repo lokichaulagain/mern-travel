@@ -1,47 +1,112 @@
-import { url } from "inspector";
-import React from "react";
 import styles from "../../styles/scss/Home.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 const HomeHoverCard = () => {
   return (
-    <div className="row my-5 py-5">
+    <div className="row my-5 py-5 mx-3">
       <div className="col-6" style={{ display: "flex", gap: "20px" }}>
-        <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the cards content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
+            <SwiperSlide style={{ backgroundColor: "white" }}>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </SwiperSlide>
           </div>
-        </div>
-        <div className={`${styles.centerCardWrapper}   card col-4   `}>
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the cards content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
-          </div>
-        </div>
 
-        <div className={`${styles.centerCardWrapper} card col-4`}>
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
+            <SwiperSlide style={{ backgroundColor: "white" }}>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </SwiperSlide>
           </div>
-        </div>
+
+          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
+            <SwiperSlide style={{ backgroundColor: "white" }}>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </SwiperSlide>
+          </div>
+
+          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
+            <SwiperSlide style={{ backgroundColor: "white" }}>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </SwiperSlide>
+          </div>
+
+          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
+            <SwiperSlide style={{ backgroundColor: "white" }}>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </SwiperSlide>
+          </div>
+
+          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
+            <SwiperSlide style={{ backgroundColor: "white" }}>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the cards content.
+                </p>
+                <a href="#" className="btn btn-primary">
+                  Go somewhere
+                </a>
+              </div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
       </div>
 
       {/* Heading and para */}
