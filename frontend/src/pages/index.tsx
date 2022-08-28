@@ -7,19 +7,16 @@ import HomeNewsLetter from "../components/home/HomeNewsLetter";
 import styles from "../styles/scss/Home.module.scss";
 import HomeHoverCard from "../components/home/HomeHoverCard";
 import HomeSection1 from "../components/home/HomeSection1";
+import HomeHeroComponent from "../components/home/HomeHeroComponent"
 
 const Home = () => {
   return (
     <div className={`${styles.pageWrapper}`}>
       <Navbar />
-      <HomeSection1/>
+      <HomeHeroComponent />
+      <HomeSection1 />
       <HomeAboutSection />
-      {/* style="width: 18rem;" */}
-
-      <div className="container-fluid">
-        <HomeHoverCard/>
-      </div>
-     
+      <HomeHoverCard />
       <HomeTopService />
       <HomeNewsLetter />
       <Footer />

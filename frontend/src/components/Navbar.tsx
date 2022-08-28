@@ -1,113 +1,136 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../../public/images/logo1.svg";
 import LogoBlack from "../../public/images/logoBlack.svg";
 import styles from "../styles/scss/Navbar.module.scss";
 
 const Navbar = () => {
   return (
-    <div className="container px-5">
+    <div style={{ backgroundColor: "white" }}>
       <div className="container px-5">
-        <nav className="navbar navbar-expand-lg bg-light">
-          <div className="container-fluid">
-            <Image src={LogoBlack} alt="" width={220} height={100} />
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo02"
-              aria-controls="navbarTogglerDemo02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+        <div className="container px-5">
+          <nav className="navbar navbar-expand-lg ">
+            <div className="container-fluid">
+              <Image src={LogoBlack} alt="" width={220} height={80} />
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
 
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-              <form className="d-flex" role="search">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
-                      HOME
-                    </a>
-                  </li>
+              <div
+                className="collapse navbar-collapse"
+                id="navbarTogglerDemo02"
+              >
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <form className="d-flex" role="search">
+                  <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li className="nav-item h6 fw-bold">
+                      <Link href={"/"}>
+                        <a className="nav-link  navLi" aria-current="page">
+                          HOME
+                        </a>
+                      </Link>
+                    </li>
 
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      PAGES
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          TEAM
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          SHELTERS
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          GALLERY
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          HISTORY
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          PRICES
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          FOODS
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          EVENTS
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          ABOUT
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                    <li className="nav-item  dropdown">
+                      <a
+                        className="nav-link   h6 fw-bold navLi dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        PAGES
+                      </a>
+                      <ul className="dropdown-menu">
+                        <Link href={"/team"}>
+                          <li>
+                            <a className="dropdown-item ">TEAM</a>
+                          </li>
+                        </Link>
 
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
-                      TREKS
-                    </a>
-                  </li>
+                        <Link href={"/shelter"}>
+                          <li className="pageLi">
+                            <a className="dropdown-item ">SHELTERS</a>
+                          </li>
+                        </Link>
 
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
-                      CONTACTS
-                    </a>
-                  </li>
+                        <Link href={"/history"}>
+                          <li className="pageLi">
+                            <a className="dropdown-item">HISTORY</a>
+                          </li>
+                        </Link>
 
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
-                      CONTACT
-                    </a>
-                  </li>
-                </ul>
-              </form>
+                        <Link href={"/price"}>
+                          <li className="pageLi">
+                            <a className="dropdown-item">PRICES</a>
+                          </li>
+                        </Link>
+
+                        <Link href={"/events"}>
+                          <li className="pageLi">
+                            <a className="dropdown-item">EVENTS</a>
+                          </li>
+                        </Link>
+
+                        <li className="pageLi">
+                          <a className="dropdown-item">GALLERY</a>
+                        </li>
+
+                        <li className="pageLi">
+                          <a className="dropdown-item">FOODS</a>
+                        </li>
+
+                        <li className="pageLi">
+                          <a className="dropdown-item  ">ABOUT</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <Link href={"/trek"}>
+                      <li className="nav-item pageLi">
+                        <a
+                          className="nav-link   h6 fw-bold  navLi"
+                          aria-current="page"
+                        >
+                          TREKS
+                        </a>
+                      </li>
+                    </Link>
+
+                    <li className="nav-item">
+                      <Link href={"/blog"}>
+                        <a
+                          className="nav-link h6 fw-bold  pageLi navLi"
+                          aria-current="page"
+                        >
+                          BLOGS
+                        </a>
+                      </Link>
+                    </li>
+
+                    <Link href={"/contact"}>
+                      <li className="nav-item pageLi">
+                        <a
+                          className="nav-link h6 fw-bold  navLi"
+                          aria-current="page"
+                        >
+                          CONTACT
+                        </a>
+                      </li>
+                    </Link>
+                  </ul>
+                </form>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </div>
   );
