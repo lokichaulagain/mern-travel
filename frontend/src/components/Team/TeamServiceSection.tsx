@@ -3,6 +3,7 @@ import styles from "../../styles/scss/team/TeamServiceSection.module.scss";
 import { FaParachuteBox } from "react-icons/fa";
 import { GiBee } from "react-icons/gi";
 import { BiBarChart } from "react-icons/bi";
+import { animate, motion } from "framer-motion";
 
 const TeamServiceSection = () => {
   return (
@@ -13,7 +14,11 @@ const TeamServiceSection = () => {
             <div className="container ">
               <div className="row">
                 <div className={`${styles.serviceContainer} col gap-4`}>
-                  <FaParachuteBox className={`${styles.serviceIcon} mb-3  `} />
+                  <motion.div whileInView={{ x: [null, 100, 0] }}  whileHover={{ scale: 1.2 }}>
+                    <FaParachuteBox
+                      className={`${styles.serviceIcon} mb-3  `}
+                    />
+                  </motion.div>
                   <div className="col">
                     <h5 className="h5">Experienced team</h5>
                     <p className={` ${styles.para}`}>
@@ -23,7 +28,9 @@ const TeamServiceSection = () => {
                 </div>
 
                 <div className={`${styles.serviceContainer} col gap-4`}>
-                  <BiBarChart className={`${styles.serviceIcon} mb-3  `} />
+                  <motion.div whileInView={{ x: [null, 100, 0] }}  whileHover={{ scale: 1.2 }}>
+                    <BiBarChart className={`${styles.serviceIcon} mb-3  `} />
+                  </motion.div>
                   <div className="col">
                     <h5 className="h5">Career opportunities</h5>
                     <p className={` ${styles.para}`}>
@@ -33,7 +40,10 @@ const TeamServiceSection = () => {
                 </div>
 
                 <div className={`${styles.serviceContainer} col gap-4`}>
-                  <GiBee className={`${styles.serviceIcon} mb-3  `} />
+                  <motion.div whileInView={{ x: [null, 100, 0] }}   whileHover={{ scale: 1.2 }}>
+                    <GiBee className={`${styles.serviceIcon} mb-3  `} />
+                  </motion.div>
+
                   <div className="col">
                     <h5 className="h5">Meet amazing people</h5>
                     <p className={` ${styles.para}`}>
