@@ -3,6 +3,7 @@ import HeroComponent from "../components/HeroComponent";
 import Navbar from "../components/Navbar";
 import ShelterButtonSection from "../components/shelter/ShelterButtonSection";
 import ShelterCenterImage from "../components/shelter/ShelterCenterImage";
+import ShelterSection1 from "../components/shelter/ShelterSection1";
 import ShelterAvailabilityForm from "../components/ShelterAvailabilityForm";
 import styles from "../styles/scss/shelter/Shelter.module.scss";
 
@@ -13,6 +14,7 @@ export default function Shelter() {
       <div className={`${styles.shelter}`}>
         <HeroComponent />
       </div>
+      <ShelterSection1 />
       <ShelterButtonSection />
       <ShelterAvailabilityForm />
       <div className={`${styles.shelter}`}>

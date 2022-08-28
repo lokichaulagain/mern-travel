@@ -3,8 +3,7 @@ import React from "react";
 import person1 from "../../../public/person/1.avif";
 import styles from "../../styles/scss/team/TeamMemberCard.module.scss";
 import { motion } from "framer-motion";
-// import styles from "../styles/scss/HeroComponent.module.scss";
-// import { motion } from "framer-motion";
+
 
 const TeamMemberCard = () => {
   return (

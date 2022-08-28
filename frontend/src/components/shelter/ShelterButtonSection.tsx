@@ -1,96 +1,3 @@
-// import React from "react";
-// import styles from "../../styles/scss/shelter/ShelterButtonSection.module.scss";
-
-// const ShelterButtonSection = () => {
-//   return (
-//     <div>
-//       {/* 4 button  */}
-//       <div className="container px-4 d-flex justify-content-center">
-//         <div className="row p-5">
-//           <div className="col p-5 gap-5">
-//             <button
-//               type="button"
-//               className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
-//             >
-//               Large button
-//             </button>
-
-//             <button
-//               type="button"
-//               className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
-//             >
-//               Large button
-//             </button>
-
-//             <button
-//               type="button"
-//               className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
-//             >
-//               Large button
-//             </button>
-
-//             <button
-//               type="button"
-//               className={`${styles.button} btn btn-primary mx-3 btn-lg   shadow-lg`}
-//             >
-//               Large button
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//       {/* carousel row */}
-
-//       <div className="container pb-5  mb-5 px-5">
-//         <div className="container px-5">
-//           <div className="row px-4">
-//             <div className="col">
-//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-//               architecto illum similique voluptatum, vel nulla laudantium quidem
-//               iste consequatur sit odit quae ut quis beatae, rerum dolorum id
-//               culpa. Veniam alias saepe quibusdam hic placeat adipisci vitae
-//               obcaecati voluptate eius libero? Obcaecati voluptatem magni porro
-//               rem similique enim veniam dolores?
-//             </div>
-
-//             <div className="col">
-//               <h2 className="h2 ">CRODA DEL LAGO REFUGE</h2>
-//               <h6 className="h6 pt-2 pb-4">Nevegal Mountain</h6>
-//               <p>
-//                 Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
-//                 eiusmod tempor incididunt utlabore et dolore magna aliqua.
-//                 Utenim ad minim veniam quis nostrud exercitatio.
-//               </p>
-//               <div className="row">
-//                 <h6 className="col">Nevegal</h6>
-//                 <h6 className="col">1250 m</h6>
-//                 <h6 className="col">$40 per night</h6>
-//               </div>
-//             </div>
-//           </div>
-//           {/* multiCarousel and button row */}
-//           <div className="row  my-3 mx-2">
-//             <div className="col">
-//               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-//               modi enim nulla reiciendis fuga asperiores repellendus! Eius
-//               mollitia numquam repudiandae enim iure rerum, officiis fuga odio
-//               dolores laborum minus assumenda optio architecto, temporibus
-//               corrupti expedita porro
-//             </div>
-
-//             <div className="col">
-//               <button type="button" className="btn btn-primary  mx-3 btn-lg">
-//                 Large button
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ShelterButtonSection;
-
 import styles from "../../styles/scss/shelter/ShelterButtonSection.module.scss";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -139,7 +46,6 @@ const ShelterButtonSection = () => {
         </div>
       </div>
       {/* carousel row */}
-
       <div className="container pb-5  mb-5 px-5">
         <div className="container px-5">
           <div className="row px-4">
@@ -153,14 +59,13 @@ const ShelterButtonSection = () => {
                 pagination={{
                   clickable: true,
                 }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination]}
                 className="mySwiper"
               >
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img} py-4`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -168,7 +73,7 @@ const ShelterButtonSection = () => {
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img}  py-4`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -176,48 +81,49 @@ const ShelterButtonSection = () => {
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img}  py-4`}
                     alt="..."
                   />
                 </SwiperSlide>
               </Swiper>
             </div>
 
-            <div className="col">
-              <h2 className="h2 ">CRODA DEL LAGO REFUGE</h2>
-              <h6 className="h6 pt-2 pb-4">Nevegal Mountain</h6>
-              <p>
+            <div className="col pt-3">
+              <h2 className={`${styles.color} h2 fw-bold`}>LILLA REFUGE</h2>
+              <h6 className={`${styles.color} h5 pt-3 pb-4`}>
+                Nevegal Mountain
+              </h6>
+              <p className={`${styles.color} pt-2`}>
                 Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                 eiusmod tempor incididunt utlabore et dolore magna aliqua.
                 Utenim ad minim veniam quis nostrud exercitatio.
               </p>
-              <div className="row">
-                <h6 className="col">Nevegal</h6>
-                <h6 className="col">1250 m</h6>
-                <h6 className="col">$40 per night</h6>
+              <div className={`${styles.color} row pt-4`}>
+                <h6 className={`${styles.color} col h6`}>Nevegal</h6>
+                <h6 className={`${styles.color} col h6`}>1250 m</h6>
+                <h6 className={`${styles.color} col h6`}>$40 per night</h6>
               </div>
             </div>
           </div>
           {/* multiCarousel and button row */}
-          <div className="row  my-3 mx-2">
-            <div className="col-6">
+          <div className="row   mx-2 gap-3">
+            <div className="col-6 pe-3">
               <Swiper
                 slidesPerView={3}
-                spaceBetween={30}
-                slidesPerGroup={3}
+                spaceBetween={10}
+                slidesPerGroup={1}
                 loop={true}
                 loopFillGroupWithBlank={true}
                 pagination={{
                   clickable: true,
                 }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination]}
                 className="mySwiper"
               >
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img} rounded py-2`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -225,7 +131,7 @@ const ShelterButtonSection = () => {
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img} rounded py-2`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -233,7 +139,7 @@ const ShelterButtonSection = () => {
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img} rounded py-2`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -241,7 +147,7 @@ const ShelterButtonSection = () => {
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img} rounded py-2`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -249,7 +155,7 @@ const ShelterButtonSection = () => {
                 <SwiperSlide>
                   <Image
                     src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
+                    className={`${styles.img} rounded py-2`}
                     alt="..."
                   />
                 </SwiperSlide>
@@ -257,7 +163,7 @@ const ShelterButtonSection = () => {
             </div>
 
             <div className="col">
-              <button type="button" className="btn btn-primary  mx-3 btn-lg">
+              <button type="button" className="btn btn-outline-primary  btn-lg">
                 Large button
               </button>
             </div>

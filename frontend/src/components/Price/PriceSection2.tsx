@@ -1,4 +1,12 @@
 import styles from "../../styles/scss/price/PriceSection2.module.scss";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
+import Image from "next/image";
+import person1 from "../../../public/images/5.jpeg";
 
 const PriceSection2 = () => {
   return (
@@ -6,7 +14,7 @@ const PriceSection2 = () => {
       <div className="container p-5">
         <div className="container p-5">
           <div className="row px-3">
-            <div className="col">
+            <div className="col-7">
               <h2 className="h2  customH2">BOOK YOUR TOUR</h2>
               <h6 className=" h6 pt-3 pb-4 customH6">
                 Contact us for tour booking
@@ -27,20 +35,29 @@ const PriceSection2 = () => {
               </button>
             </div>
 
-            <div className="col">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus tempora molestiae suscipit sed a, exercitationem
-              adipisci laborum laudantium at! Aut sequi, necessitatibus tenetur
-              ratione enim facilis illum, accusantium quos maiores dicta,
-              dolorum molestiae maxime excepturi voluptatibus. Voluptate
-              officiis, facere ad harum aperiam quasi perspiciatis esse vel
-              impedit itaque architecto voluptatum omnis labore beatae iusto
-              natus optio ex non aliquid ea fuga. Adipisci dolorum perspiciatis
-              eaque vel voluptates laborum similique quasi iusto, quaerat
-              temporibus fugit, explicabo sit! Distinctio debitis ea, nam illo
-              corporis, nesciunt reiciendis fugiat modi harum excepturi mollitia
-              quos in officia numquam nisi sunt dicta ut architecto amet
-              tempora?
+            <div className="col-5" style={{ backgroundColor: "red" }}>
+              <Swiper
+                slidesPerView={2}
+                spaceBetween={5}
+                slidesPerGroup={1}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                navigation={true}
+                modules={[Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide className={`${styles.loki}`}>
+                  <Image src={person1} className={`${styles.loki}`} alt="..." />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <Image src={person1} alt="..." />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <Image src={person1} alt="..." />
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
