@@ -35,7 +35,6 @@ const TreksCard = () => {
                   </div>
                 </div>
                 {/* --------- */}
-
                 <div className="card-body">
                   <h3 className="h3 pt-3">Bianco Excursion</h3>
                   <p className="card-text pt-3 text-muted ">

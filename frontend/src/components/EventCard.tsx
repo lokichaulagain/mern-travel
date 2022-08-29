@@ -26,7 +26,8 @@ const EventCard = () => {
                         Sunshine and wine
                       </h2>
                       <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                      <RiCalendar2Fill className={`${styles.iconSm}`} />  01 October 2019 at 8.00 PM
+                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
+                        October 2019 at 8.00 PM
                       </h6>
                       <hr />
                       <p className={`${styles.para} lh-lg `}>
@@ -81,7 +82,8 @@ const EventCard = () => {
                         Sunshine and wine
                       </h2>
                       <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                      <RiCalendar2Fill className={`${styles.iconSm}`} /> 01 October 2019 at 8.00 PM
+                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
+                        October 2019 at 8.00 PM
                       </h6>
                       <hr />
                       <p className={`${styles.para} lh-lg `}>
@@ -108,7 +110,8 @@ const EventCard = () => {
                         Sunshine and wine
                       </h2>
                       <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                      <RiCalendar2Fill className={`${styles.iconSm}`} />  01 October 2019 at 8.00 PM
+                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
+                        October 2019 at 8.00 PM
                       </h6>
                       <hr />
                       <p className={`${styles.para} lh-lg `}>
