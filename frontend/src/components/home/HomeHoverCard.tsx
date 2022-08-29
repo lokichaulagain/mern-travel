@@ -1,121 +1,133 @@
-import styles from "../../styles/scss/Home.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "../../styles/scss/home/HomeHoverCard.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import { motion } from "framer-motion";
 
 const HomeHoverCard = () => {
   return (
-    <div className="row my-5 py-5 mx-3">
-      <div className="col-6" style={{ display: "flex", gap: "20px" }}>
+    <div className="row my-5 py-5 mx-3" style={{ overflow: "hidden" }}>
+      <div className="col-6">
         <Swiper
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={20}
+          slidesPerGroup={1}
+          loop={true}
+          loopFillGroupWithBlank={true}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
           className="mySwiper"
         >
-          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-            <SwiperSlide style={{ backgroundColor: "white" }}>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </SwiperSlide>
-          </div>
+          <SwiperSlide>
+            <div
+              className={`${styles.bg} card p-3 shadow-sm border-0 rounded`}
+              style={{ width: "18rem", backgroundColor: "green" }}
+            >
+              <motion.div
+                animate={{ y: 350, opacity: 1 }}
+                whileInView={{ y: [350, 0] }}
+                transition={{ duration: 0.8, type: "tween" }}
+                className="card-body"
+              >
+                <h4 className="pureWhite pt-1  h3 fw-bold">Bianco Excursion</h4>
 
-          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-            <SwiperSlide style={{ backgroundColor: "white" }}>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </SwiperSlide>
-          </div>
+                <div className="col">
+                  <h6 className="whiteColor pt-3 h6 ">
+                    October 2019 at 8.00 PM
+                  </h6>
+                </div>
 
-          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-            <SwiperSlide style={{ backgroundColor: "white" }}>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
+                <p className="pureWhite pt-3 lh-lg  card-text">
+                  This is a wider card with supporting text below as a natural
+                  village text below as a natural .
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </SwiperSlide>
-          </div>
+              </motion.div>
 
-          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-            <SwiperSlide style={{ backgroundColor: "white" }}>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </SwiperSlide>
-          </div>
+              <button type="button" className="btn col-4 my-4  btn-primary">
+                Primary
+              </button>
+            </div>
+          </SwiperSlide>
 
-          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-            <SwiperSlide style={{ backgroundColor: "white" }}>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </SwiperSlide>
-          </div>
+          <SwiperSlide>
+            <div
+              className={`${styles.bg} card p-3 shadow-sm border-0 rounded`}
+              style={{ width: "18rem", backgroundColor: "green" }}
+            >
+              <motion.div
+                animate={{ y: 350, opacity: 1 }}
+                whileInView={{ y: [350, 0] }}
+                transition={{ duration: 0.8, type: "tween" }}
+                className="card-body"
+              >
+                <h4 className="pureWhite pt-1  h3 fw-bold">Bianco Excursion</h4>
 
-          <div className={`${styles.centerCardWrapper} card col-4 p-3`}>
-            <SwiperSlide style={{ backgroundColor: "white" }}>
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
+                <div className="col">
+                  <h6 className="whiteColor pt-3 h6 ">
+                    October 2019 at 8.00 PM
+                  </h6>
+                </div>
+
+                <p className="pureWhite pt-3 lh-lg  card-text">
+                  This is a wider card with supporting text below as a natural
+                  village text below as a natural .
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </SwiperSlide>
-          </div>
+              </motion.div>
+
+              <button type="button" className="btn col-4 my-4 btn-primary">
+                Primary
+              </button>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div
+              className={`${styles.bg} card p-3 shadow-sm border-0 rounded`}
+              style={{ width: "18rem", backgroundColor: "green" }}
+            >
+              <motion.div
+                animate={{ y: 350, opacity: 1 }}
+                whileInView={{ y: [350, 0] }}
+                transition={{ duration: 0.8, type: "tween" }}
+                className="card-body"
+              >
+                <h4 className="pureWhite pt-1  h3 fw-bold">Bianco Excursion</h4>
+
+                <div className="col">
+                  <h6 className="whiteColor pt-3 h6 ">
+                    October 2019 at 8.00 PM
+                  </h6>
+                </div>
+
+                <p className="pureWhite pt-3 lh-lg  card-text">
+                  This is a wider card with supporting text below as a natural
+                  village text below as a natural .
+                </p>
+              </motion.div>
+
+              <button type="button" className="btn col-4 my-4 btn-primary">
+                Primary
+              </button>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
 
       {/* Heading and para */}
-      <div className="col-6   ps-5">
+      <motion.div
+        animate={{ x: 350, opacity: 1 }}
+        whileInView={{ x: [350, 0] }}
+        transition={{ duration: 0.8, type: "tween" }}
+        className="col-6   ps-3"
+      >
         <div className="row ps-5">
-          <h1 className={`${styles.heading} lh-base`}>
+          <h1 className="lh-base h1 fw-bolder pureWhite">
             THE TREKS OF <br /> OUR TEAM
           </h1>
-          <p className={`${styles.para} lh-lg mt-3`}>
+          <p className=" lh-lg mt-3 h5 whiteColor">
             Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiure{" "}
             <br />
             consectetur adipisicing a didunto persmo.
@@ -123,7 +135,7 @@ const HomeHoverCard = () => {
         </div>
 
         {/* Two Button */}
-        <div className={`${styles.buttonRow} mt-4 ps-5 col`}>
+        <div className=" mt-4 ps-5 col">
           <button
             type="button"
             className="btn btn-primary rounded-pill btn-lg px-4 "
@@ -132,12 +144,12 @@ const HomeHoverCard = () => {
           </button>
           <button
             type="button"
-            className={`${styles.bottom2} btn ms-3  btn-outline rounded-pill btn-lg px-4 `}
+            className=" btn ms-3  btn-outline rounded-pill btn-lg px-4 "
           >
             The Team
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

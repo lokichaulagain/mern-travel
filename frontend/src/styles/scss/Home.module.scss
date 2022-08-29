@@ -149,39 +149,3 @@
   background-position: center;
   background-attachment: fixed;
 }
-
-//HomeCardCover
-.centerCardWrapper {
-  background-image: url("../../../public/images/im1.jpg");
-  background-size: cover;
-  background-position: center;
-  border: none;
-}
-
-.heading {
-  font-size: 55px;
-  color: white;
-  font-weight: 800;
-}
-
-.para {
-  color: white;
-}
-
-.buttonRow {
-  display: flex;
-}
-
-.bottom2 {
-  color: white;
-  border-color: white;
-
-  &:hover {
-    border-color: #379cf4;
-    color: white;
-  }
-}
-
-
-// Home Center Hover Card
-
