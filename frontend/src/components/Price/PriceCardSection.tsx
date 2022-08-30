@@ -15,26 +15,15 @@ const PriceCardSection = () => {
             >
               <div className="card text-center shadow-lg border-0">
                 <div className="card-body p-5">
-                  <h3 className={`${styles.h3} h4 fw-bold `}>Tourist guide</h3>
+                  <h3 className=" h4 mainColor fw-bold ">Tourist guide</h3>
                   <p className="h3 pt-3">
-                    $ <span className={`${styles.money} h1 fw-bold`}>100</span>
+                    $ <span className=" h1 mainColor fw-bold">100</span>
                   </p>
-                  <p className={`${styles.para} card-text fw-semibold pt-3`}>
+                  <p className=" card-text mainColor fw-semibold pt-3">
                     Per half day
                   </p>
-                  <motion.li
-                    whileHover={{ scale: 1.3 }}
-                    className={`${styles.li} `}
-                  >
-                    Dedicated guide
-                  </motion.li>
-                  <motion.li
-                    whileHover={{ scale: 1.3, originX: 0 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className={`${styles.li} pt-3`}
-                  >
-                    Great experience
-                  </motion.li>
+                  <li className={`${styles.li} `}>Dedicated guide</li>
+                  <li className={`${styles.li} pt-3`}>Great experience</li>
                   <li className={`${styles.li} pt-3`}>Cheap prices</li>
                   <li className={`${styles.li} pt-3`}>English language</li>
                   <li className={`${styles.li} pt-3`}>Italian language</li>

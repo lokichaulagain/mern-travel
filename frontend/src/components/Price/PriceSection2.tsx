@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 import Image from "next/image";
 import person1 from "../../../public/images/5.jpeg";
 
 const PriceSection2 = () => {
   return (
-    <div className={`${styles.bg}  `}>
+    <div style={{ backgroundColor: "#eef3f7" }}>
       <div className="container p-5">
         <div className="container p-5">
           <div className="row px-3">
@@ -35,28 +35,79 @@ const PriceSection2 = () => {
               </button>
             </div>
 
-            <div className="col-5" style={{ backgroundColor: "red" }}>
+            <div className="col-5" >
               <Swiper
                 slidesPerView={2}
                 spaceBetween={5}
-                slidesPerGroup={1}
+                slidesPerGroup={20}
                 loop={true}
                 loopFillGroupWithBlank={true}
-                navigation={true}
-                modules={[Navigation]}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination]}
                 className="mySwiper"
               >
-                <SwiperSlide className={`${styles.loki}`}>
-                  <Image src={person1} className={`${styles.loki}`} alt="..." />
+                <SwiperSlide>
+                  <div
+                    style={{
+                      width: "22rem",
+                      height: "25rem",
+                      backgroundColor: "green",
+                      display: "flex",
+                    }}
+                  >
+                    <Image
+                      src={person1}
+                      height={1500}
+                      width={300}
+                      alt="..."
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                </SwiperSlide>
+
+
+                <SwiperSlide>
+                  <div
+                    style={{
+                      width: "22rem",
+                      height: "25rem",
+                      backgroundColor: "green",
+                      display: "flex",
+                    }}
+                  >
+                    <Image
+                      src={person1}
+                      height={1500}
+                      width={300}
+                      alt="..."
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Image src={person1} alt="..." />
+                  <div
+                    style={{
+                      width: "22rem",
+                      height: "25rem",
+                      backgroundColor: "green",
+                      display: "flex",
+                    }}
+                  >
+                    <Image
+                      src={person1}
+                      height={1500}
+                      width={300}
+                      alt="..."
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
                 </SwiperSlide>
-
-                <SwiperSlide>
-                  <Image src={person1} alt="..." />
-                </SwiperSlide>
+           
+               
+             
               </Swiper>
             </div>
           </div>

@@ -1,48 +1,70 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-//Global css
-.heading1 {
-  font-size: 30px;
-  line-height: 45px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #13304a;
-  cursor: pointer;
-
-  box-shadow: inset 0 0 0 0 #379cf4;
+.primaryColor {
   color: #379cf4;
-  margin: 0 -0.25rem;
-  padding: 0 0.25rem;
-  transition: color 0.3s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 
-.heading1:hover {
-  box-shadow: inset 800px 0 0 0 #379cf4;
+.mainColor {
+  color: #13304a;
+}
+
+.paraColor {
+  color: #53626f;
+}
+
+.whiteColor {
+  color: whitesmoke;
+}
+
+.pureWhite {
   color: white;
 }
 
-.heading2 {
-  overflow: hidden;
-  font-size: 16px;
-  color: #13304a;
-  margin-top: 15px;
-  margin-bottom: 40px;
+.customButton {
+  color: whitesmoke;
+  background-color: #379cf4;
+  border-color: #379cf4;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    color: whitesmoke;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in;
+    background-color: #2975b7;
+    border-color: #2975b7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
-// for a tag
+.customOutlineButton {
+  color: #379cf4;
+  background-color: white;
+  border-color: #379cf4;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    color: whitesmoke;
+    color: #379cf4;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in;
+    background-color: white;
+    border-color: #2975b7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
 .link {
   text-decoration: none;
 }
 
-// Sectional component=====
-.sHeading {
-  font-weight: 800;
+.pageLi {
+  cursor: pointer;
 }
 
-.sSubHeading {
-  display: flex;
+.navLi {
+  color: #444444;
 }
+//////////////////////////////////////
 
 .sButton {
   font-size: 18px;
@@ -82,103 +104,24 @@
   }
 }
 
-//Reusable  Two row wala section
-.customH2 {
-  color: #13304a;
-  font-weight: 700;
-}
+// .loki {
+//   .hTitle {
+//     color: #13304a;
+//     transition: all 0.3s ease-in;
+//   }
 
-.customH6 {
-  color: #13304a;
-  font-weight: 500;
-}
+//   .hPara {
+//     color: #53626f;
+//   }
 
-.customP {
-  color: #13304a;
-  font-weight: 400;
-}
-
-.customButton {
-  color: whitesmoke;
-  background-color: #379cf4;
-  border-color: #379cf4;
-  transition: all 0.4s ease-out;
-
-  &:hover {
-    color: white;
-    transform: scale(0.95);
-    transition: all 0.2s ease-in;
-    background-color: #2975b7;
-    border-color: #2975b7;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-}
-
-// History section h
-.hHeading {
-  color: #13304a;
-}
-
-.hSubTitle {
-  color: #13304a;
-}
-
-.loki {
-  .hTitle {
-    color: #13304a;
-    transition: all 0.3s ease-in;
-  }
-
-  .hPara {
-    color: #53626f;
-  }
-
-  &:hover {
-    .hTitle {
-      transform: scale(1.2);
-      transition: all 0.3s ease-in-out;
-      color: #369df4;
-    }
-    .hPara {
-      color: #53626f;
-    }
-  }
-}
-
-.hColor {
-  color: #13304a;
-}
-
-.tinySpan {
-  color: #379cf4;
-}
-
-.navLi {
-  color: #444444;
-}
-
-//Navbar pageLi
-.pageLi {
-  cursor: pointer;
-}
-
-//////////=====
-.primaryColor {
-  color: #379cf4;
-}
-
-.mainColor {
-  color: #13304a;
-}
-
-.paraColor {
-  color: #53626f;
-}
-
-.whiteColor {
-  color: whitesmoke;
-}
-
-.pureWhite {
-  color: white;
-}
+//   &:hover {
+//     .hTitle {
+//       transform: scale(1.2);
+//       transition: all 0.3s ease-in-out;
+//       color: #369df4;
+//     }
+//     .hPara {
+//       color: #53626f;
+//     }
+//   }
+// }

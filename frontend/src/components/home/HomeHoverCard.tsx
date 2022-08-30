@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "../../styles/scss/home/HomeHoverCard.module.scss";
-import "swiper/css";
+import styles from "../../styles/scss/Home.module.scss";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import { motion } from "framer-motion";
+import "swiper/css";
 
 const HomeHoverCard = () => {
   return (
@@ -46,7 +46,7 @@ const HomeHoverCard = () => {
                 </p>
               </motion.div>
 
-              <button type="button" className="btn col-4 my-4  btn-primary">
+              <button type="button" className="btn col-4 my-4  customButton">
                 Primary
               </button>
             </div>
@@ -77,7 +77,7 @@ const HomeHoverCard = () => {
                 </p>
               </motion.div>
 
-              <button type="button" className="btn col-4 my-4 btn-primary">
+              <button type="button" className="btn col-4 my-4 customButton">
                 Primary
               </button>
             </div>
@@ -108,7 +108,7 @@ const HomeHoverCard = () => {
                 </p>
               </motion.div>
 
-              <button type="button" className="btn col-4 my-4 btn-primary">
+              <button type="button" className="btn col-4 my-4 customButton">
                 Primary
               </button>
             </div>
@@ -116,7 +116,7 @@ const HomeHoverCard = () => {
         </Swiper>
       </div>
 
-      {/* Heading and para */}
+      {/* Right   */}
       <motion.div
         animate={{ x: 350, opacity: 1 }}
         whileInView={{ x: [350, 0] }}
@@ -138,13 +138,13 @@ const HomeHoverCard = () => {
         <div className=" mt-4 ps-5 col">
           <button
             type="button"
-            className="btn btn-primary rounded-pill btn-lg px-4 "
+            className="btn customButton rounded-pill btn-lg px-4 "
           >
             All Treks
           </button>
           <button
             type="button"
-            className=" btn ms-3  btn-outline rounded-pill btn-lg px-4 "
+            className=" btn ms-3  btn-outline  customOutlineButton rounded-pill btn-lg px-4 "
           >
             The Team
           </button>

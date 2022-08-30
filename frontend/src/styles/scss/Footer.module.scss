@@ -8,9 +8,10 @@
 
     .facebook {
       background-color: #3b5899;
-      color: white;
-      padding: 13px 18px;
+
       cursor: pointer;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 
       &:hover {
         background-color: #379cf4;
@@ -18,8 +19,9 @@
     }
     .twitter {
       background-color: #3b8bcb;
-      padding: 13px 18px;
       cursor: pointer;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 
       &:hover {
         background-color: #379cf4;
@@ -27,8 +29,9 @@
     }
     .instagram {
       background-color: #474746;
-      padding: 13px 18px;
       cursor: pointer;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 
       &:hover {
         background-color: #379cf4;
@@ -36,8 +39,9 @@
     }
     .google {
       background-color: #d6463d;
-      padding: 13px 18px;
       cursor: pointer;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 
       &:hover {
         background-color: #379cf4;
@@ -51,19 +55,6 @@
   flex-direction: column;
 }
 
-.anchor {
-  color: #0d6efd;
-  cursor: pointer;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.para {
-  color: rgb(212, 211, 211);
-}
-
-.copy {
-  color: rgb(238, 237, 237);
+.navIcon {
+  font-size: 30px;
 }

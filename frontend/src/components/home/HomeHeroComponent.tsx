@@ -1,6 +1,3 @@
-import { motion } from "framer-motion";
-import styles from "../../styles/scss/home/HomeHeroComponent.module.scss";
-
 const HomeHeroComponent = () => {
   return (
     <div className="py-5">

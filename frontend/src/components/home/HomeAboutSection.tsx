@@ -1,17 +1,14 @@
 import React from "react";
 import Accordion from "../Accordion";
-import styles from "../../styles/scss/Home.module.scss";
 
 const HomeAboutSection = () => {
   return (
-    <div className={`${styles.aboutSection} container-fluid`}>
-      <div className="container px-5">
-        <div className="px-5">
-          <div className={styles.headingDiv}>
-            <span className=" h2 mainColor sHeading">ABOUT US</span>
-            <span className=" h5 mainColor py-4 sSubHeading">
-              We live for the nature
-            </span>
+    <div style={{ backgroundColor: "#eff3f6" }}>
+      <div className="container p-5">
+        <div className="p-5 ">
+          <div className="row mx-1 ">
+            <h1 className=" h1 fw-bolder mainColor ">ABOUT US</h1>
+            <h6 className=" h6 mainColor py-4 ">We live for the nature</h6>
           </div>
           <div className="row px-3">
             <div className="col paraColor col-lg-3.5">

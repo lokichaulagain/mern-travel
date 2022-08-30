@@ -1,130 +1,153 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAmbulance } from "@fortawesome/free-solid-svg-icons";
-// import styles from "../styles/scss/TopService.module.scss";
-import styles from "../../styles/scss/Home.module.scss"
-// import "../styles/scss/TopService.module.scss";
-
+import styles from "../../styles/scss/Home.module.scss";
+import { GiWalkingBoot, GiMountainRoad, GiWaterfall } from "react-icons/gi";
+import { BsFlower2, BsGlobe } from "react-icons/bs";
+import { FaRegFlag } from "react-icons/fa";
+import { MdOutlineEditLocationAlt, MdShareLocation } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const HomeTopService = () => {
   return (
-    <div className={`${styles.topService} container-fluid`}>
-      <div className="container px-5">
+    <div style={{ backgroundColor: "#fefeff" }} className="py-5">
+      <div className="container p-5">
         <div className=" px-5">
           <div className="row px-3">
-            <div className={styles.headingDiv}>
-              <span className="heading1">TOP SERVICE</span>
-
-              <span className="heading2">We provide the best experience</span>
+            <div className="row">
+              <h2 className="h2 fw-bolder mainColor">TOP SERVICE</h2>
+              <h6 className="h6 mainColor my-3">
+                We provide the best experience
+              </h6>
             </div>
 
             <div className="row">
               <div className={`${styles.borderBottomRight} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <GiWalkingBoot
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Experienced team</h5>
-                  <p className="card-text">
+
+                  <h5 className="h5 mainColor pt-3 pb-2">Experienced team</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
 
-              {/* <div className="vr" style={{height:"100px", width:" 1px "}}></div> */}
               <div className={`${styles.borderBottomRight} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <BsFlower2
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Easy joining</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">Easy joining</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
-              {/* <div className="vr"></div> */}
+
               <div className={`${styles.borderBottomRight} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <GiMountainRoad
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Expert Hikers</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">Expert Hikers</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
-              {/* <div className="vr"></div> */}
+
               <div className={`${styles.noBorder} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <MdShareLocation
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Secret locations</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">Secret locations</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
 
-            {/* <hr /> */}
             <div className="row">
               <div className={`${styles.borderLeft} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <FaRegFlag
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Europe locations</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">Europe locations</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
-              {/* <div className="vr"    ></div> */}
+
               <div className={`${styles.borderLeft} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <MdOutlineEditLocationAlt
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Visit us</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">Visit us</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
-              {/* <div className="vr"/> */}
+
               <div className={`${styles.borderLeft} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <BsGlobe
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">United States</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">United States</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
-              {/* <div className="vr"></div> */}
+
               <div className={`${styles.borderTop} col`}>
-                <div className={`${styles.hover}`}>
-                  <FontAwesomeIcon
-                    className={styles.boxIcon}
-                    icon={faAmbulance}
+                <motion.div
+                  whileHover={{ scale: 0.9 }}
+                  className={styles.iconDiv}
+                >
+                  <GiWaterfall
+                    className="primaryColor"
+                    style={{ fontSize: "50px" }}
                   />
-                  <h5 className="card-title">Great waterfall</h5>
-                  <p className="card-text">
+                  <h5 className="h5 mainColor pt-3 pb-2">Great waterfall</h5>
+                  <p className="lh-base paraColor">
                     Some quick example text to build on the card title and
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
