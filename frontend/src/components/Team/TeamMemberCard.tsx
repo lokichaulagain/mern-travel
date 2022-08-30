@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import person1 from "../../../public/person/1.avif";
-import styles from "../../styles/scss/team/TeamMemberCard.module.scss";
+import styles from "../../styles/scss/Team.module.scss";
 import { motion } from "framer-motion";
-
 
 const TeamMemberCard = () => {
   return (
@@ -20,15 +19,15 @@ const TeamMemberCard = () => {
               />
 
               <div className="col-7">
-                <h3 className="h3">Lokendra Chaulagain</h3>
-                <h6 className="h6">MERN Dtack Developer</h6>
-                <p className={` ${styles.para}`}>
+                <h3 className="h3 mainColor">Lokendra Chaulagain</h3>
+                <h6 className="h6 mainColor">MERN Dtack Developer</h6>
+                <p className="paraColor">
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
 
-                <a className={styles.link} href={"https://www.facebook.com"}>
+                <a className="link" href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>
@@ -46,14 +45,14 @@ const TeamMemberCard = () => {
 
               {/* </div> */}
               <div className="col-7">
-                <h3 className="h3">Lokendra Chaulagain</h3>
-                <h6 className="h6">MERN Dtack Developer</h6>
-                <p className={` ${styles.para}`}>
+                <h3 className="h3 mainColor">Lokendra Chaulagain</h3>
+                <h6 className="h6 mainColor">MERN Dtack Developer</h6>
+                <p className="paraColor">
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
-                <a className={styles.link} href={"https://www.facebook.com"}>
+                <a className="link" href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>
@@ -70,14 +69,14 @@ const TeamMemberCard = () => {
                 alt="..."
               />
               <div className="col-7">
-                <h3 className="h3">Lokendra Chaulagain</h3>
-                <h6 className="h6">MERN Dtack Developer</h6>
-                <p className={` ${styles.para}`}>
+                <h3 className="h3 mainColor">Lokendra Chaulagain</h3>
+                <h6 className="h6 mainColor">MERN Dtack Developer</h6>
+                <p className="paraColor">
                   This is some placeholder content for the custom component. It
                   is intended to mimic what some real-world content would look
                   like,
                 </p>
-                <a className={styles.link} href={"https://www.facebook.com"}>
+                <a className="link" href={"https://www.facebook.com"}>
                   Social Link
                 </a>
               </div>
@@ -103,14 +102,14 @@ const TeamMemberCard = () => {
                   alt="..."
                 />
                 <div className="col-7">
-                  <h3 className="h3">Lokendra Chaulagain</h3>
-                  <h6 className="h6">MERN Dtack Developer</h6>
+                  <h3 className="h3 mainColor">Lokendra Chaulagain</h3>
+                  <h6 className="h6 mainColor">MERN Dtack Developer</h6>
                   <p className={` ${styles.para}`}>
                     This is some placeholder content for the custom component.
                     It is intended to mimic what some real-world content would
                     look like,
                   </p>
-                  <a className={styles.link} href={"https://www.facebook.com"}>
+                  <a className="link" href={"https://www.facebook.com"}>
                     Social Link
                   </a>
                 </div>

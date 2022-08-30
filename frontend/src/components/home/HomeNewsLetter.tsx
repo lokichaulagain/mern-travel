@@ -7,10 +7,10 @@ const HomeNewsLetter = () => {
         <div className="container p-5">
           <div className="row ">
             <div className="row">
-              <span className="h2 fw-bolder mainColor">NEWSLETTER</span>
-              <span className="h5 paraColor mt-3 mb-5">
+              <h2 className="h2 fw-bolder mainColor">NEWSLETTER</h2>
+              <h6 className="h6 mainColor mt-3 mb-5">
                 Subscribe now to our newsletter
-              </span>
+              </h6>
             </div>
 
             <div className="col col-lg-4">
