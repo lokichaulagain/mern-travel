@@ -1,51 +1,13 @@
-//TrekCategoryNavbar===================
-.navWrapper {
-  background-color: #eef2f6;
-
-  .h5 {
-    font-weight: 700;
-  }
-}
-
-//TrekServiceSection
-.serviceWrapper {
-  background-color: #eef2f6;
+//serviceSection
+.serviceContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .serviceIcon {
   font-size: 50px;
-  cursor: pointer;
   color: #369df4;
-}
-
-// TrekCardWrapper===============================
-.wrapper {
-  background-color: #eef2f6;
-  .card {
-    border: none;
-  }
-}
-
-.smallCard {
-  background-color: #12314a;
-
-  .h5 {
-    color: #369df4;
-  }
-
-  .h6 {
-    color: whitesmoke;
-  }
-}
-
-.cardLink {
-  color: #369df4;
-  cursor: pointer;
-}
-
-// trekContactusCard=================================
-.contactusWrapper {
-  background-color: #eef2f6;
 }
 
 //Treks page Image Section

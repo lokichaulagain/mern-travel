@@ -1,30 +1,27 @@
-import styles from "../../styles/scss/Treks.module.scss";
-
 const TreksContactusCard = () => {
   return (
-    <div className={`${styles.contactusWrapper}`}>
+    <div className="  container my-5 px-5">
       <div className="container px-5">
-        <div className="container px-5">
-          <div className="card-group px-3">
-            <div className="container ">
-              <div
-                className="card px-5 py-4"
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <div className="card-body">
-                  <h5 className="card-title">Booking and contacts</h5>
-                  <p className="card-text">
-                    Would you like more info about other trips or you want to
-                    book a special excursion?
-                  </p>
+        <div className="row px-3">
+          <div className="container px-3">
+            <div className="card  shadow-lg border-0 px-4  py-4">
+              <div className="row">
+                <div className="col-10">
+                  <div className="card-body">
+                    <h3 className=" h3 mainColor fw-semibold">
+                      Booking and contacts
+                    </h3>
+                    <p className=" paraColor text-muted ">
+                      Would you like more info about other trips or you want to
+                      book a special excursion?
+                    </p>
+                  </div>
                 </div>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
+                <div className="col-2 d-flex align-self-center  ">
+                  <a href="#" className="btn  customButton px-4 py-2">
+                    Contact us
+                  </a>
+                </div>
               </div>
             </div>
           </div>
