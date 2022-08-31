@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../public/images/logo1.svg";
 import LogoBlack from "../../public/images/logoBlack.svg";
-import styles from "../styles/scss/Navbar.module.scss";
 
 const Navbar = () => {
   return (
@@ -49,35 +48,35 @@ const Navbar = () => {
                         PAGES
                       </a>
                       <ul className="dropdown-menu">
-                        <Link href={"/team"}>
-                          <li>
+                        <li>
+                          <Link href={"/team"}>
                             <a className="dropdown-item ">TEAM</a>
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
 
-                        <Link href={"/shelter"}>
-                          <li className="pageLi">
+                        <li className="pageLi">
+                          <Link href={"/shelter"}>
                             <a className="dropdown-item ">SHELTERS</a>
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
 
-                        <Link href={"/history"}>
-                          <li className="pageLi">
+                        <li className="pageLi">
+                          <Link href={"/history"}>
                             <a className="dropdown-item">HISTORY</a>
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
 
-                        <Link href={"/price"}>
-                          <li className="pageLi">
+                        <li className="pageLi">
+                          <Link href={"/price"}>
                             <a className="dropdown-item">PRICES</a>
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
 
-                        <Link href={"/events"}>
-                          <li className="pageLi">
+                        <li className="pageLi">
+                          <Link href={"/events"}>
                             <a className="dropdown-item">EVENTS</a>
-                          </li>
-                        </Link>
+                          </Link>
+                        </li>
 
                         <li className="pageLi">
                           <a className="dropdown-item">GALLERY</a>
