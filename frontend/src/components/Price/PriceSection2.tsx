@@ -15,12 +15,12 @@ const PriceSection2 = () => {
         <div className="container p-5">
           <div className="row px-3">
             <div className="col-7">
-              <h2 className="h2  customH2">BOOK YOUR TOUR</h2>
-              <h6 className=" h6 pt-3 pb-4 customH6">
+              <h2 className="h2 mainColor  fw-bolder">BOOK YOUR TOUR</h2>
+              <h6 className=" h6 pt-3  pb-4 mainColor">
                 Contact us for tour booking
               </h6>
 
-              <p className="h6 customP  pb-4 lh-lg">
+              <p className=" paraColor  pb-4 lh-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
                 est itaque ab. Molestias perspiciatis, iste nemo optio
                 laudantium, reprehenderit at velit et officia nisi, sint
@@ -35,7 +35,7 @@ const PriceSection2 = () => {
               </button>
             </div>
 
-            <div className="col-5" >
+            <div className="col-5">
               <Swiper
                 slidesPerView={2}
                 spaceBetween={5}
@@ -67,7 +67,6 @@ const PriceSection2 = () => {
                   </div>
                 </SwiperSlide>
 
-
                 <SwiperSlide>
                   <div
                     style={{
@@ -105,9 +104,6 @@ const PriceSection2 = () => {
                     />
                   </div>
                 </SwiperSlide>
-           
-               
-             
               </Swiper>
             </div>
           </div>

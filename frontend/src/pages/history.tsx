@@ -4,7 +4,7 @@ import HeroComponent from "../components/HeroComponent";
 import HistorySection1 from "../components/History/HistorySection1";
 import HistorySection2Slider from "../components/History/HistorySection2Slider";
 import Navbar from "../components/Navbar";
-import styles from "../styles/scss/history/History.module.scss";
+import styles from "../styles/scss/History.module.scss";
 
 export default function History() {
   return (

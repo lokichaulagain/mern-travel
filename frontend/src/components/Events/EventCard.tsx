@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import img3 from "../../public/images/3.jpeg";
-import EventImageCard from "./Events/EventImageCard";
-import styles from "../styles/scss/event/EventCard.module.scss";
+import img3 from "../../../public/images/3.jpeg";
+import EventImageCard from "./EventImageCard";
 import { FaSearchLocation } from "react-icons/fa";
 import { TbMessages } from "react-icons/tb";
 import { RiCalendar2Fill } from "react-icons/ri";
@@ -22,15 +21,18 @@ const EventCard = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h2 className={`${styles.h2} h2 fw-semibold`}>
+                      <h2 className="mainColor h2 fw-semibold">
                         Sunshine and wine
                       </h2>
-                      <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
-                        October 2019 at 8.00 PM
+                      <h6 className="mainColor h6 pt-2 pb-3">
+                        <RiCalendar2Fill
+                          className="primaryColor"
+                          style={{ fontSize: "20px" }}
+                        />{" "}
+                        01 October 2019 at 8.00 PM
                       </h6>
                       <hr />
-                      <p className={`${styles.para} lh-lg `}>
+                      <p className="paraColor lh-lg ">
                         Lorem ipsum dolor sit amet consectetur adipiscing
                         elitsed do eiusmod tempor incididunt utlabore et dolore
                         magna aliqua. Utenim ad minim veniam quis nostrud
@@ -50,15 +52,18 @@ const EventCard = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h2 className={`${styles.h2} h2 fw-semibold`}>
+                      <h2 className="mainColor h2 fw-semibold">
                         Sunshine and wine
                       </h2>
-                      <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
-                        October 2019 at 8.00 PM
+                      <h6 className="mainColor h6 pt-2 pb-3">
+                        <RiCalendar2Fill
+                          className="primaryColor"
+                          style={{ fontSize: "20px" }}
+                        />{" "}
+                        01 October 2019 at 8.00 PM
                       </h6>
                       <hr />
-                      <p className={`${styles.para} lh-lg `}>
+                      <p className="paraColor lh-lg ">
                         Lorem ipsum dolor sit amet consectetur adipiscing
                         elitsed do eiusmod tempor incididunt utlabore et dolore
                         magna aliqua. Utenim ad minim veniam quis nostrud
@@ -78,15 +83,18 @@ const EventCard = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h2 className={`${styles.h2} h2 fw-semibold`}>
+                      <h2 className="mainColor h2 fw-semibold">
                         Sunshine and wine
                       </h2>
-                      <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
-                        October 2019 at 8.00 PM
+                      <h6 className="mainColor h6 pt-2 pb-3">
+                        <RiCalendar2Fill
+                          className="primaryColor"
+                          style={{ fontSize: "20px" }}
+                        />{" "}
+                        01 October 2019 at 8.00 PM
                       </h6>
                       <hr />
-                      <p className={`${styles.para} lh-lg `}>
+                      <p className="paraColor lh-lg ">
                         Lorem ipsum dolor sit amet consectetur adipiscing
                         elitsed do eiusmod tempor incididunt utlabore et dolore
                         magna aliqua. Utenim ad minim veniam quis nostrud
@@ -106,15 +114,18 @@ const EventCard = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h2 className={`${styles.h2} h2 fw-semibold`}>
+                      <h2 className="mainColor h2 fw-semibold">
                         Sunshine and wine
                       </h2>
-                      <h6 className={`${styles.h6} h6 pt-2 pb-3`}>
-                        <RiCalendar2Fill className={`${styles.iconSm}`} /> 01
-                        October 2019 at 8.00 PM
+                      <h6 className="mainColor h6 pt-2 pb-3">
+                        <RiCalendar2Fill
+                          className="primaryColor"
+                          style={{ fontSize: "20px" }}
+                        />{" "}
+                        01 October 2019 at 8.00 PM
                       </h6>
                       <hr />
-                      <p className={`${styles.para} lh-lg `}>
+                      <p className="paraColor lh-lg ">
                         Lorem ipsum dolor sit amet consectetur adipiscing
                         elitsed do eiusmod tempor incididunt utlabore et dolore
                         magna aliqua. Utenim ad minim veniam quis nostrud
@@ -127,6 +138,7 @@ const EventCard = () => {
               {/*  */}
             </div>
 
+            {/*Two  Icon Card */}
             <div className="col ">
               <div className="gap-5">
                 <EventImageCard />
@@ -136,9 +148,12 @@ const EventCard = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <FaSearchLocation className={`${styles.iconLg}`} />
-                    <h5 className={`${styles.h5} h5 pt-3`}>Event organizers</h5>
-                    <p className={`${styles.para} card-text lh-base pt-1`}>
+                    <FaSearchLocation
+                      className="primaryColor"
+                      style={{ fontSize: "45px" }}
+                    />
+                    <h5 className="mainColor h5 pt-3">Event organizers</h5>
+                    <p className="paraColor card-text lh-base pt-1">
                       We are searching for event organizers
                     </p>
                   </div>
@@ -150,9 +165,12 @@ const EventCard = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <TbMessages className={`${styles.iconLg}`} />
-                    <h5 className={`${styles.h5} h5 pt-3`}>Need help?</h5>
-                    <p className={`${styles.para} card-text lh-base pt-1`}>
+                    <TbMessages
+                      className="primaryColor"
+                      style={{ fontSize: "45px" }}
+                    />
+                    <h5 className="mainColor h5 pt-3">Need help?</h5>
+                    <p className="paraColor card-text lh-base pt-1">
                       Contact us if have any event inquery
                     </p>
                   </div>

@@ -12,8 +12,6 @@ const Accordion = () => {
             data-bs-target="#flush-collapseOne"
             aria-expanded="false"
             aria-controls="flush-collapseOne"
-            
-          
           >
             Our mountains and our location
           </button>
@@ -26,11 +24,10 @@ const Accordion = () => {
         >
           <div className="accordion-body">
             <p className="paraColor">
-            Placeholder content for this accordion, which is intended to
-            demonstrate the <code>.accordion-flush</code> class. This is the
-            first accordion body.
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              first accordion body.
             </p>
-          
           </div>
         </div>
       </div>
@@ -54,11 +51,11 @@ const Accordion = () => {
           data-bs-parent="#accordionFlushExample"
         >
           <div className="accordion-body">
-          <p className="paraColor">
-            Placeholder content for this accordion, which is intended to
-            demonstrate the <code>.accordion-flush</code> class. This is the
-            second accordion body. imagine this being filled with some actual
-            content.
+            <p className="paraColor">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              second accordion body. imagine this being filled with some actual
+              content.
             </p>
           </div>
         </div>
@@ -83,13 +80,13 @@ const Accordion = () => {
           data-bs-parent="#accordionFlushExample"
         >
           <div className="accordion-body">
-          <p className="paraColor">
-            Placeholder content for this accordion, which is intended to
-            demonstrate the <code>.accordion-flush</code> class. This is the
-            third accordion body. Nothing more exciting happening here in terms
-            of content, but just filling up the space to make it look, at least
-            at first glance, a bit more representative of how this would look in
-            a real-world application.
+            <p className="paraColor">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              third accordion body. Nothing more exciting happening here in
+              terms of content, but just filling up the space to make it look,
+              at least at first glance, a bit more representative of how this
+              would look in a real-world application.
             </p>
           </div>
         </div>

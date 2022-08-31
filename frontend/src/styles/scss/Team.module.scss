@@ -6,19 +6,9 @@
   background-attachment: fixed;
 }
 
-//teamCard
-.teamImg {
-  object-fit: cover;
-}
-
 //serviceSection
 .serviceContainer {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.serviceIcon {
-  font-size: 50px;
-  color: #369df4;
 }

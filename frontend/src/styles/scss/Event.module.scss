@@ -1,0 +1,14 @@
+.bg {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../../../public//images/trek.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+//event card right side card
+.cardBg {
+  background-image: url("../../../public/images/eventPerson.jpg");
+  background-size: cover;
+  background-position: center;
+}

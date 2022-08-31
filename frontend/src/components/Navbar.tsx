@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/images/logo1.svg";
 import LogoBlack from "../../public/images/logoBlack.svg";
 
 const Navbar = () => {

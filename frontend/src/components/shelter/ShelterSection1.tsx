@@ -33,7 +33,7 @@ const ShelterSection1 = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <MdDinnerDining className={`${styles.iconLg}`} />
+                    <MdDinnerDining className="iconLg" />
                     <h4 className="mainColor h4  pt-3">Event organizers</h4>
                     <p className="paraColor card-text lh-base pt-1">
                       We are searching for event organizers
@@ -48,7 +48,7 @@ const ShelterSection1 = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <GiRunningShoe className={`${styles.iconLg}`} />
+                    <GiRunningShoe className="iconLg" />
                     <h4 className="mainColor h4 pt-3">Breakfast</h4>
                     <p className="paraColor card-text lh-base pt-1">
                       Take a break in our refuges and hunts.
@@ -63,7 +63,7 @@ const ShelterSection1 = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <FaSearchLocation className={`${styles.iconLg}`} />
+                    <FaSearchLocation className="iconLg" />
                     <h4 className="mainColor h4 pt-3">Trekking</h4>
                     <p className="paraColor card-text lh-base pt-1">
                       Lots of refuges through the paths and treks
@@ -78,7 +78,7 @@ const ShelterSection1 = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <FaCaravan className={`${styles.iconLg}`} />
+                    <FaCaravan className="iconLg" />
                     <h4 className="mainColor h4 pt-3">Cable car</h4>
                     <p className="paraColor card-text lh-base pt-1">
                       Try the many panoramic cable cars
@@ -93,7 +93,7 @@ const ShelterSection1 = () => {
                   style={{ width: "18rem" }}
                 >
                   <div className="card-body">
-                    <FaSearchLocation className={`${styles.iconLg}`} />
+                    <FaSearchLocation className="iconLg" />
                     <h4 className="mainColor h4 pt-3">Views </h4>
                     <p className="paraColor card-text lh-base pt-1">
                       Enjoy amazing and unique natural views

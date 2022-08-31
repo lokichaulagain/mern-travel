@@ -18,9 +18,7 @@ const TreksServiceCard = () => {
                   className={`${styles.serviceContainer} col gap-4`}
                 >
                   <motion.div whileInView={{ y: [null, 50, 0] }}>
-                    <FaParachuteBox
-                      className={`${styles.serviceIcon} mb-3  `}
-                    />
+                    <FaParachuteBox className="iconLg mb-3" />
                   </motion.div>
                   <div className="col">
                     <h5 className="h5 mainColor">Experienced team</h5>
@@ -35,7 +33,7 @@ const TreksServiceCard = () => {
                   className={`${styles.serviceContainer} col gap-4`}
                 >
                   <motion.div whileInView={{ y: [null, 50, 0] }}>
-                    <BiBarChart className={`${styles.serviceIcon} mb-3  `} />
+                    <BiBarChart className="iconLg mb-3" />
                   </motion.div>
                   <div className="col">
                     <h5 className="h5 mainColor">Career opportunities</h5>
@@ -50,7 +48,7 @@ const TreksServiceCard = () => {
                   className={`${styles.serviceContainer} col gap-4`}
                 >
                   <motion.div whileInView={{ y: [null, 50, 0] }}>
-                    <GiBee className={`${styles.serviceIcon} mb-3  `} />
+                    <GiBee className="iconLg mb-3" />
                   </motion.div>
                   <div className="col">
                     <h5 className="h5 mainColor">Meet amazing people</h5>

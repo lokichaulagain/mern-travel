@@ -13,7 +13,7 @@ const TreksCardSection = () => {
           >
             <li className="nav-item" role="presentation">
               <button
-                className="btn categoryButton active"
+                className="btn shelterButton btn-lg   shadow-lg active"
                 id="pills-all-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-all"
@@ -27,7 +27,7 @@ const TreksCardSection = () => {
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="btn categoryButton"
+                className="btn shelterButton btn-lg   shadow-lg"
                 id="pills-hiking-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-hiking"
@@ -41,7 +41,7 @@ const TreksCardSection = () => {
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="btn categoryButton"
+                className="btn shelterButton btn-lg   shadow-lg"
                 id="pills-treking-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-treking"
@@ -55,7 +55,7 @@ const TreksCardSection = () => {
             </li>
             <li className="nav-item" role="presentation">
               <button
-                className="btn categoryButton"
+                className="btn shelterButton btn-lg   shadow-lg"
                 id="pills-canyoning-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-canyoning"
@@ -70,7 +70,7 @@ const TreksCardSection = () => {
 
             <li className="nav-item" role="presentation">
               <button
-                className="btn categoryButton"
+                className="btn shelterButton btn-lg   shadow-lg"
                 id="pills-adventure-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-adventure"

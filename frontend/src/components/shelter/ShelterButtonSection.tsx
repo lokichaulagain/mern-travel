@@ -104,45 +104,31 @@ const ShelterButtonSection = () => {
                     className="mySwiper"
                   >
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img} py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className=" py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
                   </Swiper>
                 </div>
 
                 <div className="col pt-3">
-                  <h2 className={`${styles.color} h2 fw-bold`}>LILLA REFUGE</h2>
-                  <h6 className={`${styles.color} h5 pt-3 pb-4`}>
-                    Nevegal Mountain
-                  </h6>
-                  <p className={`${styles.color} pt-2`}>
+                  <h2 className="mainColor h2 fw-bold">LILLA REFUGE</h2>
+                  <h6 className="mainColor h5 pt-3 pb-4">Nevegal Mountain</h6>
+                  <p className="mainColor pt-2">
                     Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                     eiusmod tempor incididunt utlabore et dolore magna aliqua.
                     Utenim ad minim veniam quis nostrud exercitatio.
                   </p>
-                  <div className={`${styles.color} row pt-4`}>
-                    <h6 className={`${styles.color} col h6`}>Nevegal</h6>
-                    <h6 className={`${styles.color} col h6`}>1250 m</h6>
-                    <h6 className={`${styles.color} col h6`}>$40 per night</h6>
+                  <div className="mainColor row pt-4">
+                    <h6 className="mainColor col h6">Nevegal</h6>
+                    <h6 className="mainColor col h6">1250 m</h6>
+                    <h6 className="mainColor col h6">$40 per night</h6>
                   </div>
                 </div>
               </div>
@@ -164,7 +150,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -172,7 +158,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -180,7 +166,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -188,7 +174,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -196,7 +182,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -237,45 +223,31 @@ const ShelterButtonSection = () => {
                     className="mySwiper"
                   >
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img} py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className=" py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
                   </Swiper>
                 </div>
 
                 <div className="col pt-3">
-                  <h2 className={`${styles.color} h2 fw-bold`}>LILLA REFUGE</h2>
-                  <h6 className={`${styles.color} h5 pt-3 pb-4`}>
-                    Nevegal Mountain
-                  </h6>
-                  <p className={`${styles.color} pt-2`}>
+                  <h2 className="mainColor h2 fw-bold">LILLA REFUGE</h2>
+                  <h6 className="mainColor h5 pt-3 pb-4">Nevegal Mountain</h6>
+                  <p className="mainColor pt-2">
                     Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                     eiusmod tempor incididunt utlabore et dolore magna aliqua.
                     Utenim ad minim veniam quis nostrud exercitatio.
                   </p>
-                  <div className={`${styles.color} row pt-4`}>
-                    <h6 className={`${styles.color} col h6`}>Nevegal</h6>
-                    <h6 className={`${styles.color} col h6`}>1250 m</h6>
-                    <h6 className={`${styles.color} col h6`}>$40 per night</h6>
+                  <div className="mainColor row pt-4">
+                    <h6 className="mainColor col h6">Nevegal</h6>
+                    <h6 className="mainColor col h6">1250 m</h6>
+                    <h6 className="mainColor col h6">$40 per night</h6>
                   </div>
                 </div>
               </div>
@@ -297,7 +269,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -305,7 +277,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -313,7 +285,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -321,7 +293,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -329,7 +301,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -370,45 +342,31 @@ const ShelterButtonSection = () => {
                     className="mySwiper"
                   >
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img} py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className=" py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
                   </Swiper>
                 </div>
 
                 <div className="col pt-3">
-                  <h2 className={`${styles.color} h2 fw-bold`}>LILLA REFUGE</h2>
-                  <h6 className={`${styles.color} h5 pt-3 pb-4`}>
-                    Nevegal Mountain
-                  </h6>
-                  <p className={`${styles.color} pt-2`}>
+                  <h2 className="mainColor h2 fw-bold">LILLA REFUGE</h2>
+                  <h6 className="mainColor h5 pt-3 pb-4">Nevegal Mountain</h6>
+                  <p className="mainColor pt-2">
                     Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                     eiusmod tempor incididunt utlabore et dolore magna aliqua.
                     Utenim ad minim veniam quis nostrud exercitatio.
                   </p>
-                  <div className={`${styles.color} row pt-4`}>
-                    <h6 className={`${styles.color} col h6`}>Nevegal</h6>
-                    <h6 className={`${styles.color} col h6`}>1250 m</h6>
-                    <h6 className={`${styles.color} col h6`}>$40 per night</h6>
+                  <div className="mainColor row pt-4">
+                    <h6 className="mainColor col h6">Nevegal</h6>
+                    <h6 className="mainColor col h6">1250 m</h6>
+                    <h6 className="mainColor col h6">$40 per night</h6>
                   </div>
                 </div>
               </div>
@@ -430,7 +388,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -438,7 +396,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -446,7 +404,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -454,7 +412,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -462,7 +420,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -503,45 +461,31 @@ const ShelterButtonSection = () => {
                     className="mySwiper"
                   >
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img} py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className=" py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
 
                     <SwiperSlide>
-                      <Image
-                        src={person1}
-                        className={`${styles.img}  py-4`}
-                        alt="..."
-                      />
+                      <Image src={person1} className="  py-4" alt="..." />
                     </SwiperSlide>
                   </Swiper>
                 </div>
 
                 <div className="col pt-3">
-                  <h2 className={`${styles.color} h2 fw-bold`}>LILLA REFUGE</h2>
-                  <h6 className={`${styles.color} h5 pt-3 pb-4`}>
-                    Nevegal Mountain
-                  </h6>
-                  <p className={`${styles.color} pt-2`}>
+                  <h2 className="mainColor h2 fw-bold">LILLA REFUGE</h2>
+                  <h6 className="mainColor h5 pt-3 pb-4">Nevegal Mountain</h6>
+                  <p className="mainColor pt-2">
                     Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
                     eiusmod tempor incididunt utlabore et dolore magna aliqua.
                     Utenim ad minim veniam quis nostrud exercitatio.
                   </p>
-                  <div className={`${styles.color} row pt-4`}>
-                    <h6 className={`${styles.color} col h6`}>Nevegal</h6>
-                    <h6 className={`${styles.color} col h6`}>1250 m</h6>
-                    <h6 className={`${styles.color} col h6`}>$40 per night</h6>
+                  <div className="mainColor row pt-4">
+                    <h6 className="mainColor col h6">Nevegal</h6>
+                    <h6 className="mainColor col h6">1250 m</h6>
+                    <h6 className="mainColor col h6">$40 per night</h6>
                   </div>
                 </div>
               </div>
@@ -564,7 +508,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -572,7 +516,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -580,7 +524,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -588,7 +532,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>
@@ -596,7 +540,7 @@ const ShelterButtonSection = () => {
                     <SwiperSlide>
                       <Image
                         src={person1}
-                        className={`${styles.img} rounded py-2`}
+                        className=" rounded py-2"
                         alt="..."
                       />
                     </SwiperSlide>

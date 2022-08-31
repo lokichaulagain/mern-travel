@@ -6,7 +6,10 @@ const ShelterAvailabilityForm = () => {
           <div className="row py-3 px-3">
             <div className=" row">
               <div className="mb-3 col">
-                <label htmlFor="exampleInputEmail1" className="form-label mainColor">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="form-label mainColor h6"
+                >
                   Name
                 </label>
                 <input
@@ -19,7 +22,10 @@ const ShelterAvailabilityForm = () => {
               </div>
 
               <div className="mb-3 col">
-                <label htmlFor="exampleInputEmail1" className="form-label mainColor">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="form-label mainColor h6"
+                >
                   Email
                 </label>
                 <input
@@ -32,7 +38,10 @@ const ShelterAvailabilityForm = () => {
               </div>
 
               <div className="mb-3 col">
-                <label htmlFor="exampleInputEmail1" className="form-label mainColor">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="form-label mainColor h6"
+                >
                   Checkin
                 </label>
                 <input
@@ -40,12 +49,15 @@ const ShelterAvailabilityForm = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Checkin"
+                  placeholder="Checkin "
                 />
               </div>
 
               <div className="mb-3 col">
-                <label htmlFor="exampleInputEmail1" className="form-label mainColor">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="form-label mainColor h6"
+                >
                   Checkout
                 </label>
                 <input
@@ -58,7 +70,10 @@ const ShelterAvailabilityForm = () => {
               </div>
 
               <div className="mb-3 col">
-                <label htmlFor="exampleInputEmail1" className="form-label mainColor">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="form-label mainColor h6"
+                >
                   Guests
                 </label>
 
@@ -66,7 +81,7 @@ const ShelterAvailabilityForm = () => {
                   className="form-select"
                   aria-label="Default select example"
                 >
-                  <option selected>select number</option>
+                  <option value="">select number</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -78,7 +93,7 @@ const ShelterAvailabilityForm = () => {
 
             <div className="row">
               <div className="col-4 ">
-                <a className="p-1 rounded" href="#simple-list-item-1">
+                <a className="p-1 rounded link" href="#simple-list-item-1">
                   Check availability
                 </a>
               </div>
@@ -92,7 +107,7 @@ const ShelterAvailabilityForm = () => {
                     id="flexCheckDefault"
                   />
                   <label
-                    className="form-check-label"
+                    className="form-check-label paraColor text-muted"
                     htmlFor="flexCheckDefault"
                   >
                     By click subscribe you accept the terms of service and the

@@ -1,6 +1,6 @@
 import React from 'react'
-import ShelterAvailabilityForm from '../components/ShelterAvailabilityForm'
-import ShelterLocation from '../components/ShelterLocation'
+import ShelterAvailabilityForm from '../components/shelter/ShelterAvailabilityForm'
+import ShelterLocation from '../components/shelter/ShelterLocation'
 
 function Shelters() {
   return (

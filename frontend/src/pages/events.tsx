@@ -1,9 +1,9 @@
 import React from "react";
-import EventCard from "../components/EventCard";
+import EventCard from "../components/Events/EventCard";
 import Footer from "../components/Footer";
 import HeroComponent from "../components/HeroComponent";
 import Navbar from "../components/Navbar";
-import styles from "../styles/scss/event/Event.module.scss";
+import styles from "../styles/scss/Event.module.scss";
 
 function events() {
   return (
