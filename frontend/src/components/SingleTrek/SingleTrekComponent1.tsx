@@ -1,10 +1,6 @@
 import Image from "next/image";
 import person1 from "../../../public/person/1.avif";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAmbulance } from "@fortawesome/free-solid-svg-icons";
-import styles from "../../styles/scss/singleTrek/SingleTrekComponent1.module.scss";
-
 const SingleTrekComponent1 = () => {
   return (
     <div style={{ backgroundColor: "white" }}>
@@ -12,7 +8,7 @@ const SingleTrekComponent1 = () => {
         <div className="container p-5">
           <div className="row  px-2">
             <div className="col">
-              <p className={`${styles.para} lh-lg `}>
+              <p className="mainColor lh-lg ">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Laboriosam porro optio sapiente ad velit, possimus nesciunt sed
                 ducimus magnam molestias fugit incidunt dolore! Laborum
@@ -26,18 +22,14 @@ const SingleTrekComponent1 = () => {
             <div className="col ">
               <div className="row">
                 <div className="col-5">
-                  <Image
-                    src={person1}
-                    className={`${styles.personImg}  flex-shrink-0 me-3`}
-                    alt="..."
-                  />
+                  <Image src={person1} alt="..." />
                 </div>
 
                 <div className="col-7">
-                  <h3 className={`${styles.color} h3`}>Mountain guide</h3>
-                  <h6 className={`${styles.color} h6`}>Lokendra Chaulagain</h6>
+                  <h3 className="mainColor h3">Mountain guide</h3>
+                  <h6 className="mainColor h6">Lokendra Chaulagain</h6>
                   <hr />
-                  <p className={`${styles.para} lh-lg`}>
+                  <p className="mainColor lh-lg">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto laborum.
                   </p>
@@ -62,13 +54,13 @@ const SingleTrekComponent1 = () => {
               <div className="col">
                 <div className="row">
                   <div className="col">
-                    <h5 className={`${styles.color} h5`}>Nationality</h5>
-                    <p className={`${styles.color} `}>Nepali</p>
+                    <h5 className="mainColor h5">Nationality</h5>
+                    <p className="mainColor ">Nepali</p>
                   </div>
 
                   <div className="col">
-                    <h5 className={`${styles.color} h5`}>Language</h5>
-                    <p className={`${styles.color} `}>English</p>
+                    <h5 className="mainColor h5">Language</h5>
+                    <p className="mainColor ">English</p>
                   </div>
                 </div>
               </div>

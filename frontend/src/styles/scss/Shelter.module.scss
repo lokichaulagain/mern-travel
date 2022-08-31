@@ -1,8 +1,13 @@
 .shelter {
   background-image: linear-gradient(rgba(15, 23, 54, 0.7), rgba(4, 9, 30, 0.7)),
-    url("../../../../public/images/food.jpg");
+    url("../../../public/images/food.jpg");
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.iconLg {
+  color: #379cf4;
+  font-size: 46px;
 }

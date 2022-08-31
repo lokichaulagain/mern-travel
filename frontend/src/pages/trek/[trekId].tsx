@@ -6,7 +6,7 @@ import SingleTrekCenterContent from "../../components/SingleTrek/SingleTrekCente
 import SingleTrekComponent1 from "../../components/SingleTrek/SingleTrekComponent1";
 import SingleTrekSection2 from "../../components/SingleTrek/SingleTrekSection2";
 import SingleTrekSection3 from "../../components/SingleTrek/SingleTrekSection3";
-import styles from "../../styles/scss/singleTrek/SingleTrek.module.scss";
+import styles from "../../styles/scss/SingleTrek.module.scss";
 
 export default function singleTrek() {
   return (
