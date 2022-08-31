@@ -125,3 +125,15 @@
 //     }
 //   }
 // }
+
+.categoryButton {
+  background-color: #369df4;
+  border-color: #369df4;
+  color: white;
+
+  &:hover {
+    background-color: #13304a;
+    border-color: #13304a;
+    color: white;
+  }
+}
