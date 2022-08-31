@@ -13,7 +13,6 @@ function Trek() {
     <div className={`${styles.pageWrapper}`}>
       <Navbar />
       <HeroComponent />
-      <TreksCategoryNavbar />
       <TreksCard />
       <TreksContactusCard />
       <TreksServiceCard />
