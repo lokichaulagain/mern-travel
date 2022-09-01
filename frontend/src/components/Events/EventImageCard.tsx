@@ -5,7 +5,7 @@ const EventImageCard = () => {
   return (
     <div className="col-3">
       <div
-        className={`${styles.cardBg} card pt-5 p-3 border-0 shadow-sm`}
+        className={`${styles.cardBg} card pt-5 p-3 co border-0 shadow-sm`}
         style={{ width: "18rem" }}
       >
         <div className="card-body pt-5 ">
