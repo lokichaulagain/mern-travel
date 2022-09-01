@@ -11,7 +11,7 @@ export default function Shelter() {
   return (
     <div>
       <Navbar />
-      <div className={`${styles.shelter}`}>
+      <div className={`${styles.shelter}`} style={{overflow:"hidden"}}>
         <HeroComponent />
       </div>
       <ShelterSection1 />

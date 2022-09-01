@@ -9,7 +9,7 @@ const TrekCard = () => {
       whileHover={{ y: 30 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="card-4  mb-5 border-0  shadow rounded"
+      className="card   mb-5 border-0  shadow rounded"
       style={{ width: "22rem" }}
     >
       <Image src={person1} className=" rounded" alt="" />

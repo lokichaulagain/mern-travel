@@ -18,11 +18,9 @@ const TeamServiceSection = () => {
                   className={`${styles.serviceContainer} col gap-4`}
                 >
                   <motion.div whileInView={{ y: [null, 50, 0] }}>
-                    <FaParachuteBox
-                      className="iconLg mb-3"
-                    />
+                    <FaParachuteBox className="iconLg mb-3" />
                   </motion.div>
-                  <div className="col">
+                  <div className="col col-lg-10 col-md-10  gap-4">
                     <h5 className="h5 mainColor">Experienced team</h5>
                     <p className="paraColor">
                       We always lived inside our amazing nature
@@ -37,7 +35,7 @@ const TeamServiceSection = () => {
                   <motion.div whileInView={{ y: [null, 50, 0] }}>
                     <BiBarChart className="iconLg mb-3" />
                   </motion.div>
-                  <div className="col">
+                  <div className="col-lg-10 mt-lg-5 col-md-10 mt-md-5 mt-sm-5 gap-4">
                     <h5 className="h5 mainColor">Career opportunities</h5>
                     <p className="paraColor">
                       Grow with us is possible thanks to our levels structure.
@@ -52,7 +50,7 @@ const TeamServiceSection = () => {
                   <motion.div whileInView={{ y: [null, 50, 0] }}>
                     <GiBee className="iconLg mb-3" />
                   </motion.div>
-                  <div className="col">
+                  <div className="col col-lg-10 mt-lg-5 col-md-10 mt-md-5 mt-sm-5 gap-4">
                     <h5 className="h5 mainColor">Meet amazing people</h5>
                     <p className="paraColor ">
                       We are the best team ever! Funny and friendly with each

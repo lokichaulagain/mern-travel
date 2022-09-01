@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img1 from "../../public/images/1.jpeg";
+import img1 from "../../../public/images/1.jpeg";
 
 const ShelterLocation = () => {
   return (

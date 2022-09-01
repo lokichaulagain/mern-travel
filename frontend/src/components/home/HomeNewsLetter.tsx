@@ -8,13 +8,15 @@ const HomeNewsLetter = () => {
           <div className="row ">
             <div className="row">
               <h2 className="h2 fw-bolder mainColor">NEWSLETTER</h2>
-              <h6 className="h6 mainColor mt-3 mb-5">
+              <h6 className="h6 mainColor mt-3 mb-5">fmfjf-rmoud903  hsysy3deehe
                 Subscribe now to our newsletter
               </h6>
             </div>
 
             <div className="col col-lg-4">
               <input
+
+              // tThis is eh comment dndhdhlmmm49uuenru  '044 09u4  8yr eineniheeoijeije7 errrrrrrrrrrr     
                 type="email"
                 className="form-control"
                 id="exampleFormControlInput1"

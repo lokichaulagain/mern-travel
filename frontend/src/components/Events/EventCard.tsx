@@ -5,6 +5,7 @@ import EventImageCard from "./EventImageCard";
 import { FaSearchLocation } from "react-icons/fa";
 import { TbMessages } from "react-icons/tb";
 import { RiCalendar2Fill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const EventCard = () => {
   return (
@@ -14,7 +15,11 @@ const EventCard = () => {
           <div className="row">
             <div className="col-8">
               {/* Card */}
-              <div className="card mb-3 shadow-sm border-0">
+              <motion.div
+                whileHover={{ scale: 0.95 }}
+                transition={{ ease: "easeOut", duration: 0.2 }}
+                className="card mb-3 shadow-sm border-0"
+              >
                 <div className="row g-0">
                   <div className="col-md-4">
                     <Image src={img3} className="img-fluid " alt="..." />
@@ -41,11 +46,12 @@ const EventCard = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/*  */}
 
               {/* Card */}
-              <div className="card mb-3 shadow-sm border-0">
+              <motion.div   whileHover={{ scale: 0.95 }}
+                transition={{ ease: "easeOut", duration: 0.2 }} className="card mb-3 shadow-sm border-0">
                 <div className="row g-0">
                   <div className="col-md-4">
                     <Image src={img3} className="img-fluid " alt="..." />
@@ -72,11 +78,12 @@ const EventCard = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/*  */}
 
               {/* Card */}
-              <div className="card mb-3 shadow-sm border-0">
+              <motion.div   whileHover={{ scale: 0.95 }}
+                transition={{ ease: "easeOut", duration: 0.2 }} className="card mb-3 shadow-sm border-0">
                 <div className="row g-0">
                   <div className="col-md-4">
                     <Image src={img3} className="img-fluid " alt="..." />
@@ -103,11 +110,12 @@ const EventCard = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/*  */}
 
               {/* Card */}
-              <div className="card mb-3 shadow-sm border-0">
+              <motion.div   whileHover={{ scale: 0.95 }}
+                transition={{ ease: "easeOut", duration: 0.2 }} className="card mb-3 shadow-sm border-0">
                 <div className="row g-0">
                   <div className="col-md-4">
                     <Image src={img3} className="img-fluid " alt="..." />
@@ -134,7 +142,7 @@ const EventCard = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/*  */}
             </div>
 
