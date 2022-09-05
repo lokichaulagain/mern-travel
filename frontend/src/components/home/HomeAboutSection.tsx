@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 
 const HomeAboutSection = () => {
   return (
-    <div style={{ backgroundColor: "#eff3f6" }}>
+    <div style={{ backgroundColor: "#eff3f6" }} className="container-fluid">
       <div className="container py-5">
         <div className="row container py-5">
           <div className="row">

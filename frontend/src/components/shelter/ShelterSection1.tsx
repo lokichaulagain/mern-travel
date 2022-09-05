@@ -12,97 +12,123 @@ import { GiRunningShoe } from "react-icons/gi";
 const ShelterSection1 = () => {
   return (
     <div style={{ backgroundColor: "#EFF3F6" }}>
-      <div className="container p-5">
-        <div className="container p-5">
-          <div className="row py-2 px-4">
-            <Swiper
-              slidesPerView={4}
-              spaceBetween={90}
-              slidesPerGroup={1}
-              loop={true}
-              loopFillGroupWithBlank={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <div
-                  className="card p-3 border-0 shadow-sm my-5"
-                  style={{ width: "18rem" }}
-                >
-                  <div className="card-body">
-                    <MdDinnerDining className="iconLg" />
-                    <h4 className="mainColor h4  pt-3">Event organizers</h4>
-                    <p className="paraColor card-text lh-base pt-1">
-                      We are searching for event organizers
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+      <div className="container py-5">
+        <div className="row container py-2 px-4">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
 
-              <SwiperSlide>
-                <div
-                  className="card p-3 border-0 shadow-sm my-5"
-                  style={{ width: "18rem" }}
-                >
-                  <div className="card-body">
-                    <GiRunningShoe className="iconLg" />
-                    <h4 className="mainColor h4 pt-3">Breakfast</h4>
-                    <p className="paraColor card-text lh-base pt-1">
-                      Take a break in our refuges and hunts.
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
 
-              <SwiperSlide>
-                <div
-                  className="card p-3 border-0 shadow-sm my-5"
-                  style={{ width: "18rem" }}
-                >
-                  <div className="card-body">
-                    <FaSearchLocation className="iconLg" />
-                    <h4 className="mainColor h4 pt-3">Trekking</h4>
-                    <p className="paraColor card-text lh-base pt-1">
-                      Lots of refuges through the paths and treks
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+              800: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
 
-              <SwiperSlide>
-                <div
-                  className="card p-3 border-0 shadow-sm my-5"
-                  style={{ width: "18rem" }}
-                >
-                  <div className="card-body">
-                    <FaCaravan className="iconLg" />
-                    <h4 className="mainColor h4 pt-3">Cable car</h4>
-                    <p className="paraColor card-text lh-base pt-1">
-                      Try the many panoramic cable cars
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
 
-              <SwiperSlide>
-                <div
-                  className="card p-3 border-0 shadow-sm my-5"
-                  style={{ width: "18rem" }}
-                >
-                  <div className="card-body">
-                    <FaSearchLocation className="iconLg" />
-                    <h4 className="mainColor h4 pt-3">Views </h4>
-                    <p className="paraColor card-text lh-base pt-1">
-                      Enjoy amazing and unique natural views
-                    </p>
-                  </div>
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+
+              1400: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div
+                className="card p-3 border-0 shadow-sm my-5"
+                // style={{ width: "20rem" }}
+              >
+                <div className="card-body">
+                  <MdDinnerDining className="iconLg" />
+                  <h4 className="mainColor h4  pt-3">Organizers</h4>
+                  <p className="paraColor card-text lh-base pt-1">
+                    We are searching for event organizers
+                  </p>
                 </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className="card p-3 border-0 shadow-sm my-5"
+                // style={{ width: "20rem" }}
+              >
+                <div className="card-body">
+                  <MdDinnerDining className="iconLg" />
+                  <h4 className="mainColor h4  pt-3">Breakfast</h4>
+                  <p className="paraColor card-text lh-base pt-1">
+                    We are searching for event organizers
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className="card p-3 border-0 shadow-sm my-5"
+                // style={{ width: "20rem" }}
+              >
+                <div className="card-body">
+                  <FaSearchLocation className="iconLg" />
+                  <h4 className="mainColor h4 pt-3">Trekking</h4>
+                  <p className="paraColor card-text lh-base pt-1">
+                    Lots of refuges through the paths and
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className="card p-3 border-0 shadow-sm my-5"
+                // style={{ width: "20rem" }}
+              >
+                <div className="card-body">
+                  <FaCaravan className="iconLg" />
+                  <h4 className="mainColor h4 pt-3">Cable car</h4>
+                  <p className="paraColor card-text lh-base pt-1">
+                    Try the many panoramic cable cars
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className="card p-3 border-0 shadow-sm my-5"
+                // style={{ width: "20rem" }}
+              >
+                <div className="card-body">
+                  <FaSearchLocation className="iconLg" />
+                  <h4 className="mainColor h4 pt-3">Views </h4>
+                  <p className="paraColor card-text lh-base pt-1">
+                    Enjoy amazing and unique natural
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>

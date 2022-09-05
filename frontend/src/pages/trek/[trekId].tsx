@@ -1,8 +1,8 @@
 import React from "react";
+import CenterImageSection from "../../components/CenterImageSection";
 import Footer from "../../components/Footer";
 import HeroComponent from "../../components/HeroComponent";
 import Navbar from "../../components/Navbar";
-import SingleTrekCenterContent from "../../components/SingleTrek/SingleTrekCenterContent";
 import SingleTrekComponent1 from "../../components/SingleTrek/SingleTrekComponent1";
 import SingleTrekSection2 from "../../components/SingleTrek/SingleTrekSection2";
 import SingleTrekSection3 from "../../components/SingleTrek/SingleTrekSection3";
@@ -15,7 +15,7 @@ export default function singleTrek() {
         <Navbar />
         <HeroComponent />
         <SingleTrekComponent1 />
-        <SingleTrekCenterContent />
+        <CenterImageSection />
       </div>
       <SingleTrekSection2 />
       <SingleTrekSection3 />

@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import styles from "../../styles/scss/Home.module.scss";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
@@ -7,28 +8,48 @@ import "swiper/css";
 
 const HomeHoverCard = () => {
   return (
-    <div className="row my-5 py-5 mx-3" style={{ overflow: "hidden" }}>
-      <div className="col-6">
+    <div className="row  container my-5" style={{ overflow: "hidden" }}>
+      <div className=" col-12 mb-5 col-sm-12  col-md-12  col-lg-7 ">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={20}
-          slidesPerGroup={1}
-          loop={true}
-          loopFillGroupWithBlank={true}
+          slidesPerView={1}
+          spaceBetween={10}
           pagination={{
             clickable: true,
           }}
+          breakpoints={{
+            860: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+
+            990: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+
+            1200: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+
+            //≥1400px
+            1450: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+          }}
           modules={[Pagination]}
-          className="mySwiper"
+          className="mySwiper swiper-container"
         >
           <SwiperSlide>
             <div
-              className={`${styles.bg} card p-3 shadow-sm border-0 rounded`}
-              style={{ width: "18rem", backgroundColor: "green" }}
+              className={`${styles.bg} card p-3 shadow-sm border-0 rounded  `}
+              style={{ backgroundColor: "green" }}
             >
               <motion.div
                 animate={{ y: 350, opacity: 1 }}
                 whileInView={{ y: [350, 0] }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, type: "tween" }}
                 className="card-body"
               >
@@ -55,11 +76,12 @@ const HomeHoverCard = () => {
           <SwiperSlide>
             <div
               className={`${styles.bg} card p-3 shadow-sm border-0 rounded`}
-              style={{ width: "18rem", backgroundColor: "green" }}
+              style={{ backgroundColor: "green" }}
             >
               <motion.div
                 animate={{ y: 350, opacity: 1 }}
                 whileInView={{ y: [350, 0] }}
+                 viewport={{ once: true }}
                 transition={{ duration: 0.8, type: "tween" }}
                 className="card-body"
               >
@@ -86,11 +108,12 @@ const HomeHoverCard = () => {
           <SwiperSlide>
             <div
               className={`${styles.bg} card p-3 shadow-sm border-0 rounded`}
-              style={{ width: "18rem", backgroundColor: "green" }}
+              style={{ backgroundColor: "green" }}
             >
               <motion.div
                 animate={{ y: 350, opacity: 1 }}
                 whileInView={{ y: [350, 0] }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, type: "tween" }}
                 className="card-body"
               >
@@ -118,33 +141,34 @@ const HomeHoverCard = () => {
 
       {/* Right   */}
       <motion.div
-        animate={{ x: 350, opacity: 1 }}
-        whileInView={{ x: [350, 0] }}
+        animate={{ x: 150, opacity: 1 }}
+        whileInView={{ x: [150, 0] }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, type: "tween" }}
-        className="col-6   ps-3"
+        className="col col-12 col-sm-12 col-md-12 col-lg-5  "
       >
-        <div className="row ps-5">
+        <div className="row ">
           <h1 className="lh-base h1 fw-bolder pureWhite">
             THE TREKS OF <br /> OUR TEAM
           </h1>
           <p className=" lh-lg mt-3 h5 whiteColor">
-            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiure{" "}
+            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiure
             <br />
             consectetur adipisicing a didunto persmo.
           </p>
         </div>
 
         {/* Two Button */}
-        <div className=" mt-4 ps-5 col">
+        <div className="col mt-4">
           <button
             type="button"
-            className="btn customButton rounded-pill btn-lg px-4 "
+            className={`${styles.customOutlineButton} btn btn-lg  rounded-pill `}
           >
             All Treks
           </button>
           <button
             type="button"
-            className=" btn ms-3  btn-outline  customOutlineButton rounded-pill btn-lg px-4 "
+            className={`${styles.customButton} btn btn-lg ms-3 rounded-pill  `}
           >
             The Team
           </button>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoBlack from "../../public/images/logoBlack.svg";
 
+
 const Navbar = () => {
   return (
     <div style={{ backgroundColor: "white" }}>
@@ -18,9 +19,7 @@ const Navbar = () => {
                 aria-controls="navbarTogglerDemo02"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
+              ></button>
 
               <div
                 className="collapse navbar-collapse"
@@ -29,17 +28,17 @@ const Navbar = () => {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                 <form className="d-flex" role="search">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-                    <li className="nav-item h6 fw-bold">
-                      <Link href={"/"}>
-                        <a className="nav-link  navLi" aria-current="page">
-                          HOME
-                        </a>
-                      </Link>
-                    </li>
+                    <Link href="/">
+                      <button type="button" className="navColor h6 fw-bold ">
+                        HOME
+                      </button>
+                    </Link>
 
-                    <li className="nav-item  dropdown">
+                
+
+                    <li className="nav-item dropdown  fw-bold">
                       <a
-                        className="nav-link   h6 fw-bold navLi dropdown-toggle"
+                        className="nav-link dropdown-toggle fw-bold"
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -47,35 +46,35 @@ const Navbar = () => {
                         PAGES
                       </a>
                       <ul className="dropdown-menu">
-                        <li>
-                          <Link href={"/team"}>
-                            <a className="dropdown-item ">TEAM</a>
-                          </Link>
-                        </li>
+                        <Link href="/team">
+                          <li className="pageLi">
+                            <a className="dropdown-item">TEAM</a>
+                          </li>
+                        </Link>
 
-                        <li className="pageLi">
-                          <Link href={"/shelter"}>
-                            <a className="dropdown-item ">SHELTERS</a>
-                          </Link>
-                        </li>
+                        <Link href="/shelter">
+                          <li className="pageLi">
+                            <a className="dropdown-item">SHELTERS</a>
+                          </li>
+                        </Link>
 
-                        <li className="pageLi">
-                          <Link href={"/history"}>
+                        <Link href="/history">
+                          <li className="pageLi">
                             <a className="dropdown-item">HISTORY</a>
-                          </Link>
-                        </li>
+                          </li>
+                        </Link>
 
-                        <li className="pageLi">
-                          <Link href={"/price"}>
+                        <Link href="/price">
+                          <li className="pageLi">
                             <a className="dropdown-item">PRICES</a>
-                          </Link>
-                        </li>
+                          </li>
+                        </Link>
 
-                        <li className="pageLi">
-                          <Link href={"/events"}>
+                        <Link href="/events">
+                          <li className="pageLi">
                             <a className="dropdown-item">EVENTS</a>
-                          </Link>
-                        </li>
+                          </li>
+                        </Link>
 
                         <li className="pageLi">
                           <a className="dropdown-item">GALLERY</a>
@@ -86,42 +85,27 @@ const Navbar = () => {
                         </li>
 
                         <li className="pageLi">
-                          <a className="dropdown-item  ">ABOUT</a>
+                          <a className="dropdown-item">ABOUT</a>
                         </li>
                       </ul>
                     </li>
 
-                    <Link href={"/trek"}>
-                      <li className="nav-item pageLi">
-                        <a
-                          className="nav-link   h6 fw-bold  navLi"
-                          aria-current="page"
-                        >
-                          TREKS
-                        </a>
-                      </li>
+                    <Link href="/trek">
+                      <button type="button" className="navColor h6 fw-bold ">
+                        TREKS
+                      </button>
                     </Link>
 
-                    <li className="nav-item">
-                      <Link href={"/blog"}>
-                        <a
-                          className="nav-link h6 fw-bold  pageLi navLi"
-                          aria-current="page"
-                        >
-                          BLOGS
-                        </a>
-                      </Link>
-                    </li>
+                    <Link href="/blog">
+                      <button type="button" className="navColor h6 fw-bold ">
+                        BLOGS
+                      </button>
+                    </Link>
 
-                    <Link href={"/contact"}>
-                      <li className="nav-item pageLi">
-                        <a
-                          className="nav-link h6 fw-bold  navLi"
-                          aria-current="page"
-                        >
-                          CONTACT
-                        </a>
-                      </li>
+                    <Link href="/contact">
+                      <button type="button" className="navColor h6 fw-bold ">
+                        CONTACT
+                      </button>
                     </Link>
                   </ul>
                 </form>

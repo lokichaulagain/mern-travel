@@ -5,68 +5,7 @@
   object-fit: contain;
 }
 
-//serviceSection
-.borderLeft {
-  background-color: white;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-right: 1px solid rgb(174, 172, 172);
-  cursor: pointer;
-}
 
-.iconDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.borderTop {
-  background-color: white;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid rgb(174, 172, 172);
-  cursor: pointer;
-}
-
-.borderBottomRight {
-  background-color: white;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgb(174, 172, 172);
-  border-right: 1px solid rgb(174, 172, 172);
-  cursor: pointer;
-}
-.borderBottomRight {
-  background-color: white;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgb(174, 172, 172);
-  border-right: 1px solid rgb(174, 172, 172);
-  cursor: pointer;
-}
-
-.noBorder {
-  background-color: white;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
 
 // HomePage
 .pageWrapper {
@@ -77,6 +16,41 @@
   background-position: center;
   background-attachment: fixed;
 }
+
+
+.customButton {
+  color: whitesmoke;
+  background-color: #379cf4;
+  border-color: #379cf4;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    color: whitesmoke;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in;
+    background-color: #2975b7;
+    border-color: #2975b7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.customOutlineButton {
+  color: #379cf4;
+  background-color: white;
+  border-color: #379cf4;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    color: whitesmoke;
+    color: #379cf4;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in;
+    background-color: white;
+    border-color: #2975b7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
 
 
 

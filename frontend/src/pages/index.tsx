@@ -7,13 +7,13 @@ import HomeNewsLetter from "../components/home/HomeNewsLetter";
 import styles from "../styles/scss/Home.module.scss";
 import HomeHoverCard from "../components/home/HomeHoverCard";
 import HomeSection1 from "../components/home/HomeSection1";
-import HomeHeroComponent from "../components/home/HomeHeroComponent"
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
     <div className={`${styles.pageWrapper}`}>
       <Navbar />
-      <HomeHeroComponent />
+      <Hero />
       <HomeSection1 />
       <HomeAboutSection />
       <HomeHoverCard />

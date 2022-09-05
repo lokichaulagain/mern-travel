@@ -2,9 +2,9 @@ import React from "react";
 import Footer from "../components/Footer";
 import HeroComponent from "../components/HeroComponent";
 import Navbar from "../components/Navbar";
-import TeamContactusCard from "../components/Team/TeamContactusCard";
 import TeamMemberCard from "../components/Team/TeamMemberCard";
-import TeamServiceSection from "../components/Team/TeamServiceSection";
+import TreksContactusCard from "../components/Treks/TreksContactusCard";
+import TreksServiceCard from "../components/Treks/TreksServiceCard";
 import styles from "../styles/scss/Team.module.scss";
 
 export default function Team() {
@@ -15,8 +15,8 @@ export default function Team() {
         <HeroComponent />
       </div>
       <TeamMemberCard />
-      <TeamContactusCard />
-      <TeamServiceSection />
+      <TreksContactusCard />
+      <TreksServiceCard />
       <Footer />
     </div>
   );

@@ -10,7 +10,7 @@ const TrekCard = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       className="card   mb-5 border-0  shadow rounded"
-      style={{ width: "22rem" }}
+      // style={{ width: "22rem" }}
     >
       <Image src={person1} className=" rounded" alt="" />
       {/* small card */}

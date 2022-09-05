@@ -1,0 +1,44 @@
+.formBody {
+    
+    .contactForm {
+        
+        .title {
+            margin-bottom: 30px;
+
+            .block {
+                color: #379cf4;
+                height: 15px;
+                width: 15px;
+                display: block;
+            }
+    
+            h4 {
+                font-weight: 900;
+                margin-bottom: 20px;
+                color: #13304a;
+            }
+        }
+    }
+
+    .contactInfo {
+
+        .infoTitle {
+            margin-bottom: 30px;
+
+            h4 {
+                font-weight: 900;
+                margin-bottom: 20px;
+                color: #13304a;
+            }
+        }
+
+        .info {
+
+            .infoText {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+}

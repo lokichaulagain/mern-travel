@@ -9,43 +9,75 @@ import Image from "next/image";
 
 const HistorySection2Slider = () => {
   return (
-    <div style={{ backgroundColor: "#EFF2F7" }}>
-      <div className="container p-5">
-        <div className="container p-5">
-          <div className="container px-3">
-            <Swiper
-              slidesPerView={5}
-              spaceBetween={10}
-              slidesPerGroup={1}
-              loop={true}
-              loopFillGroupWithBlank={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <Image src={person1} className=" rounded" alt="" />
-              </SwiperSlide>
+    <div style={{ backgroundColor: "#EFF2F7" }} className="container-fluid">
+      <div className="container py-5 ">
+        <div className="container row ">
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={10}
+            slidesPerGroup={1}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              600: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
 
-              <SwiperSlide>
-                <Image src={person1} className=" rounded" alt="" />
-              </SwiperSlide>
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
 
-              <SwiperSlide>
-                <Image src={person1} className=" rounded" alt="" />
-              </SwiperSlide>
+              //	≥992px
+              992: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
 
-              <SwiperSlide>
-                <Image src={person1} className=" rounded" alt="" />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Image src={person1} className=" rounded" alt="" />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+              // ≥1200px
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              //≥1400px
+              1400: {
+                slidesPerView: 5,
+                spaceBetween: 10,
+              },
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={person1} className=" rounded" alt="" />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>

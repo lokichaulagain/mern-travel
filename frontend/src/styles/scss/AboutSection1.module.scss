@@ -1,0 +1,53 @@
+.mainAbout{
+    background-color: rgb(228, 155, 155);
+    margin: 2rem;
+}
+.mainImage{
+    height: 25rem;
+    width: 100%;
+   
+}
+.firstSection2{
+    background-color: rgb(197, 197, 103);
+    height: 10rem;
+    width: 100%;
+    border:1px solid black;
+    margin-top: 1rem;
+}
+// .secondSection1> div{
+//     border:1px solid black;
+// }
+.secondSection1{
+background-color: rgb(219, 157, 219);
+margin-top: 2rem;
+height: 10rem;
+width: 100%;
+}
+.secondSection2{
+    background-color: rgb(91, 161, 150);
+    margin-top: 2rem;
+    height: 10rem;
+    width: 100%;  
+}
+.secondSection2hr{
+    margin-top: 1rem;
+    width: 100%;
+    height:10px;
+    font-weight: bold;
+    color: 2px solid black;
+}
+.caroumain{
+    height: 6rem;
+}
+.carouselImg1{
+   object-fit:cover; 
+ 
+  
+}
+.caroudiv1{
+    height: 3rem;
+    object-fit:cover;
+    overflow: none;
+   
+    border-radius: 1rem;
+}

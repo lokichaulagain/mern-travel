@@ -6,3 +6,19 @@
   background-position: center;
   background-attachment: fixed;
 }
+
+.customButton {
+  color: whitesmoke;
+  background-color: #379cf4;
+  border-color: #379cf4;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    color: whitesmoke;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in;
+    background-color: #2975b7;
+    border-color: #2975b7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}

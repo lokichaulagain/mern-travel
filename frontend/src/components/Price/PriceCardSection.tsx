@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 
 const PriceCardSection = () => {
   return (
-    <div className="container py-5 px-5">
-      <div className="container py-4 px-5">
-        <div className="row px-3">
-          {/* card1 */}
-          <div className="col-4 pb-5">
+    <div className="container-fluid py-5 ">
+      <div className="container">
+        <div className="row container py-4 ">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4 pb-5">
             <motion.div
               whileHover={{ y: 30 }}
               initial={{ opacity: 0 }}
@@ -38,7 +37,7 @@ const PriceCardSection = () => {
           {/* card2 */}
 
           {/* card1 */}
-          <div className="col-4 pb-5">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4 pb-5">
             <motion.div
               whileHover={{ y: 30 }}
               initial={{ opacity: 0 }}
@@ -70,7 +69,7 @@ const PriceCardSection = () => {
           {/* card2 */}
 
           {/* card1 */}
-          <div className="col-4 pb-5">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4 pb-5">
             <motion.div
               whileHover={{ y: 30 }}
               initial={{ opacity: 0 }}
@@ -99,7 +98,6 @@ const PriceCardSection = () => {
               </div>
             </motion.div>
           </div>
-          {/* card2 */}
         </div>
       </div>
     </div>

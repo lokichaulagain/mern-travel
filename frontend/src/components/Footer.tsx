@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <div className={`${styles.navSection} container-fluid`}>
       <div className="container py-3">
-        <div className="container py-3 mx-md-5">
-          <div className="row pt-5 mx-md-3">
+        <div className="container py-3">
+          <div className="row pt-5">
             <div
               className={`${styles.navCol} col-10  col-sm-10 col-md-10 col-lg-4`}
             >
@@ -72,26 +72,24 @@ const Footer = () => {
       </div>
       <hr />
 
-      <div className="container px-5">
-        <div className="container px-5">
-          <div className="row px-3">
-            <p className="col">
-              © 2019 Alpins - Hiking & Outdoor Template Handmade by&nbsp;
-              <a className="link" href={"https://www.google.com"}>
-                falcontech.com
-              </a>
-            </p>
-            <p className={`${styles.nevSection} col text-end`}>
-              <a className="link" href={"https://www.google.com"}>
-                <span> Contact us</span>
-              </a>
-              <span className="px-2">|</span>
+      <div className="container">
+        <div className="row container ">
+          <p className="col col-12 lh-base m col-xl-8 col-lg-8 col-md-12 col-sm-12">
+            © 2019 Alpins - Hiking & Outdoor Template Handmade by&nbsp;
+            <a className="link" href={"https://www.google.com"}>
+              falcontech.com
+            </a>
+          </p>
+          <p className="col ">
+            <a className="link" href={"https://www.google.com"}>
+              <span> Contact us</span>
+            </a>
+            <span className="px-2">|</span>
 
-              <a className="link" href={"https://www.facebook.com"}>
-                Privacy policy
-              </a>
-            </p>
-          </div>
+            <a className="link" href={"https://www.facebook.com"}>
+              Privacy policy
+            </a>
+          </p>
         </div>
       </div>
     </div>

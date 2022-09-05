@@ -13,84 +13,86 @@ const ShelterButtonSection = () => {
     <div>
       {/* 4 button  */}
       <div className="container d-flex justify-content-center">
-        <div className="row py-5">
-          <ul
-            className="nav nav-pills mb-3 gap-4"
-            id="pills-tab"
-            role="tablist"
-          >
-            <li className="nav-item" role="presentation">
-              <button
-                className=" btn active shelterButton btn-lg   shadow-lg"
-                id="pills-home-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-home"
-                type="button"
-                role="tab"
-                aria-controls="pills-home"
-                aria-selected="true"
-              >
-                Large button
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className=" btn shelterButton  btn-lg   shadow-lg"
-                id="pills-profile-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-profile"
-                type="button"
-                role="tab"
-                aria-controls="pills-profile"
-                aria-selected="false"
-              >
-                Large button
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className=" btn shelterButton  btn-lg   shadow-lg"
-                id="pills-contact-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-contact"
-                type="button"
-                role="tab"
-                aria-controls="pills-contact"
-                aria-selected="false"
-              >
-                Large button
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className=" btn shelterButton  btn-lg   shadow-lg"
-                id="pills-disabled-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-disabled"
-                type="button"
-                role="tab"
-                aria-controls="pills-disabled"
-                aria-selected="false"
-              >
-                Large button
-              </button>
-            </li>
-          </ul>
+        <div className="container">
+          <div className="container row  py-5">
+            <ul
+              className="nav nav-pills mb-3 gap-4"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li className="nav-item" role="presentation">
+                <button
+                  className=" btn active shelterButton btn-lg   shadow-lg"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  Large button
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className=" btn shelterButton  btn-lg   shadow-lg"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Large button
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className=" btn shelterButton  btn-lg   shadow-lg"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Large button
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className=" btn shelterButton  btn-lg   shadow-lg"
+                  id="pills-disabled-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-disabled"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-disabled"
+                  aria-selected="false"
+                >
+                  Large button
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="tab-content" id="pills-tabContent">
-        {/* Home Content */}
+      {/* Home Content-----------------------------------  */}
+      <div className="tab-content " id="pills-tabContent">
         <div
           className="tab-pane fade show active"
           id="pills-home"
           role="tabpanel"
           aria-labelledby="pills-home-tab"
         >
-          <div className="container pb-5  mb-5 px-5">
-            <div className="container px-5">
+          <div className="container-fluid pb-5 mb-5">
+            <div className="container ">
               <div className="row px-4">
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
                   <Swiper
                     slidesPerView={1}
                     spaceBetween={30}
@@ -125,24 +127,47 @@ const ShelterButtonSection = () => {
                     eiusmod tempor incididunt utlabore et dolore magna aliqua.
                     Utenim ad minim veniam quis nostrud exercitatio.
                   </p>
-                  <div className="mainColor row pt-4">
+                  <div className="mainColor row pt-4 mb-4">
                     <h6 className="mainColor col h6">Nevegal</h6>
                     <h6 className="mainColor col h6">1250 m</h6>
-                    <h6 className="mainColor col h6">$40 per night</h6>
+                    <h6 className="mainColor col h6">$40/night</h6>
                   </div>
                 </div>
               </div>
 
               <div className="row   mx-2 gap-3">
-                <div className="col-6 pe-3">
+                <div className="col-12  pe-3 col-md-12 col-lg-6">
                   <Swiper
-                    slidesPerView={3}
+                    slidesPerView={2}
                     spaceBetween={10}
-                    slidesPerGroup={1}
-                    loop={true}
-                    loopFillGroupWithBlank={true}
                     pagination={{
                       clickable: true,
+                    }}
+                    breakpoints={{
+                      640: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                      },
+
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                      },
+
+                      1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                      },
+
+                      1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                      },
+
+                      1400: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                      },
                     }}
                     modules={[Pagination]}
                     className="mySwiper"
@@ -190,7 +215,10 @@ const ShelterButtonSection = () => {
                 </div>
 
                 <div className="col">
-                  <button type="button" className="btn customButton  btn-lg   ">
+                  <button
+                    type="button"
+                    className={`${styles.customButton} btn customButton btn-lg`}
+                  >
                     Large button
                   </button>
                 </div>
@@ -198,6 +226,7 @@ const ShelterButtonSection = () => {
             </div>
           </div>
         </div>
+        {/* ----------------------------------------------------- */}
 
         {/* Profile Content */}
         <div
@@ -319,7 +348,7 @@ const ShelterButtonSection = () => {
         </div>
 
         {/* Contact content */}
-        <div
+        {/* <div
           className="tab-pane fade"
           id="pills-contact"
           role="tabpanel"
@@ -435,10 +464,10 @@ const ShelterButtonSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Disabled content */}
-        <div
+        {/* <div
           className="tab-pane fade"
           id="pills-disabled"
           role="tabpanel"
@@ -491,7 +520,6 @@ const ShelterButtonSection = () => {
               </div>
 
               <div className="row   mx-2 gap-3">
-                {/* Small carousel */}
                 <div className="col-6 pe-3">
                   <Swiper
                     slidesPerView={3}
@@ -547,7 +575,7 @@ const ShelterButtonSection = () => {
                   </Swiper>
                 </div>
 
-                {/* Button */}
+               
                 <div className="col">
                   <button type="button" className="btn customButton  btn-lg ">
                     Large button
@@ -556,7 +584,7 @@ const ShelterButtonSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

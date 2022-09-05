@@ -1,0 +1,17 @@
+.slider {
+    
+    .key {
+
+        .myCard {
+            width: 100%;
+            position: relative;
+            transition: top ease 0.5s;
+            top: 0;
+            // color: red;
+
+            :hover {
+                top: -10px;
+            }
+        }
+    }
+}

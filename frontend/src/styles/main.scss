@@ -1,4 +1,14 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// Google Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// font variable
+$Montserrat-font: "Montserrat";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $Montserrat-font;
+}
 
 .primaryColor {
   color: #379cf4;
@@ -20,43 +30,33 @@
   color: white;
 }
 
-.customButton {
-  color: whitesmoke;
-  background-color: #379cf4;
-  border-color: #379cf4;
-  transition: all 0.4s ease-out;
+// .customButton {
+//   color: whitesmoke;
+//   background-color: #379cf4;
+//   border-color: #379cf4;
+//   transition: all 0.4s ease-out;
 
-  &:hover {
-    color: whitesmoke;
-    transform: scale(0.95);
-    transition: all 0.2s ease-in;
-    background-color: #2975b7;
-    border-color: #2975b7;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-}
+//   &:hover {
+//     color: whitesmoke;
+//     transform: scale(0.95);
+//     transition: all 0.2s ease-in;
+//     background-color: #2975b7;
+//     border-color: #2975b7;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//   }
+// }
 
-.customOutlineButton {
-  color: #379cf4;
-  background-color: white;
-  border-color: #379cf4;
-  transition: all 0.4s ease-out;
-
-  &:hover {
-    color: whitesmoke;
-    color: #379cf4;
-    transform: scale(0.95);
-    transition: all 0.2s ease-in;
-    background-color: white;
-    border-color: #2975b7;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
+.loki {
+  background-color: red;
 }
 
 .link {
   text-decoration: none;
 }
 
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 .pageLi {
   cursor: pointer;
 }
@@ -96,4 +96,7 @@
   object-fit: cover;
 }
 
-
+.navColor {
+  all: unset;
+  color: #444444;
+}
