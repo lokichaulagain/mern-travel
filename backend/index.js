@@ -4,6 +4,8 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
 import aboutUsRoute from "./routes/aboutUs.route.js";
+import cmsRoute from "./routes/cms.route.js";
+
 import cors from "cors";
 
 const port = process.env.PORT;
@@ -29,6 +31,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/aboutUs", aboutUsRoute);
+app.use("/api/cms", cmsRoute);
 
 //portListening
 app.listen(port, (error) => {
