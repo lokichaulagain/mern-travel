@@ -25,6 +25,18 @@ const navItems = [
 
   {
     icon: <SettingsOutlinedIcon />,
+    label: "Our Team",
+    route: "/team",
+  },
+
+  {
+    icon: <SettingsOutlinedIcon />,
+    label: "Shelter",
+    route: "/shelter",
+  },
+
+  {
+    icon: <SettingsOutlinedIcon />,
     label: "Our Services",
     route: "/ourServices",
   },
@@ -51,7 +63,6 @@ const navItems = [
     label: "CMS Settings",
     route: "/cms",
   },
-
 
   {
     icon: <SettingsOutlinedIcon />,
@@ -86,7 +97,9 @@ export default function LeftAppBar() {
     <Box style={{ height: "100vh" }}>
       <List>
         {navItems.map((item, index) => (
-          <ListItem key={index} disablePadding>
+          <ListItem
+            key={index}
+            disablePadding>
             <ListItemButton
               selected={selectedIndex === index}
               onClick={(event) => {

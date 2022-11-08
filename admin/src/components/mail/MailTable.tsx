@@ -47,7 +47,6 @@ export default function MailTable() {
                           />
                         </IconButton>
                       </Link>
-                      {/* <EditEmployeeDetailDialog /> */}
 
                       <div>
                         <IconButton
@@ -93,6 +92,7 @@ export default function MailTable() {
                           </div>
                         </div>
                       </div>
+
                     </div>
                   </td>
                 </tr>

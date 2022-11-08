@@ -99,9 +99,9 @@ export const HomeContextProvider = ({ children }) => {
   }, [isUpdated]);
   console.log(sec2ii);
 
-  const deleteMail = async (id) => {
+  const deleteSec2i = async (id) => {
     try {
-      const res = await axios.delete("http://localhost:4000/api/contact/" + id);
+      const res = await axios.delete("http://localhost:4000/api/home/sec2i/" + id);
       deleteSuccess();
       setIsUpdated(1);
     } catch (error) {
@@ -109,5 +109,25 @@ export const HomeContextProvider = ({ children }) => {
     }
   };
 
-  return <HomeContext.Provider value={{ deleteMail }}>{children}</HomeContext.Provider>;
+  const deleteSec3ii = async (id) => {
+    try {
+      const res = await axios.delete("http://localhost:4000/api/home/sec3ii/" + id);
+      deleteSuccess();
+      setIsUpdated(1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteSec5 = async (id) => {
+    try {
+      const res = await axios.delete("http://localhost:4000/api/home/sec5/" + id);
+      deleteSuccess();
+      setIsUpdated(1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return <HomeContext.Provider value={{ sec5, sec4, sec3ii, sec3i, sec2ii, sec2i, deleteSec2i, deleteSec3ii, deleteSec5 }}>{children}</HomeContext.Provider>;
 };

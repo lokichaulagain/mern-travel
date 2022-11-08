@@ -5,6 +5,8 @@ dotenv.config();
 import mongoose from "mongoose";
 import contactRoute from "./routes/contact.route.js";
 import homeRoute from "./routes/home.route.js";
+import teamRoute from "./routes/team.route.js";
+import shelterRoute from "./routes/shelter.route.js";
 import cmsRoute from "./routes/cms.route.js";
 import cors from "cors";
 
@@ -32,6 +34,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/contact", contactRoute);
 app.use("/api/home", homeRoute);
+app.use("/api/team", teamRoute);
+app.use("/api/shelter", shelterRoute);
 app.use("/api/cms", cmsRoute);
 
 //portListening

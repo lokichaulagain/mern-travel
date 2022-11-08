@@ -1,20 +1,20 @@
 import * as React from "react";
-import { Button, IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
 import AddNewDialog from "./AddNewDialog";
+import { HomeContext } from "../../../context/HomeContext";
 import { useContext } from "react";
 import TableHeading from "../TableHeading";
-import { HomeContext } from "../../../context/HomeContext";
+import { Button, IconButton } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 
-export default function Section5Table() {
-  const { sec5, deleteSec5 } = useContext(HomeContext);
+export default function Section2iTable() {
+  const { sec2i, deleteSec2i } = useContext(HomeContext);
 
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Section 5"} />
+        <TableHeading heading={"Section 2i"} />
         <AddNewDialog />
       </div>
 
@@ -30,8 +30,8 @@ export default function Section5Table() {
             </tr>
           </thead>
           <tbody>
-            {sec5 &&
-              sec5.map((data: any, index: any) => (
+            {sec2i &&
+              sec2i.map((data: any, index: any) => (
                 <tr
                   key={index}
                   className="customPrimaryTxtColor custom_table_hover ">
@@ -54,7 +54,7 @@ export default function Section5Table() {
                       <IconButton
                         aria-label="delete"
                         data-bs-toggle="modal"
-                        data-bs-target="#sec5Modal">
+                        data-bs-target="#exampleModal">
                         <DeleteIcon
                           fontSize="inherit"
                           color="warning"
@@ -63,9 +63,9 @@ export default function Section5Table() {
 
                       <div
                         className="modal fade "
-                        id="sec5Modal"
+                        id="exampleModal"
                         tab-index="-1"
-                        aria-labelledby="sec5ModalLabel"
+                        aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div className="modal-dialog ">
                           <div
@@ -83,7 +83,7 @@ export default function Section5Table() {
                               </Button>
 
                               <Button
-                                onClick={(e) => deleteSec5(data._id)}
+                                onClick={(e) => deleteSec2i(data._id)}
                                 data-bs-dismiss="modal"
                                 className="table_button "
                                 size="small">
