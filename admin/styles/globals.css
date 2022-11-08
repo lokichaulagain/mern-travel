@@ -1,0 +1,181 @@
+:root {
+  /* ========================= */
+  --color-secondary: #ff9b44;
+  --dark-color: #16181d;
+  --dark-grey-color: #22262b;
+  --leftbar-txt-color: #8b95a0;
+  --primary-text-color: #bbc4cc;
+  --secondary-text-color: #6d757c;
+  --ternary-text-color: #7e7e80;
+  --border-color: #2d3741;
+  --primary-heading-color: #bac4cd;
+  --secondary-heading-color: #7e7e80;
+  --label-color: #7f8fa4;
+  --text-muted: #8e8e8e;
+
+  /*===========================  */
+}
+
+/*==Loki==========================  */
+.right_side_bg {
+  background-color: var(--dark-grey-color);
+}
+
+/* primaryHeadingColor */
+.phc {
+  color: var(--primary-heading-color);
+}
+
+.customLabel {
+  color: var(--label-color);
+}
+
+.txtMuted {
+  color: var(--text-muted);
+}
+
+.customSecondaryColor {
+  color: var(--color-secondary);
+}
+
+/*  */
+.shc {
+  color: var(--primary-heading-color);
+}
+
+.customInput {
+  background-color: #2e3538;
+  color: #bbc3c9;
+  border-radius: 5px;
+}
+
+/* crusor pointer */
+.cp {
+  cursor: pointer;
+}
+
+.customBg {
+  background-color: var(--dark-grey-color);
+}
+
+.customNavbar {
+  background-color: var(--dark-color);
+  border-bottom: 2px solid var(--border-color);
+  color: var(--primary-text-color);
+}
+
+.customLeftBar {
+  background-color: var(--dark-color);
+  color: var(--leftbar-txt-color);
+}
+
+.customPrimaryTxtColor {
+  color: var(--primary-text-color);
+}
+
+.customSecondaryTxtColor {
+  color: var(--secondary-text-color);
+}
+
+.customTernaryTxtColor {
+  color: var(--ternary-text-color);
+}
+
+.customCard {
+  background-color: var(--dark-color);
+  border: 1px solid var(--border-color);
+  color: var(--primary-text-color);
+}
+
+.table_button {
+  border: 1px solid var(--border-color);
+  color: var(--primary-text-color);
+  background-color: var(--dark-color);
+}
+.table_button:hover {
+  background-color: var(--dark-color);
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid var(--color-secondary);
+}
+
+.customProfileCard {
+  background-color: var(--dark-color);
+  border: 1px solid var(--border-color);
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+/*=====================  */
+
+.myBtn {
+  background-color: black;
+  color: white;
+  padding: 10px 18px;
+  transition: 0.25s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+}
+
+.myBtn:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+.mySecondaryBtn {
+  border: 1px solid black;
+  padding: 5px 15px;
+  transition: 0.25s;
+}
+
+.mySecondaryBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.ghostBtn {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+  text-align: center;
+  color: #535253;
+}
+
+.ghostBtn:hover {
+  text-decoration: underline;
+}
+
+.anchor {
+  text-decoration: none;
+}
+
+.custom_card {
+  background-color: var(--card-bg-color);
+  border: 1px solid rgb(186, 199, 186);
+}
+
+/* disable select on grid table */
+.MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+.MuiDataGrid-root .MuiDataGrid-cell:focus {
+  outline: none;
+}
+
+.custom_table_hover:hover {
+  background-color: #2d3741;
+}
+
+/* =========================== */
+.input_field_style {
+  background-color: #2d3741 !important;
+  color: #bbc4cc !important;
+}
+
+.input_field_style:focus {
+  box-shadow: 0 0 0 0.035rem #688eb1 !important;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}

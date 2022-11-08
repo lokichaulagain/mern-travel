@@ -1,11 +1,15 @@
-.bgImg {
-    background-position: center;
-}
+.hero {
+    position: relative;
+    
+    .text {
+        margin: 100px 0;
+        color: rgb(241, 241, 241);
+        // position: relative;
 
-.text {
-    margin: 150px 0;
-
-    .heading {
-        
+        .heading {
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+       
     }
 }

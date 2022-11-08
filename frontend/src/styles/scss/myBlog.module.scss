@@ -1,0 +1,71 @@
+.MainBlogComp{
+    background-color:rgb(238,243,247);
+    // margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+
+.mainCardComp {
+  position: relative;
+  transition: transform 0.25s ease-out;
+  transform: scale(1.05);
+  border: none;
+
+  .insideimg {
+    position: absolute;
+    left: 16px;
+    top: 4rem;
+    // background-color: white;
+    color: white;
+    // border: 1px solid black;
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  :hover {
+    transform: scale(0.95);
+    transition: transform 0.25s ease-out;
+  }
+}
+
+
+
+// for different component
+
+    .commonClass {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: rgb(238,243,247);
+        border: none;
+        // color:white;
+       
+      
+        ::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #0087ca;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+      
+        :hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+
+      .listItems {
+        display: flex;
+        flex-direction: column;
+        //  height: 100px;
+      }
+

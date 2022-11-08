@@ -39,6 +39,13 @@
                 width: 100%;
                 justify-content: space-between;
             }
+
+            .myButton {
+                padding: 5px 15px;
+                outline: none;
+                border: 1.5px solid #379cf4;
+                background-color: white;
+            }
         }
     }
 }

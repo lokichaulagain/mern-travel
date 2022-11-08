@@ -7,12 +7,16 @@ import styles from "../../styles/scss/Treks.module.scss";
 import HeroComponent from "../../components/HeroComponent";
 import TreksCardSection from "../../components/Treks/TreksCardSection";
 import CenterImageSection from "../../components/CenterImageSection";
+import Pagehero from "../../components/Pagehero";
 
 function Trek() {
   return (
     <div className={`${styles.pageWrapper}`}>
       <Navbar />
-      <HeroComponent />
+      {/* <HeroComponent /> */}
+      <div className="mb-5">
+        <Pagehero title='Treks' />
+      </div>
       <TreksCardSection />
       <CenterImageSection/>
       <TreksContactusCard />

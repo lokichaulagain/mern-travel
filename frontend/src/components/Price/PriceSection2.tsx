@@ -5,42 +5,26 @@ import "swiper/css/navigation";
 
 const PriceSection2 = () => {
   return (
-    <div style={{ backgroundColor: "#eef3f7" }} className="container-fluid">
+    <div
+      style={{ backgroundColor: "#eef3f7" }}
+      className="container-fluid">
       <div className="container py-5">
         <div className="container row py-3">
           <div className="col-12 col-sm-12 col-md-12 col-l-6 col-xxl-6 mb-5 ">
             <h2 className="h2 mainColor  fw-bolder">BOOK YOUR TOUR</h2>
-            <h6 className=" h6 pt-3  pb-4 mainColor">
-              Contact us for tour booking
-            </h6>
+            <h6 className=" h5 pt-2  pb-2 mainColor">Contact us for tour booking</h6>
 
-            <p className=" paraColor  pb-4 lh-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
-              est itaque ab. Molestias perspiciatis, iste nemo optio laudantium,
-              reprehenderit at velit et officia nisi, sint corporis vel!
-              Praesentium voluptas id aliquam optio odio consectetur reiciendis?
-            </p>
+            <p className=" paraColor   pb-4 lh-lg">The ancient Himalayas is one of the most preferred traveling agencies in Nepal. You can choose among the multiple packages we provide to spend your precious time that can be the best for your lifetime. Nepal is a country where the tourism industry is one of the biggest industries which means you’ll have plenty of travel during your visit.</p>
             <button
               type="button"
-              className="btn fw-semibold fs-6 customButton   shadow-sm  btn-primary rounded-pill py-3 px-5 btn-lg  "
-            >
+              className="btn fw-semibold fs-6 customButton   shadow-sm  btn-primary rounded-pill py-3 px-5 btn-lg  ">
               Contact us
             </button>
           </div>
 
           <div className="col-12  col-md-12  col-sm-12  col-l-6 col-xxl-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-            eaque omnis ea nesciunt rem vitae, iusto quam possimus officia
-            adipisci doloribus pariatur facere nostrum odio sunt reprehenderit
-            explicabo veniam cum quos inventore? Aspernatur, facere molestiae
-            deserunt iure eos consectetur corporis dolor voluptatibus, expedita
-            animi ab, asperiores earum fugiat ratione! Necessitatibus mollitia
-            dolorem quam dicta quod! Quis debitis perferendis possimus
-            consectetur atque molestias omnis dolor temporibus ipsa cupiditate
-            quidem sequi harum, aliquam tenetur error aliquid velit fuga nobis
-            doloremque consequatur illum a amet quibusdam. Repudiandae
-            reiciendis animi assumenda illo, voluptates, eos officia molestiae
-            accusamus totam ab atque sed, veniam asperiores reprehenderit.
+            The Ancient Himalayas offer a remarkable journey to enjoy the majestic Himalayas with a diversified culture. Nepal, a country with thousands of destinations for trekking and hiking, is the best destination to enjoy your splendid time in nature. Your adventurous journey with Ancient Himalayas will certainly be an enthralling trip to Nepal taking the journey uphill and downhill along the greenery, peaks, glacier rivers, waterfalls, and the breathtaking view of the most beautiful
+            mountains all over the world. Enjoy the adventure, amenities, and hospitality with the best trekking agency that provides you with the best packages to the Everest Base Camp, Annapurna Base Camp, Langtang Valley Trek, and multiple others.
           </div>
         </div>
       </div>

@@ -1,11 +1,18 @@
 import Cms from "../models/Cms.js";
 import createError from "../utils/error.js";
 
+
 const createCmsContent = async (req, res, next) => {
   try {
     const newCmsContent = new Cms(req.body);
     const savedCmsContent = await newCmsContent.save();
     res.status(200).json(savedCmsContent);
+
+    
+
+
+
+
   } catch (error) {
     return next(createError(500, "Server Error while creating Cms content !!!"));
   }
