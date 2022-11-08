@@ -19,6 +19,12 @@ const navItems = [
 
   {
     icon: <SettingsOutlinedIcon />,
+    label: "Home",
+    route: "/home",
+  },
+
+  {
+    icon: <SettingsOutlinedIcon />,
     label: "Our Services",
     route: "/ourServices",
   },

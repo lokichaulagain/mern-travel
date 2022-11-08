@@ -8,7 +8,11 @@ import AddServiceDialog from "./AddServiceDialog";
 export default function OurServicesTable() {
   return (
     <>
+    <div className="d-flex align-items-center ">
+      <h3 style={{color:"white",width:"500px"}}>Section 5</h3>
       <AddServiceDialog />
+    </div>
+      
       <div className="customCard mt-2 ">
         <table className="table  ">
           <thead>
