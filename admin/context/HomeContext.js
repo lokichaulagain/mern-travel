@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState, createContext, useContext } from "react";
 import { toast } from "react-toastify";
-import { MiscellaneousContext } from "./MiscellaneousContext";
+// import { MiscellaneousContext } from "./MiscellaneousContext";
 
 export const HomeContext = createContext();
 
@@ -14,7 +14,7 @@ export const HomeContextProvider = ({ children }) => {
   const [sec2ii, setSec2ii] = useState([]);
   const [isUpdated, setIsUpdated] = useState(0);
 
-  const { handleClickOpen, handleClose, open } = useContext(MiscellaneousContext);
+  // const { handleClickOpen, handleClose, open } = useContext(MiscellaneousContext);
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
   const createdSuccess = () => toast.success("Successfully Created");
@@ -103,7 +103,35 @@ export const HomeContextProvider = ({ children }) => {
     };
     fetchAllSec3ii();
   }, [isUpdated]);
-  console.log(sec3ii);
+
+  const [newSec3ii, setNewSec3ii] = useState({
+    title: "",
+    description: "",
+  });
+
+  const handleSec3iiInputChange = (e) => {
+    setNewSec3ii({
+      ...newSec3ii,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSec3iiFormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:4000/api/home/sec3ii", newSec3ii);
+      createdSuccess();
+      setIsUpdated(1);
+      handleClose();
+      console.log("Form has been submitted");
+      setNewSec3ii({
+        title: "",
+        description: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const fetchAllSec2i = async () => {
@@ -117,7 +145,6 @@ export const HomeContextProvider = ({ children }) => {
     };
     fetchAllSec2i();
   }, [isUpdated]);
-  console.log(sec2i);
 
   const [newSec2i, setNewSec2i] = useState({
     h1: "",
@@ -227,7 +254,6 @@ export const HomeContextProvider = ({ children }) => {
     }
   };
 
-
   const deleteSec3i = async (id) => {
     try {
       const res = await axios.delete("http://localhost:4000/api/home/sec3i/" + id);
@@ -258,5 +284,37 @@ export const HomeContextProvider = ({ children }) => {
     }
   };
 
-  return <HomeContext.Provider value={{ open, handleClickOpen, handleClose, sec5, sec4, sec3ii, sec3i, sec2ii, sec2i, deleteSec2i, deleteSec2ii, deleteSec3i,deleteSec3ii, deleteSec5, handleSec2iInputChange, handleFormSubmit, newSec2i, setNewSec2i, handleSec2iiInputChange, newSec2ii, handle2iiFormSubmit, handle3iFormSubmit, handleSec3iInputChange, newSec3i }}>{children}</HomeContext.Provider>;
+  const [newSec5, setNewSec5] = useState({
+    title: "",
+    description: "",
+    icon: "",
+  });
+
+  const handleSec5InputChange = (e) => {
+    setNewSec5({
+      ...newSec5,
+      [e.target.name]: e.target.value,
+    });
+  };
+  console.log(newSec5);
+
+  const handleSec5FormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:4000/api/home/sec5", newSec5);
+      createdSuccess();
+      setIsUpdated(1);
+      handleClose();
+      console.log("Form has been submitted");
+      setNewSec5({
+        title: "",
+        description: "",
+        icon: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return <HomeContext.Provider value={{ sec5, sec4, sec3ii, sec3i, sec2ii, sec2i, deleteSec2i, deleteSec2ii, deleteSec3i, deleteSec3ii, deleteSec5, handleSec2iInputChange, handleFormSubmit, newSec2i, setNewSec2i, handleSec2iiInputChange, newSec2ii, handle2iiFormSubmit, handle3iFormSubmit, handleSec3iInputChange, newSec3i, handleSec3iiFormSubmit, handleSec3iiInputChange, newSec3ii, newSec5, handleSec5InputChange, handleSec5FormSubmit }}>{children}</HomeContext.Provider>;
 };

@@ -3,7 +3,14 @@ import { Grid, Dialog, Button } from "@mui/material";
 import { HomeContext } from "../../../context/HomeContext";
 
 export default function Add2iDialog() {
-  const { handleSec2iInputChange, handleFormSubmit, newSec2i, open, handleClickOpen, handleClose } = useContext(HomeContext);
+  const { handleSec2iInputChange, handleFormSubmit, newSec2i } = useContext(HomeContext);
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>

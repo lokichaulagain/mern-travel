@@ -3,10 +3,10 @@ import { Button, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-import AddNewDialog from "./AddNewDialog";
 import { useContext } from "react";
 import TableHeading from "../TableHeading";
 import { HomeContext } from "../../../context/HomeContext";
+import Add5Dialog from "./Add5Dialog";
 
 export default function Section5Table() {
   const { sec5, deleteSec5 } = useContext(HomeContext);
@@ -15,7 +15,7 @@ export default function Section5Table() {
     <>
       <div className="d-flex align-items-center ">
         <TableHeading heading={"Section 5"} />
-        <AddNewDialog />
+       {sec5.length <9 ? <Add5Dialog /> : null}
       </div>
 
       <div className="customCard mt-2 ">
@@ -83,7 +83,7 @@ export default function Section5Table() {
                               </Button>
 
                               <Button
-                                onClick={(e) => deleteSec5(data._id)}
+                                onClick={() => deleteSec5(data._id)}
                                 data-bs-dismiss="modal"
                                 className="table_button "
                                 size="small">

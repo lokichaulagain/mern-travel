@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Grid, Dialog, Button } from "@mui/material";
 import { HomeContext } from "../../../context/HomeContext";
 
-export default function Add2iiDialog() {
-  const { handleSec2iiInputChange, newSec2ii, handle2iiFormSubmit } = useContext(HomeContext);
+export default function Add3iiDialog() {
+  const { handleSec3iiFormSubmit, handleSec3iiInputChange, newSec3ii } = useContext(HomeContext);
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -11,6 +11,7 @@ export default function Add2iiDialog() {
   const handleClose = () => {
     setOpen(false);
   };
+
 
   return (
     <>
@@ -41,31 +42,13 @@ export default function Add2iiDialog() {
               </label>
               <input
                 className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                onChange={handleSec2iiInputChange}
+                onChange={handleSec3iiInputChange}
                 name="title"
-                value={newSec2ii.title}
+                value={newSec3ii.title}
                 placeholder="placeholder"
               />
             </div>
 
-            <div className="col">
-              <label
-                htmlFor="subtitle"
-                className="form-label ">
-                subtitle
-              </label>
-              <input
-                className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                id="subtitle"
-                onChange={handleSec2iiInputChange}
-                value={newSec2ii.subtitle}
-                name="subtitle"
-                placeholder="placeholder"
-              />
-            </div>
-          </div>
-
-          <div className="row ">
             <div className="col">
               <label
                 htmlFor="description"
@@ -74,14 +57,12 @@ export default function Add2iiDialog() {
               </label>
               <input
                 className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                onChange={handleSec2iiInputChange}
-                value={newSec2ii.description}
+                onChange={handleSec3iiInputChange}
+                value={newSec3ii.description}
                 name="description"
                 placeholder="placeholder"
               />
             </div>
-
-            <div className="col"></div>
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">
@@ -93,7 +74,7 @@ export default function Add2iiDialog() {
             <Button
               type="submit"
               className="customCard px-4"
-              onClick={handle2iiFormSubmit}>
+              onClick={handleSec3iiFormSubmit}>
               Add
             </Button>
           </div>

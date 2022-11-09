@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/Header";
 import Section5Table from "../../components/home/Section5Table";
 import { HomeContextProvider } from "../../../context/HomeContext";
-import Section4Table from "../../components/home/Section4Table";
 import Section3iiTable from "../../components/home/Section3iiTable";
 import Section3iTable from "../../components/home/Section3iTable";
 import Section2iTable from "../../components/home/Section2iTable";
@@ -16,7 +15,6 @@ function Home() {
       <Section2iiTable />
       <Section3iTable />
       <Section3iiTable />
-      <Section4Table />
       <Section5Table />
     </HomeContextProvider>
   );

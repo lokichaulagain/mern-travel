@@ -54,7 +54,7 @@ export default function Section2iTable() {
                       <IconButton
                         aria-label="delete"
                         data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
+                        data-bs-target="#addSec2iModal">
                         <DeleteIcon
                           fontSize="inherit"
                           color="warning"
@@ -63,9 +63,9 @@ export default function Section2iTable() {
 
                       <div
                         className="modal fade "
-                        id="exampleModal"
+                        id="addSec2iModal"
                         tab-index="-1"
-                        aria-labelledby="exampleModalLabel"
+                        aria-labelledby="addSec2iModalLabel"
                         aria-hidden="true">
                         <div className="modal-dialog ">
                           <div

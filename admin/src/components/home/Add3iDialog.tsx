@@ -3,7 +3,15 @@ import { Grid, Dialog, Button } from "@mui/material";
 import { HomeContext } from "../../../context/HomeContext";
 
 export default function Add3iDialog() {
-  const { handle3iFormSubmit, handleSec3iInputChange, newSec3i, open, handleClickOpen, handleClose } = useContext(HomeContext);
+  const { handle3iFormSubmit, handleSec3iInputChange, newSec3i } = useContext(HomeContext);
+
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>
