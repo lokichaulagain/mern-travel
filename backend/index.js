@@ -7,6 +7,8 @@ import contactRoute from "./routes/contact.route.js";
 import homeRoute from "./routes/home.route.js";
 import teamRoute from "./routes/team.route.js";
 import shelterRoute from "./routes/shelter.route.js";
+import foodRoute from "./routes/food.route.js";
+import eventRoute from "./routes/event.route.js";
 import cmsRoute from "./routes/cms.route.js";
 import cors from "cors";
 
@@ -36,6 +38,8 @@ app.use("/api/contact", contactRoute);
 app.use("/api/home", homeRoute);
 app.use("/api/team", teamRoute);
 app.use("/api/shelter", shelterRoute);
+app.use("/api/food", foodRoute);
+app.use("/api/event", eventRoute);
 app.use("/api/cms", cmsRoute);
 
 //portListening

@@ -35,6 +35,22 @@ const navItems = [
     route: "/shelter",
   },
 
+
+  {
+    icon: <SettingsOutlinedIcon />,
+    label: "Foods",
+    route: "/food",
+  },
+
+
+
+  {
+    icon: <SettingsOutlinedIcon />,
+    label: "Events",
+    route: "/event",
+  },
+
+
   {
     icon: <SettingsOutlinedIcon />,
     label: "Our Services",
