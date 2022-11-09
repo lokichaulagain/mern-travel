@@ -1,12 +1,12 @@
 import * as React from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-import AddNewDialog from "./AddNewDialog";
 import { HomeContext } from "../../../context/HomeContext";
 import { useContext } from "react";
 import TableHeading from "../TableHeading";
 import { Button, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Add2iDialog from "./Add2iDialog";
 
 export default function Section2iTable() {
   const { sec2i, deleteSec2i } = useContext(HomeContext);
@@ -15,7 +15,7 @@ export default function Section2iTable() {
     <>
       <div className="d-flex align-items-center ">
         <TableHeading heading={"Section 2i"} />
-        <AddNewDialog />
+        {sec2i.length < 5 ? <Add2iDialog /> : null}
       </div>
 
       <div className="customCard mt-2 ">
@@ -83,7 +83,7 @@ export default function Section2iTable() {
                               </Button>
 
                               <Button
-                                onClick={(e) => deleteSec2i(data._id)}
+                                onClick={() => deleteSec2i(data._id)}
                                 data-bs-dismiss="modal"
                                 className="table_button "
                                 size="small">

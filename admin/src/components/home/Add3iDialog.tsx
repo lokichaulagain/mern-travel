@@ -1,18 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Grid, Dialog, Button } from "@mui/material";
-import TextInputField from "../TextInputField";
-import { TeamContext } from "../../../context/TeamContext";
+import { HomeContext } from "../../../context/HomeContext";
 
-export default function AddNewDialog() {
-  // const {  handleTeamInputChange, handleTeamFormSubmit } = useContext(TeamContext);
-
-  const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+export default function Add3iDialog() {
+  const { handle3iFormSubmit, handleSec3iInputChange, newSec3i, open, handleClickOpen, handleClose } = useContext(HomeContext);
 
   return (
     <>
@@ -30,9 +21,7 @@ export default function AddNewDialog() {
       <Dialog
         open={open}
         onClose={handleClose}>
-        <form
-          // onSubmit={handleTeamFormSubmit}
-          className="customCard p-3 overflow_hidden">
+        <form className="customCard p-3 overflow_hidden">
           <h4>Create New Service </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
 
@@ -41,28 +30,29 @@ export default function AddNewDialog() {
               <label
                 htmlFor="title"
                 className="form-label ">
-                Title here
+                Title
               </label>
               <input
                 className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                id="fullName"
-                // onChange={handleTeamInputChange}
-                name="name"
+                onChange={handleSec3iInputChange}
+                name="title"
+                value={newSec3i.title}
                 placeholder="placeholder"
               />
             </div>
 
             <div className="col">
               <label
-                htmlFor="title"
+                htmlFor="subtitle"
                 className="form-label ">
-                Title here
+                subtitle
               </label>
               <input
                 className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                id="fullName"
-                // onChange={handleTeamInputChange}
-                name="profilePicture"
+                id="subtitle"
+                onChange={handleSec3iInputChange}
+                value={newSec3i.subtitle}
+                name="subtitle"
                 placeholder="placeholder"
               />
             </div>
@@ -71,33 +61,20 @@ export default function AddNewDialog() {
           <div className="row ">
             <div className="col">
               <label
-                htmlFor="title"
+                htmlFor="description"
                 className="form-label ">
-                Title here
+                description
               </label>
               <input
                 className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                id="fullName"
-                // onChange={handleTeamInputChange}
-                name="position"
-                placeholder="placeholder"
-              />
-            </div>
-
-            <div className="col">
-              <label
-                htmlFor="title"
-                className="form-label ">
-                Title here
-              </label>
-              <input
-                className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
-                id="fullName"
-                // onChange={handleTeamInputChange}
+                onChange={handleSec3iInputChange}
+                value={newSec3i.description}
                 name="description"
                 placeholder="placeholder"
               />
             </div>
+
+            <div className="col"></div>
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">
@@ -109,7 +86,7 @@ export default function AddNewDialog() {
             <Button
               type="submit"
               className="customCard px-4"
-              onClick={handleClose}>
+              onClick={handle3iFormSubmit}>
               Add
             </Button>
           </div>

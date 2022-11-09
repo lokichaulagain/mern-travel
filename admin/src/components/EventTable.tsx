@@ -1,22 +1,22 @@
 import * as React from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-import AddNewDialog from "./AddNewDialog";
-import { HomeContext } from "../../../context/HomeContext";
 import { useContext } from "react";
-import TableHeading from "../TableHeading";
 import { Button, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import Add2iiDialog from "./Add2iiDialog";
+import TableHeading from "./TableHeading";
+import AddNewDialog from "./home/AddNewDialog";
+import { EventContext } from "../../context/EventContext";
 
-export default function Section2iiTable() {
-  const { sec2ii, deleteSec2ii,  } = useContext(HomeContext);
+export default function EventTable() {
+  const { events, deleteEvent } = useContext(EventContext);
+  console.log(events)
 
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Section 2ii"} />
-        {sec2ii.length == 0 ? <Add2iiDialog /> : null}
+        <TableHeading heading={"Event Table"} />
+        <AddNewDialog />
       </div>
 
       <div className="customCard mt-2 ">
@@ -31,8 +31,8 @@ export default function Section2iiTable() {
             </tr>
           </thead>
           <tbody>
-            {sec2ii &&
-              sec2ii.map((data: any, index: any) => (
+            {events &&
+              events.map((data: any, index: any) => (
                 <tr
                   key={index}
                   className="customPrimaryTxtColor custom_table_hover ">
@@ -55,7 +55,7 @@ export default function Section2iiTable() {
                       <IconButton
                         aria-label="delete"
                         data-bs-toggle="modal"
-                        data-bs-target="#deleteSec2iiModal">
+                        data-bs-target="#eventDeleteModal">
                         <DeleteIcon
                           fontSize="inherit"
                           color="warning"
@@ -64,9 +64,9 @@ export default function Section2iiTable() {
 
                       <div
                         className="modal fade "
-                        id="deleteSec2iiModal"
+                        id="eventDeleteModal"
                         tab-index="-1"
-                        aria-labelledby="deleteSec2iiModalLabel"
+                        aria-labelledby="eventDeleteModalLabel"
                         aria-hidden="true">
                         <div className="modal-dialog ">
                           <div
@@ -84,7 +84,7 @@ export default function Section2iiTable() {
                               </Button>
 
                               <Button
-                                onClick={(e) => deleteSec2ii(data._id)}
+                                onClick={(e) => deleteEvent(data._id)}
                                 data-bs-dismiss="modal"
                                 className="table_button "
                                 size="small">

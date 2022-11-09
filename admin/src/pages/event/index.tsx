@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../../components/Header";
-import { TeamContextProvider } from "../../../context/TeamContext";
-import TeamMemberTable from "../../components/team/TeamMemberTable";
+import { EventContextProvider } from "../../../context/EventContext";
+import EventTable from "../../components/EventTable";
 
 function Event() {
   return (
-    <TeamContextProvider>
-      <Header pageTitle={"Team Page"} />
-      <TeamMemberTable />
-    </TeamContextProvider>
+    <EventContextProvider>
+      <Header pageTitle={"Event Page"} />
+      <EventTable />
+    </EventContextProvider>
   );
 }
 

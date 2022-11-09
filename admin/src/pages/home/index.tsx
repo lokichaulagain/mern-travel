@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
 import Section5Table from "../../components/home/Section5Table";
-import OurApproachTable from "../../components/ourServices/OurApproachTable";
 import { HomeContextProvider } from "../../../context/HomeContext";
 import Section4Table from "../../components/home/Section4Table";
 import Section3iiTable from "../../components/home/Section3iiTable";
@@ -19,7 +18,6 @@ function Home() {
       <Section3iiTable />
       <Section4Table />
       <Section5Table />
-      {/* <OurApproachTable /> */}
     </HomeContextProvider>
   );
 }

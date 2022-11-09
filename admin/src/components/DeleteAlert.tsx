@@ -8,8 +8,7 @@ import { AncientHimalayanContext } from "../../context/Context";
 import { clearScreenDown } from "readline";
 
 export default function DeleteAlert({ deleteSec2i, id }: any) {
-  console.log(id)
-  console.log(deleteSec2i)
+
   // const { mails, deleteMail } = useContext(AncientHimalayanContext);
   return (
     <>

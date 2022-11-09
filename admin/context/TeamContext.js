@@ -10,6 +10,26 @@ export const TeamContextProvider = ({ children }) => {
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
 
+  const [team, setTeam] = useState({
+    name: "",
+    profilePicture: "",
+    position: "",
+    description: "",
+  });
+
+  const handleTeamInputChange = (e) => {
+    setTeam({
+      ...team,
+      [e.target.name]: e.target.value,
+    });
+  };
+  console.log(team);
+
+  const handleTeamFormSubmit = () => {
+    e.preventDefault();
+    console.log("Form has been submitted");
+  };
+
   useEffect(() => {
     const fetchAllTeamMember = async () => {
       try {
@@ -33,5 +53,5 @@ export const TeamContextProvider = ({ children }) => {
     }
   };
 
-  return <TeamContext.Provider value={{ members, deleteTeamMember }}>{children}</TeamContext.Provider>;
+  return <TeamContext.Provider value={{ members, deleteTeamMember, team, handleTeamInputChange,handleTeamFormSubmit }}>{children}</TeamContext.Provider>;
 };
