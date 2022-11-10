@@ -5,8 +5,8 @@ import { useContext } from "react";
 import { Button, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import TableHeading from "./TableHeading";
-import AddNewDialog from "./home/AddNewDialog";
 import { EventContext } from "../../context/EventContext";
+import AddEventDialog from "./AddEventDialog";
 
 export default function EventTable() {
   const { events, deleteEvent } = useContext(EventContext);
@@ -16,7 +16,7 @@ export default function EventTable() {
     <>
       <div className="d-flex align-items-center ">
         <TableHeading heading={"Event Table"} />
-        <AddNewDialog />
+        <AddEventDialog />
       </div>
 
       <div className="customCard mt-2 ">

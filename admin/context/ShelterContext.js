@@ -24,6 +24,36 @@ export const ShelterContextProvider = ({ children }) => {
     fetchAllShelterSec2();
   }, [isUpdated]);
 
+  const [newCarouselCard, setNewCarouselCard] = useState({
+    icon: "",
+    title: "",
+    description: "",
+  });
+
+  const handleSec2InputChange = (e) => {
+    setNewCarouselCard({
+      ...newCarouselCard,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSec2FormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:4000/api/shelter/sec2", newCarouselCard);
+      setIsUpdated(1);
+      createSuccess();
+      console.log("Form has been submitted");
+      setNewCarouselCard({
+        icon: "",
+        title: "",
+        description: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     const fetchAllShelterSec3 = async () => {
       try {
@@ -57,5 +87,5 @@ export const ShelterContextProvider = ({ children }) => {
     }
   };
 
-  return <ShelterContext.Provider value={{ sec2, sec3, deleteShelterSec2, deleteShelterSec3 }}>{children}</ShelterContext.Provider>;
+  return <ShelterContext.Provider value={{ sec2, sec3, deleteShelterSec2, deleteShelterSec3, handleSec2InputChange, newCarouselCard, handleSec2FormSubmit }}>{children}</ShelterContext.Provider>;
 };

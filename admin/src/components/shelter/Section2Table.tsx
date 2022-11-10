@@ -5,8 +5,8 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
 import { useContext } from "react";
 import TableHeading from "../TableHeading";
-import AddNewDialog from "../home/AddNewDialog";
 import { ShelterContext } from "../../../context/ShelterContext";
+import AddSection2Dialog from "./AddSection2Dialog";
 
 export default function Section2Table() {
   const { sec2, deleteShelterSec2 } = useContext(ShelterContext);
@@ -15,7 +15,7 @@ export default function Section2Table() {
     <>
       <div className="d-flex align-items-center ">
         <TableHeading heading={"Section 2"} />
-        <AddNewDialog />
+        <AddSection2Dialog />
       </div>
 
       <div className="customCard mt-2 ">

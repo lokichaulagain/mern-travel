@@ -9,8 +9,9 @@ export const TeamContextProvider = ({ children }) => {
   const [isUpdated, setIsUpdated] = useState(0);
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
+  const createSuccess = () => toast.success("Successfully Created");
 
-  const [team, setTeam] = useState({
+  const [newMember, setNewMember] = useState({
     name: "",
     profilePicture: "",
     position: "",
@@ -18,16 +19,22 @@ export const TeamContextProvider = ({ children }) => {
   });
 
   const handleTeamInputChange = (e) => {
-    setTeam({
-      ...team,
+    setNewMember({
+      ...newMember,
       [e.target.name]: e.target.value,
     });
   };
-  console.log(team);
 
-  const handleTeamFormSubmit = () => {
+  const handleTeamFormSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form has been submitted");
+    try {
+      const res = await axios.post("http://localhost:4000/api/team", newMember);
+      setIsUpdated(1);
+      createSuccess();
+      console.log("Form has been submitted");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
@@ -53,5 +60,5 @@ export const TeamContextProvider = ({ children }) => {
     }
   };
 
-  return <TeamContext.Provider value={{ members, deleteTeamMember, team, handleTeamInputChange,handleTeamFormSubmit }}>{children}</TeamContext.Provider>;
+  return <TeamContext.Provider value={{ members, deleteTeamMember, newMember, handleTeamInputChange, handleTeamFormSubmit }}>{children}</TeamContext.Provider>;
 };

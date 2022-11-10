@@ -5,8 +5,8 @@ import { useContext } from "react";
 import TableHeading from "../TableHeading";
 import { Button, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import AddNewDialog from "../home/AddNewDialog";
 import { TeamContext } from "../../../context/TeamContext";
+import AddTeamMemberDialog from "./AddTeamMemberDialog";
 
 export default function TeamMemberTable() {
   const {members, deleteTeamMember } = useContext(TeamContext);
@@ -15,7 +15,7 @@ export default function TeamMemberTable() {
     <>
       <div className="d-flex align-items-center ">
         <TableHeading heading={"Team Members"} />
-        <AddNewDialog />
+        <AddTeamMemberDialog />
       </div>
 
       <div className="customCard mt-2 ">
@@ -83,7 +83,7 @@ export default function TeamMemberTable() {
                               </Button>
 
                               <Button
-                                onClick={(e) => deleteTeamMember(data._id)}
+                                onClick={() => deleteTeamMember(data._id)}
                                 data-bs-dismiss="modal"
                                 className="table_button "
                                 size="small">
