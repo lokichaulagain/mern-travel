@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/Header";
-import Section5Table from "../../components/home/Section5Table";
 import { HomeContextProvider } from "../../../context/HomeContext";
 import Section3iiTable from "../../components/home/Section3iiTable";
 import Section3iTable from "../../components/home/Section3iTable";
@@ -15,7 +14,6 @@ function Home() {
       <Section2iiTable />
       <Section3iTable />
       <Section3iiTable />
-      <Section5Table />
     </HomeContextProvider>
   );
 }

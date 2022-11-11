@@ -1,15 +1,14 @@
 import React from "react";
 import Header from "../../components/Header";
-import OurApproachTable from "../../components/ourServices/OurApproachTable";
 import OurServicesTable from "../../components/ourServices/OurServicesTable";
+import { OurServicesContextProvider } from "../../../context/OurServicesContext";
 
 function Portfolio() {
   return (
-    <>
+    <OurServicesContextProvider>
       <Header pageTitle={"services"} />
       <OurServicesTable />
-      <OurApproachTable />
-    </>
+    </OurServicesContextProvider>
   );
 }
 

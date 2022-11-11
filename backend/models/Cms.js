@@ -26,14 +26,6 @@ const cmsSchema = new mongoose.Schema(
       type: String,
     },
 
-    googleUrl: {
-      type: String,
-    },
-
-    twitterUrl: {
-      type: String,
-    },
-
     companyName: {
       type: String,
     },

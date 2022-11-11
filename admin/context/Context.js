@@ -6,7 +6,6 @@ export const AncientHimalayanContext = createContext();
 
 export const AncientHimalayanContextProvider = ({ children }) => {
   const [mails, setMails] = useState([]);
-  const [cmsData, setCmsData] = useState({});
   const [isUpdated, setIsUpdated] = useState(0);
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
@@ -34,17 +33,6 @@ export const AncientHimalayanContextProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    const fetchCmsData = async () => {
-      try {
-        const res = await axios.get("http://localhost:4000/api/cms");
-        setCmsData(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchCmsData();
-  }, [isUpdated]);
-
-  return <AncientHimalayanContext.Provider value={{ mails, cmsData, deleteMail }}>{children}</AncientHimalayanContext.Provider>;
+ 
+  return <AncientHimalayanContext.Provider value={{ mails,  deleteMail }}>{children}</AncientHimalayanContext.Provider>;
 };
