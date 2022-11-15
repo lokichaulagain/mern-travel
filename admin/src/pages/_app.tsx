@@ -12,6 +12,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { MiscellaneousContextProvider } from "../../context/MiscellaneousContext";
 import { CmsContextProvider } from "../../context/CmsContext";
 import { TeamContextProvider } from "../../context/TeamContext";
+import { OurServicesContextProvider } from "../../context/OurServicesContext";
+import { HomeContextProvider } from "../../context/HomeContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -26,40 +28,44 @@ function MyApp({ Component, pageProps }: AppProps) {
         <MiscellaneousContextProvider>
           <CmsContextProvider>
             <TeamContextProvider>
-              <Box
-                className="customBg"
-                style={{ height: "100vh" }}>
-                <>
-                  {location === "login" || location === "register" ? (
-                    <Grid container>
-                      <Component {...pageProps} />
-                    </Grid>
-                  ) : (
+              <OurServicesContextProvider>
+                <HomeContextProvider>
+                  <Box
+                    className="customBg"
+                    style={{ height: "100vh" }}>
                     <>
-                      <Topbar />
-                      <Grid container>
-                        <Grid
-                          item
-                          xs={3}
-                          lg={2}
-                          className="customLeftBar">
-                          <LeftAppBar />
-                        </Grid>
-
-                        {/* Right side */}
-                        <Grid
-                          item
-                          xs={9}
-                          lg={10}
-                          p={5}
-                          className="right_side_bg">
+                      {location === "login" || location === "register" ? (
+                        <Grid container>
                           <Component {...pageProps} />
                         </Grid>
-                      </Grid>
+                      ) : (
+                        <>
+                          <Topbar />
+                          <Grid container>
+                            <Grid
+                              item
+                              xs={3}
+                              lg={2}
+                              className="customLeftBar">
+                              <LeftAppBar />
+                            </Grid>
+
+                            {/* Right side */}
+                            <Grid
+                              item
+                              xs={9}
+                              lg={10}
+                              p={5}
+                              className="right_side_bg">
+                              <Component {...pageProps} />
+                            </Grid>
+                          </Grid>
+                        </>
+                      )}
                     </>
-                  )}
-                </>
-              </Box>
+                  </Box>
+                </HomeContextProvider>
+              </OurServicesContextProvider>
             </TeamContextProvider>
           </CmsContextProvider>
         </MiscellaneousContextProvider>

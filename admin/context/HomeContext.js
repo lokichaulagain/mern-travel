@@ -12,6 +12,10 @@ export const HomeContextProvider = ({ children }) => {
   const [sec3ii, setSec3ii] = useState([]);
   const [sec2i, setSec2i] = useState([]);
   const [sec2ii, setSec2ii] = useState([]);
+  const [singleSec2i, setSingleSec2i] = useState({});
+  const [singleSec2ii, setSingleSec2ii] = useState({});
+  const [singleSec3i, setSingleSec3i] = useState({});
+  const [singleSec3ii, setSingleSec3ii] = useState({});
   const [isUpdated, setIsUpdated] = useState(0);
 
   // const { handleClickOpen, handleClose, open } = useContext(MiscellaneousContext);
@@ -45,7 +49,9 @@ export const HomeContextProvider = ({ children }) => {
     };
     fetchAllSec4();
   }, [isUpdated]);
-  console.log(sec4);
+
+
+
 
   useEffect(() => {
     const fetchAllSec3i = async () => {
@@ -59,6 +65,39 @@ export const HomeContextProvider = ({ children }) => {
     };
     fetchAllSec3i();
   }, [isUpdated]);
+
+
+
+
+    const fetchSingleSec3i = async (id) => {
+      try {
+        const res = await axios.get(`http://localhost:4000/api/home/sec3i/${id}`);
+        setSingleSec3i(res.data);
+        setIsUpdated(0);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+
+
+
+    const fetchSingleSec3ii = async (id) => {
+      try {
+        const res = await axios.get(`http://localhost:4000/api/home/sec3ii/${id}`);
+        setSingleSec3ii(res.data);
+        setIsUpdated(0);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    console.log(singleSec3ii)
+
+
+
+
+
 
   const [newSec3i, setNewSec3i] = useState({
     title: "",
@@ -146,6 +185,16 @@ export const HomeContextProvider = ({ children }) => {
     fetchAllSec2i();
   }, [isUpdated]);
 
+  const fetchSingleSec2i = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/home/sec2i/${id}`);
+      setSingleSec2i(res.data);
+      setIsUpdated(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const [newSec2i, setNewSec2i] = useState({
     h1: "",
     p1: "",
@@ -202,6 +251,16 @@ export const HomeContextProvider = ({ children }) => {
     };
     fetchAllSec2ii();
   }, [isUpdated]);
+
+  const fetchSingle2ii = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/home/sec2ii/${id}`);
+      setSingleSec2ii(res.data);
+      setIsUpdated(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const [newSec2ii, setNewSec2ii] = useState({
     title: "",
@@ -316,5 +375,9 @@ export const HomeContextProvider = ({ children }) => {
     }
   };
 
-  return <HomeContext.Provider value={{ sec5, sec4, sec3ii, sec3i, sec2ii, sec2i, deleteSec2i, deleteSec2ii, deleteSec3i, deleteSec3ii, deleteSec5, handleSec2iInputChange, handleFormSubmit, newSec2i, setNewSec2i, handleSec2iiInputChange, newSec2ii, handle2iiFormSubmit, handle3iFormSubmit, handleSec3iInputChange, newSec3i, handleSec3iiFormSubmit, handleSec3iiInputChange, newSec3ii, newSec5, handleSec5InputChange, handleSec5FormSubmit }}>{children}</HomeContext.Provider>;
+  return (
+    <HomeContext.Provider value={{fetchSingleSec3i,singleSec3i,fetchSingleSec3ii,singleSec3ii, fetchSingle2ii, singleSec2ii, singleSec2i, fetchSingleSec2i, sec5, sec4, sec3ii, sec3i, sec2ii, sec2i, deleteSec2i, deleteSec2ii, deleteSec3i, deleteSec3ii, deleteSec5, handleSec2iInputChange, handleFormSubmit, newSec2i, setNewSec2i, handleSec2iiInputChange, newSec2ii, handle2iiFormSubmit, handle3iFormSubmit, handleSec3iInputChange, newSec3i, handleSec3iiFormSubmit, handleSec3iiInputChange, newSec3ii, newSec5, handleSec5InputChange, handleSec5FormSubmit }}>
+      {children}
+    </HomeContext.Provider>
+  );
 };

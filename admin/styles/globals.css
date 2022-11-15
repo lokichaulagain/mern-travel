@@ -111,6 +111,10 @@
 
 /*=====================  */
 
+.css-cveggr-MuiListItemIcon-root {
+  color: #8b95a0 !important;
+}
+
 .myBtn {
   background-color: black;
   color: white;

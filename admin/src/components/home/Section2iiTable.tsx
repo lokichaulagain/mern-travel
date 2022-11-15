@@ -1,7 +1,6 @@
 import * as React from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-import AddNewDialog from "./AddNewDialog";
 import { HomeContext } from "../../../context/HomeContext";
 import { useContext } from "react";
 import TableHeading from "../TableHeading";
@@ -15,7 +14,7 @@ export default function Section2iiTable() {
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Section 2ii"} />
+        <TableHeading heading={"Section 2 Description"} />
         {sec2ii.length == 0 ? <Add2iiDialog /> : null}
       </div>
 
@@ -42,7 +41,7 @@ export default function Section2iiTable() {
                   <td>{data.description}</td>
                   <td>
                     <div className="d-flex ">
-                      <Link href={`staffDetails/1`}>
+                      <Link href={`/home/${data._id}`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"

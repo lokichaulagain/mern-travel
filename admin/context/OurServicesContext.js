@@ -6,6 +6,7 @@ export const OurServicesContext = createContext();
 export const OurServicesContextProvider = ({ children }) => {
   const [sec5, setSec5] = useState([]);
   const [isUpdated, setIsUpdated] = useState(0);
+  const [singleData, setSingleData] = useState({})
   const deleteSuccess = () => toast.success("Successfully Deleted");
   const createSuccess = () => toast.success("Successfully Created");
 
@@ -29,7 +30,19 @@ export const OurServicesContextProvider = ({ children }) => {
     };
     fetchAllSec5();
   }, [isUpdated]);
-  console.log(sec5);
+
+
+
+    const fetchSingleService = async (id) => {
+      try {
+        const res = await axios.get(`http://localhost:4000/api/home/sec5/${id}`);
+        setSingleData(res.data);
+        setIsUpdated(0);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
 
   const deleteSec5 = async (id) => {
     try {
@@ -72,5 +85,5 @@ export const OurServicesContextProvider = ({ children }) => {
     }
   };
 
-  return <OurServicesContext.Provider value={{ handleSec5FormSubmit, handleSec5InputChange, sec5, newSec5, open, handleClose, handleClickOpen ,deleteSec5}}>{children}</OurServicesContext.Provider>;
+  return <OurServicesContext.Provider value={{fetchSingleService,singleData, handleSec5FormSubmit, handleSec5InputChange, sec5, newSec5, open, handleClose, handleClickOpen ,deleteSec5}}>{children}</OurServicesContext.Provider>;
 };

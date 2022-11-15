@@ -14,7 +14,7 @@ export default function Section2iTable() {
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Section 2i"} />
+        <TableHeading heading={"Section 2 Carousel"} />
         {sec2i.length < 5 ? <Add2iDialog /> : null}
       </div>
 
@@ -41,7 +41,7 @@ export default function Section2iTable() {
                   <td>{data.description}</td>
                   <td>
                     <div className="d-flex ">
-                      <Link href={`staffDetails/1`}>
+                      <Link href={`/home/${data._id}`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"

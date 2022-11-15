@@ -14,7 +14,7 @@ export default function Section3iiTable() {
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Section 3ii"} />
+        <TableHeading heading={"Section 3 Accordion Section"} />
         {sec3ii.length < 4 ? <Add3iiDialog /> : null}
       </div>
 
@@ -41,7 +41,7 @@ export default function Section3iiTable() {
                   <td>{data.description}</td>
                   <td>
                     <div className="d-flex ">
-                      <Link href={`staffDetails/1`}>
+                      <Link href={`/home/${data._id}`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"
