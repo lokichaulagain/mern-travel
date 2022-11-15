@@ -47,7 +47,7 @@ export default function CmsTable() {
 
                   <td>
                     <div className="d-flex ">
-                      <Link href={`staffDetails/1`}>
+                      <Link href={`/cms/${data._id}`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"

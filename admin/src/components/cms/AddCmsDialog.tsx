@@ -4,25 +4,20 @@ import { CmsContext } from "../../../context/CmsContext";
 
 export default function AddCmsDialog() {
   const { cmsData, newCmsData, handleCmsInputChange, handleCmsFormSubmit, open, handleClose, handleClickOpen } = useContext(CmsContext);
-  // const [open, setOpen] = React.useState(false);
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
 
   return (
     <>
       <Grid
         container
         justifyContent="end">
-        <Button
-          size="large"
-          onClick={handleClickOpen}
-          className="customCard px-4">
-          Add New
-        </Button>
+        {cmsData.length == 0 ? (
+          <Button
+            size="large"
+            onClick={handleClickOpen}
+            className="customCard px-4">
+            Add New
+          </Button>
+        ) : null}
       </Grid>
 
       <Dialog
@@ -56,6 +51,7 @@ export default function AddCmsDialog() {
                 Company Logo
               </label>
               <input
+                type="file"
                 className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
                 id="companyLogo"
                 onChange={handleCmsInputChange}

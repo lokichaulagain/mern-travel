@@ -57,6 +57,13 @@ const navItems = [
     route: "/ourServices",
   },
 
+  
+  {
+    icon: <SettingsOutlinedIcon />,
+    label: "Price Packages",
+    route: "/pricePackages",
+  },
+
   {
     icon: <SettingsOutlinedIcon />,
     label: "About",

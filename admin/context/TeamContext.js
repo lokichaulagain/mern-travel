@@ -7,6 +7,7 @@ export const TeamContext = createContext();
 export const TeamContextProvider = ({ children }) => {
   const [members, setMembers] = useState([]);
   const [isUpdated, setIsUpdated] = useState(0);
+  const [singleData, setSingleData] = useState({});
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
   const createSuccess = () => toast.success("Successfully Created");
@@ -50,6 +51,16 @@ export const TeamContextProvider = ({ children }) => {
     fetchAllTeamMember();
   }, [isUpdated]);
 
+  const fetchTeamDataById = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/team/${id}`);
+      setSingleData(res.data);
+      console.log(res.data);
+      setIsUpdated(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const deleteTeamMember = async (id) => {
     try {
       const res = await axios.delete("http://localhost:4000/api/team/" + id);
@@ -60,5 +71,5 @@ export const TeamContextProvider = ({ children }) => {
     }
   };
 
-  return <TeamContext.Provider value={{ members, deleteTeamMember, newMember, handleTeamInputChange, handleTeamFormSubmit }}>{children}</TeamContext.Provider>;
+  return <TeamContext.Provider value={{ fetchTeamDataById, singleData, members, deleteTeamMember, newMember, handleTeamInputChange, handleTeamFormSubmit }}>{children}</TeamContext.Provider>;
 };

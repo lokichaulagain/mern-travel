@@ -1,6 +1,6 @@
 import React from "react";
-import CmsTable from "../components/cms/CmsTable";
-import Header from "../components/Header";
+import CmsTable from "../../components/cms/CmsTable";
+import Header from "../../components/Header";
 
 function Cms() {
   return (

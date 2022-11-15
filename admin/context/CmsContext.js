@@ -6,6 +6,7 @@ export const CmsContext = createContext();
 export const CmsContextProvider = ({ children }) => {
   const [isUpdated, setIsUpdated] = useState(0);
   const [cmsData, setCmsData] = useState([]);
+  const [singleData, setSingleData] = useState({});
   const deleteSuccess = () => toast.success("Successfully Deleted");
   const createSuccess = () => toast.success("Successfully Created");
 
@@ -45,6 +46,18 @@ export const CmsContextProvider = ({ children }) => {
       createSuccess();
       handleClose();
       console.log("Form has been submitted");
+      setNewCmsData({
+        companyName: "",
+        companyLogo: "",
+        facebookUrl: "",
+        instagramUrl: "",
+        twitterUrl: "",
+        email: "",
+        phone1: "",
+        whatsapp: "",
+        googleUrl: "",
+        twitterUrl: "",
+      });
     } catch (error) {
       console.log(error);
     }
@@ -73,5 +86,16 @@ export const CmsContextProvider = ({ children }) => {
     fetchCmsData();
   }, [isUpdated]);
 
-  return <CmsContext.Provider value={{ cmsData, newCmsData, deleteCms, handleCmsInputChange, handleCmsFormSubmit, open, handleClose, handleClickOpen }}>{children}</CmsContext.Provider>;
+  const fetchCmsDataById = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/cms/${id}`);
+      setSingleData(res.data);
+      console.log(res.data);
+      setIsUpdated(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return <CmsContext.Provider value={{ cmsData, newCmsData, deleteCms, handleCmsInputChange, handleCmsFormSubmit, open, handleClose, handleClickOpen, fetchCmsDataById, singleData }}>{children}</CmsContext.Provider>;
 };

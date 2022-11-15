@@ -5,17 +5,18 @@ import { useContext } from "react";
 import TableHeading from "../TableHeading";
 import { Button, IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { TeamContext } from "../../../context/TeamContext";
-import AddTeamMemberDialog from "./AddTeamMemberDialog";
+import AddPricePackageDialog from "./AddPricePackageDialog";
+import { PricePackageContext } from "../../../context/PricePackageContext";
 
-export default function TeamMemberTable() {
-  const { members, deleteTeamMember } = useContext(TeamContext);
+export default function PricePackageTable() {
+  const { pricePackages, deletePricePackage, handlePricePackageInputChange, handlePricePackageFormSubmit } = useContext(PricePackageContext);
+  console.log(pricePackages)
 
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Team Members"} />
-        <AddTeamMemberDialog />
+        <TableHeading heading={"Price Package"} />
+        <AddPricePackageDialog />
       </div>
 
       <div className="customCard mt-2 ">
@@ -23,27 +24,25 @@ export default function TeamMemberTable() {
           <thead>
             <tr className="customPrimaryTxtColor">
               <th scope="col">S.N</th>
-              <th scope="col">Name</th>
-              <th scope="col">Profile Picture</th>
-              <th scope="col">Position</th>
+              <th scope="col">Icon</th>
+              <th scope="col">Title</th>
               <th scope="col">Description</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {members &&
-              members.map((data: any, index: any) => (
+            {pricePackages &&
+              pricePackages.map((data: any, index: any) => (
                 <tr
                   key={index}
                   className="customPrimaryTxtColor custom_table_hover ">
                   <th scope="row">{index + 1}</th>
-                  <td>{data.name}</td>
-                  <td>{data.profilePicture}</td>
-                  <td>{data.position}</td>
+                  <td>{data.icon}</td>
+                  <td>{data.title}</td>
                   <td>{data.description}</td>
                   <td>
                     <div className="d-flex ">
-                      <Link href={`/team/${data._id}`}>
+                      <Link href={`staffDetails/1`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"
@@ -85,7 +84,7 @@ export default function TeamMemberTable() {
                               </Button>
 
                               <Button
-                                onClick={() => deleteTeamMember(data._id)}
+                                onClick={() => deletePricePackage(data._id)}
                                 data-bs-dismiss="modal"
                                 className="table_button "
                                 size="small">
