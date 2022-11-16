@@ -6,9 +6,11 @@ import mongoose from "mongoose";
 import contactRoute from "./routes/contact.route.js";
 import homeRoute from "./routes/home.route.js";
 import teamRoute from "./routes/team.route.js";
+import blogRoute from "./routes/blog.route.js";
 import shelterRoute from "./routes/shelter.route.js";
 import foodRoute from "./routes/food.route.js";
 import eventRoute from "./routes/event.route.js";
+import pricePackageRoute from "./routes/pricePackage.route.js";
 import cmsRoute from "./routes/cms.route.js";
 import cors from "cors";
 
@@ -37,10 +39,12 @@ app.get("/", (req, res) => {
 app.use("/api/contact", contactRoute);
 app.use("/api/home", homeRoute);
 app.use("/api/team", teamRoute);
+app.use("/api/blog", blogRoute);
 app.use("/api/shelter", shelterRoute);
 app.use("/api/food", foodRoute);
 app.use("/api/event", eventRoute);
 app.use("/api/cms", cmsRoute);
+app.use("/api/pricePackage", pricePackageRoute);
 
 //portListening
 app.listen(port, (error) => {

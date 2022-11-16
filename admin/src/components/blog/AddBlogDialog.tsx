@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Grid, Dialog, Button } from "@mui/material";
-import TextInputField from "../TextInputField";
+import { BlogContext } from "../../../context/BlogContext";
 
 export default function AddBlogDialog() {
+  const { newBlog, handleBlogInputChange, handleBlogFormSubmit } = useContext(BlogContext);
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -11,59 +12,90 @@ export default function AddBlogDialog() {
     setOpen(false);
   };
 
-  const [blogValues, setBlogValues] = useState({
-    title: "",
-    thumbnail: "",
-    description: "",
-  });
-
-  const handleInputChange = (e: any) => {
-    setBlogValues({
-      ...blogValues,
-      [e.target.name]: e.target.value,
-    });
-  };
-  console.log(blogValues);
-
-
-  const handleFormSubmit = (e: any) => {
-    e.preventDefault();
-    console.log("Form has been submitted");
-  };
-
   return (
     <>
-      <Grid container justifyContent="end">
-        <Button size="large" onClick={handleClickOpen} className="customCard px-4">
-         New Blog
+      <Grid
+        container
+        justifyContent="end">
+        <Button
+          size="large"
+          onClick={handleClickOpen}
+          className="customCard px-4">
+          Add New
         </Button>
       </Grid>
 
-      <Dialog open={open} onClose={handleClose}>
-        <form onSubmit={handleFormSubmit} className="customCard p-3 overflow_hidden">
-          <h4>Create New Blog </h4>
+      <Dialog
+        open={open}
+        onClose={handleClose}>
+        <form className="customCard p-3 overflow_hidden">
+          <h4>Create New Service </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
 
-          <div className="row">
+          <div className="row ">
             <div className="col">
-              <TextInputField name="title" value={blogValues.title} onchange="handleInputChange" type="text" placeholder="lokendra" label="Title" />
+              <label
+                htmlFor="title"
+                className="form-label ">
+                Title
+              </label>
+              <input
+                className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
+                onChange={handleBlogInputChange}
+                name="title"
+                value={newBlog.title}
+                placeholder="placeholder"
+              />
             </div>
+
             <div className="col">
-              <TextInputField name="thumbnail" value={blogValues.thumbnail} onchange="handleInputChange" type="text" placeholder="Thumbnail" label="Thumbnail" />
+              <label
+                htmlFor="thumbnail"
+                className="form-label ">
+                thumbnail
+              </label>
+              <input
+                type="file"
+                className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
+                id="thumbnail"
+                onChange={handleBlogInputChange}
+                value={newBlog.thumbnail}
+                name="thumbnail"
+                placeholder="placeholder"
+              />
             </div>
           </div>
 
-          <div className="row">
+          <div className="row ">
             <div className="col">
-              <TextInputField name="description" value={blogValues.description} onchange="handleInputChange" type="text" placeholder="Thumbnail" label="Description" />
+              <label
+                htmlFor="description"
+                className="form-label ">
+                description
+              </label>
+              <input
+                className=" input_field_style form-control form-control-lg mb-2  border-0  rounded-0"
+                id="description"
+                onChange={handleBlogInputChange}
+                value={newBlog.description}
+                name="description"
+                placeholder="placeholder"
+              />
             </div>
+
+            <div className="col"></div>
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">
-            <Button className="customCard px-3" onClick={handleClose}>
+            <Button
+              className="customCard px-3"
+              onClick={handleClose}>
               Cancel
             </Button>
-            <Button type="submit" className="customCard px-4" onClick={handleClose}>
+            <Button
+              type="submit"
+              className="customCard px-4"
+              onClick={handleBlogFormSubmit}>
               Add
             </Button>
           </div>

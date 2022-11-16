@@ -16,6 +16,7 @@ import { OurServicesContextProvider } from "../../context/OurServicesContext";
 import { HomeContextProvider } from "../../context/HomeContext";
 import { PricePackageContextProvider } from "../../context/PricePackageContext";
 import { EventContextProvider } from "../../context/EventContext";
+import { BlogContextProvider } from "../../context/BlogContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -35,40 +36,42 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <MiscellaneousContextProvider>
                   <PricePackageContextProvider>
                     <EventContextProvider>
-                      <Box
-                        className="customBg"
-                        style={{ height: "100vh" }}>
-                        <>
-                          {location === "login" || location === "register" ? (
-                            <Grid container>
-                              <Component {...pageProps} />
-                            </Grid>
-                          ) : (
-                            <>
-                              <Topbar />
+                      <BlogContextProvider>
+                        <Box
+                          className="customBg"
+                          style={{ height: "100vh" }}>
+                          <>
+                            {location === "login" || location === "register" ? (
                               <Grid container>
-                                <Grid
-                                  item
-                                  xs={3}
-                                  lg={2}
-                                  className="customLeftBar">
-                                  <LeftAppBar />
-                                </Grid>
-
-                                {/* Right side */}
-                                <Grid
-                                  item
-                                  xs={9}
-                                  lg={10}
-                                  p={5}
-                                  className="right_side_bg">
-                                  <Component {...pageProps} />
-                                </Grid>
+                                <Component {...pageProps} />
                               </Grid>
-                            </>
-                          )}
-                        </>
-                      </Box>
+                            ) : (
+                              <>
+                                <Topbar />
+                                <Grid container>
+                                  <Grid
+                                    item
+                                    xs={3}
+                                    lg={2}
+                                    className="customLeftBar">
+                                    <LeftAppBar />
+                                  </Grid>
+
+                                  {/* Right side */}
+                                  <Grid
+                                    item
+                                    xs={9}
+                                    lg={10}
+                                    p={5}
+                                    className="right_side_bg">
+                                    <Component {...pageProps} />
+                                  </Grid>
+                                </Grid>
+                              </>
+                            )}
+                          </>
+                        </Box>
+                      </BlogContextProvider>
                     </EventContextProvider>
                   </PricePackageContextProvider>
                 </MiscellaneousContextProvider>

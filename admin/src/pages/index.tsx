@@ -1,5 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { useContext } from "react";
+import { BlogContext } from "../../context/BlogContext";
 import { OurServicesContext } from "../../context/OurServicesContext";
 import { PricePackageContext } from "../../context/PricePackageContext";
 import { TeamContext } from "../../context/TeamContext";
@@ -12,6 +13,7 @@ export default function Home() {
   const { members } = useContext(TeamContext);
   const { sec5 } = useContext(OurServicesContext);
   const { pricePackages } = useContext(PricePackageContext);
+  const { blogs } = useContext(BlogContext);
 
   return (
     <Stack spacing={2}>
@@ -48,8 +50,8 @@ export default function Home() {
           item={8}
         />
         <CardSmall
-          title={"Ongoing Tour"}
-          item={3}
+          title={"Total Blogs"}
+          item={blogs.length}
         />
         <CardSmall
           title={"Pending  Tour"}
