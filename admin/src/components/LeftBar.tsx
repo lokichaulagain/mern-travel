@@ -134,7 +134,7 @@ export default function LeftAppBar() {
               onClick={(event) => {
                 handleListItemClick(event, index), router.push(item.route);
               }}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemIcon className="left_navbar_icon">{item.icon}</ListItemIcon>
               <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>

@@ -14,11 +14,11 @@ export default function Section3iTable() {
   return (
     <>
       <div className="d-flex align-items-center ">
-        <TableHeading heading={"Section Description Section"} />
+        <TableHeading heading={"Section 3 Description"} />
         {sec3i.length == 0 ? <Add3iDialog /> : null}
       </div>
 
-      <div className="customCard mt-2 ">
+      <div className="customCard mt-2 mb-5">
         <table className="table  ">
           <thead>
             <tr className="customPrimaryTxtColor">

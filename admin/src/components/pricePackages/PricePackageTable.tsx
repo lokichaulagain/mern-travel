@@ -9,8 +9,7 @@ import AddPricePackageDialog from "./AddPricePackageDialog";
 import { PricePackageContext } from "../../../context/PricePackageContext";
 
 export default function PricePackageTable() {
-  const { pricePackages, deletePricePackage, handlePricePackageInputChange, handlePricePackageFormSubmit } = useContext(PricePackageContext);
-  console.log(pricePackages)
+  const { pricePackages, deletePricePackage } = useContext(PricePackageContext);
 
   return (
     <>
@@ -42,7 +41,7 @@ export default function PricePackageTable() {
                   <td>{data.description}</td>
                   <td>
                     <div className="d-flex ">
-                      <Link href={`staffDetails/1`}>
+                      <Link href={`/pricePackages/${data._id}`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"
@@ -55,7 +54,7 @@ export default function PricePackageTable() {
                       <IconButton
                         aria-label="delete"
                         data-bs-toggle="modal"
-                        data-bs-target="#teamMemberModal">
+                        data-bs-target="#pricePackageModal">
                         <DeleteIcon
                           fontSize="inherit"
                           color="warning"
@@ -64,9 +63,9 @@ export default function PricePackageTable() {
 
                       <div
                         className="modal fade "
-                        id="teamMemberModal"
+                        id="pricePackageModal"
                         tab-index="-1"
-                        aria-labelledby="teamMemberModalLabel"
+                        aria-labelledby="pricePackageModalLabel"
                         aria-hidden="true">
                         <div className="modal-dialog ">
                           <div

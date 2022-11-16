@@ -18,7 +18,7 @@ export default function Section3iiTable() {
         {sec3ii.length < 4 ? <Add3iiDialog /> : null}
       </div>
 
-      <div className="customCard mt-2 ">
+      <div className="customCard mt-2 mb-5 ">
         <table className="table  ">
           <thead>
             <tr className="customPrimaryTxtColor">

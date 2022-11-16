@@ -1,10 +1,13 @@
 import axios from "axios";
-import { useEffect, useState, createContext } from "react";
+import { useEffect, useState, createContext,useContext } from "react";
 import { toast } from "react-toastify";
+import { TeamContext } from "./TeamContext";
 
 export const MiscellaneousContext = createContext();
 
 export const MiscellaneousContextProvider = ({ children }) => {
+  
+
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {

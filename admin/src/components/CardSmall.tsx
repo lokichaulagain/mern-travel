@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar";
 import AirportShuttleOutlinedIcon from "@mui/icons-material/AirportShuttleOutlined";
 
-export default function CardSmall() {
+export default function CardSmall({title,item}:any) {
   return (
     <Grid
       container
@@ -19,8 +19,8 @@ export default function CardSmall() {
         </Avatar>
       </Grid>
       <Grid item>
-        <Typography variant="h6">Processing</Typography>
-        <Typography variant="h4">14</Typography>
+        <Typography variant="h6">{title}</Typography>
+        <Typography variant="h4">{item}</Typography>
       </Grid>
     </Grid>
   );

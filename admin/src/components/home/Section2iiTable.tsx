@@ -18,7 +18,7 @@ export default function Section2iiTable() {
         {sec2ii.length == 0 ? <Add2iiDialog /> : null}
       </div>
 
-      <div className="customCard mt-2 ">
+      <div className="customCard mt-2 mb-5 ">
         <table className="table  ">
           <thead>
             <tr className="customPrimaryTxtColor">

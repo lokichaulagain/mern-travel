@@ -10,7 +10,6 @@ import AddEventDialog from "./AddEventDialog";
 
 export default function EventTable() {
   const { events, deleteEvent } = useContext(EventContext);
-  console.log(events)
 
   return (
     <>
@@ -42,7 +41,7 @@ export default function EventTable() {
                   <td>{data.description}</td>
                   <td>
                     <div className="d-flex ">
-                      <Link href={`staffDetails/1`}>
+                      <Link href={`/event/${data._id}`}>
                         <IconButton aria-label="delete">
                           <VisibilityIcon
                             fontSize="inherit"

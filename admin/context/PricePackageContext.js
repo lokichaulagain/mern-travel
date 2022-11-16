@@ -6,6 +6,7 @@ export const PricePackageContext = createContext();
 export const PricePackageContextProvider = ({ children }) => {
   const [isUpdated, setIsUpdated] = useState(0);
   const [pricePackages, setPricePackages] = useState([]);
+  const [singlePricePackage, setSinglePricePackage] = useState({});
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
   const createSuccess = () => toast.success("Successfully Created");
@@ -34,7 +35,7 @@ export const PricePackageContextProvider = ({ children }) => {
   });
 
   const handlePricePackageInputChange = (e) => {
-    setNewCmsData({
+    setNewPricePackage({
       ...newPricePackage,
       [e.target.name]: e.target.value,
     });
@@ -76,5 +77,15 @@ export const PricePackageContextProvider = ({ children }) => {
     fetchPricePackages();
   }, [isUpdated]);
 
-  return <PricePackageContext.Provider value={{ pricePackages, deletePricePackage, handlePricePackageInputChange, handlePricePackageFormSubmit, open, handleClose, handleClickOpen, newPricePackage }}>{children}</PricePackageContext.Provider>;
+  const fetchSinglePricePackage = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/pricePackage/${id}`);
+      setSinglePricePackage(res.data);
+      setIsUpdated(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return <PricePackageContext.Provider value={{ fetchSinglePricePackage, singlePricePackage, pricePackages, deletePricePackage, handlePricePackageInputChange, handlePricePackageFormSubmit, open, handleClose, handleClickOpen, newPricePackage }}>{children}</PricePackageContext.Provider>;
 };

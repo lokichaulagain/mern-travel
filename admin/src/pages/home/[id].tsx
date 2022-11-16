@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import SingleRowTableItem from "../../components/SingleRowTableItem";
 import { HomeContext } from "../../../context/HomeContext";
+import Header from "../../components/Header";
 
 const Id = () => {
   const { singleSec2i, fetchSingleSec2i, fetchSingle2ii, singleSec2ii, fetchSingleSec3i, singleSec3i, fetchSingleSec3ii, singleSec3ii } = useContext(HomeContext);
@@ -15,12 +16,12 @@ const Id = () => {
     fetchSingleSec3ii(id);
   }, [id]);
 
-
   return (
     <>
+      {singleSec2i ? <Header pageTitle={"Home / Section 2 Carousel"} /> : singleSec2ii ? <Header pageTitle={"Home / Section 2 Description"} /> : fetchSingleSec3i ? <Header pageTitle={"Home / Section 3 Description"} /> : singleSec3ii ? <Header pageTitle={"Home / Section 3 Accordion"} /> : <Header pageTitle={"Home / page not found"} />}
+
       {singleSec2i && (
         <div className="row customCard">
-          <h4>Heading Here </h4>
           <SingleRowTableItem
             name={"Description"}
             value={singleSec2i.description}
@@ -63,7 +64,6 @@ const Id = () => {
 
       {singleSec2ii && (
         <div className="row customCard">
-          <h4>Heading Here </h4>
           <SingleRowTableItem
             name={"Title"}
             value={singleSec2ii.title}
@@ -81,8 +81,6 @@ const Id = () => {
 
       {singleSec3i && (
         <div className="row customCard">
-          <h4>Heading Here </h4>
-
           <SingleRowTableItem
             name={"Title"}
             value={singleSec3i.title}
@@ -101,8 +99,6 @@ const Id = () => {
 
       {singleSec3ii && (
         <div className="row customCard">
-          <h4>Heading Here </h4>
-
           <SingleRowTableItem
             name={"Title"}
             value={singleSec3ii.title}

@@ -14,6 +14,8 @@ import { CmsContextProvider } from "../../context/CmsContext";
 import { TeamContextProvider } from "../../context/TeamContext";
 import { OurServicesContextProvider } from "../../context/OurServicesContext";
 import { HomeContextProvider } from "../../context/HomeContext";
+import { PricePackageContextProvider } from "../../context/PricePackageContext";
+import { EventContextProvider } from "../../context/EventContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -25,50 +27,56 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <AncientHimalayanContextProvider>
-        <MiscellaneousContextProvider>
-          <CmsContextProvider>
-            <TeamContextProvider>
-              <OurServicesContextProvider>
-                <HomeContextProvider>
-                  <Box
-                    className="customBg"
-                    style={{ height: "100vh" }}>
-                    <>
-                      {location === "login" || location === "register" ? (
-                        <Grid container>
-                          <Component {...pageProps} />
-                        </Grid>
-                      ) : (
+        {/* <MiscellaneousContextProvider> */}
+        <CmsContextProvider>
+          <TeamContextProvider>
+            <OurServicesContextProvider>
+              <HomeContextProvider>
+                <MiscellaneousContextProvider>
+                  <PricePackageContextProvider>
+                    <EventContextProvider>
+                      <Box
+                        className="customBg"
+                        style={{ height: "100vh" }}>
                         <>
-                          <Topbar />
-                          <Grid container>
-                            <Grid
-                              item
-                              xs={3}
-                              lg={2}
-                              className="customLeftBar">
-                              <LeftAppBar />
-                            </Grid>
-
-                            {/* Right side */}
-                            <Grid
-                              item
-                              xs={9}
-                              lg={10}
-                              p={5}
-                              className="right_side_bg">
+                          {location === "login" || location === "register" ? (
+                            <Grid container>
                               <Component {...pageProps} />
                             </Grid>
-                          </Grid>
+                          ) : (
+                            <>
+                              <Topbar />
+                              <Grid container>
+                                <Grid
+                                  item
+                                  xs={3}
+                                  lg={2}
+                                  className="customLeftBar">
+                                  <LeftAppBar />
+                                </Grid>
+
+                                {/* Right side */}
+                                <Grid
+                                  item
+                                  xs={9}
+                                  lg={10}
+                                  p={5}
+                                  className="right_side_bg">
+                                  <Component {...pageProps} />
+                                </Grid>
+                              </Grid>
+                            </>
+                          )}
                         </>
-                      )}
-                    </>
-                  </Box>
-                </HomeContextProvider>
-              </OurServicesContextProvider>
-            </TeamContextProvider>
-          </CmsContextProvider>
-        </MiscellaneousContextProvider>
+                      </Box>
+                    </EventContextProvider>
+                  </PricePackageContextProvider>
+                </MiscellaneousContextProvider>
+              </HomeContextProvider>
+            </OurServicesContextProvider>
+          </TeamContextProvider>
+        </CmsContextProvider>
+        {/* </MiscellaneousContextProvider> */}
       </AncientHimalayanContextProvider>
       <ToastContainer
         position="top-right"

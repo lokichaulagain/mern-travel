@@ -7,6 +7,7 @@ export const EventContext = createContext();
 export const EventContextProvider = ({ children }) => {
   const [events, setEvents] = useState([]);
   const [isUpdated, setIsUpdated] = useState(0);
+  const [singleEvent, setSingleEvent] = useState({});
 
   const deleteSuccess = () => toast.success("Successfully Deleted");
   const createSuccess = () => toast.success("Successfully Created");
@@ -23,6 +24,16 @@ export const EventContextProvider = ({ children }) => {
     };
     fetchAllEvent();
   }, [isUpdated]);
+
+  const fetchSingleEvent = async (id) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/event/${id}`);
+      setSingleEvent(res.data);
+      setIsUpdated(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const [newEvent, setNewEvent] = useState({
     title: "",
@@ -66,5 +77,5 @@ export const EventContextProvider = ({ children }) => {
     }
   };
 
-  return <EventContext.Provider value={{ events, deleteEvent, handleEvenInputChange, handleEventFormSubmit, newEvent }}>{children}</EventContext.Provider>;
+  return <EventContext.Provider value={{ fetchSingleEvent, singleEvent, events, deleteEvent, handleEvenInputChange, handleEventFormSubmit, newEvent }}>{children}</EventContext.Provider>;
 };

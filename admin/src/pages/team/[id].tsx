@@ -15,7 +15,6 @@ const TeamId = () => {
   return (
     <TeamContextProvider>
     <div className="row customCard">
-      <h4>Heading Here </h4>
       <SingleRowTableItem name={"Name"} value={singleData.name} />
       <SingleRowTableItem name={"Profile Picture"} value={singleData.profilePicture} />
       <SingleRowTableItem name={"Position"} value={singleData.position} />
