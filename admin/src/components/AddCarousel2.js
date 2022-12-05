@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Grid, Dialog, Button } from "@mui/material";
-import axios from "axios";
 import { useForm } from "react-hook-form";
-import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
-import ImageUploading from "react-images-uploading";
+import axios from "axios";
+import { MiscellaneousContext } from "../../context/MiscellaneousContext";
 import Image from "next/image";
+import ImageUploading from "react-images-uploading";
 
-export default function AddCategoryDialog({ setIsUpdated }) {
-  const { handleClickOpen, handleClose, open, createSuccess, somethingWentWrong } = useContext(MiscellaneousContext);
+const AddCarousel2 = ({ setIsUpdated }) => {
+  const { handleClickOpen, handleClose, open, somethingWentWrong } = useContext(MiscellaneousContext);
 
   const {
     register,
@@ -16,29 +16,26 @@ export default function AddCategoryDialog({ setIsUpdated }) {
     formState: { errors },
     reset,
   } = useForm();
-  const handleAllField = watch();
+  let allFields = watch();
 
   const [images, setImages] = useState();
   const onChange = (imageList) => {
     setImages(imageList);
   };
 
-  const createCategory = async () => {
+  const createBanner = async () => {
     const formData = new FormData();
-    formData.append("name", handleAllField.name);
-    formData.append("description", handleAllField.description);
     if (images) {
       formData.append("thumbnail", images[0].file, images[0].file.name);
     }
 
     try {
-      const res = await axios.post("http://localhost:4000/api/category", formData);
-      setIsUpdated(5);
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/homeCarousel`, formData);
+      setIsUpdated(3);
       handleClose();
-      createSuccess();
       reset();
+      console.log("Banner create success");
       console.log(res);
-      console.log("Form has been submitted");
     } catch (error) {
       console.log(error);
       somethingWentWrong();
@@ -62,24 +59,10 @@ export default function AddCategoryDialog({ setIsUpdated }) {
         open={open}
         onClose={handleClose}>
         <form
-          onSubmit={handleSubmit(createCategory)}
-          className="customCard p-3 overflow_hidden">
-          <h4>Create New Service </h4>
+          className="customCard p-3 overflow_hidden"
+          onSubmit={handleSubmit(createBanner)}>
+          <h4>Carousel 2 </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
-
-          <div className="row mb-3 ">
-            <label
-              htmlFor="name"
-              className="form-label h6 p_zero_first_cap mt-2 ">
-              Category Name
-            </label>
-            <input
-              className=" input_field_style form-control form-control-lg  px-2  border-0  rounded-0"
-              {...register("name", { required: "Required field" })}
-              placeholder="Category Name"
-            />
-            {errors.name && <p className="form_hook_error">{`${errors.name.message}`}</p>}
-          </div>
 
           <div className="row">
             <label
@@ -132,20 +115,6 @@ export default function AddCategoryDialog({ setIsUpdated }) {
             </ImageUploading>
           </div>
 
-          <div className="row mb-3 ">
-            <label
-              htmlFor="description"
-              className="form-label h6 p_zero_first_cap mt-2 ">
-              Description
-            </label>
-            <input
-              className=" input_field_style form-control form-control-lg  px-2  border-0  rounded-0"
-              {...register("description", { required: "Required field" })}
-              placeholder="Description"
-            />
-            {errors.description && <p className="form_hook_error">{`${errors.description.message}`}</p>}
-          </div>
-
           <div className="mt-3 d-flex justify-content-end  gap-2">
             <Button
               className="customCard px-3"
@@ -162,4 +131,6 @@ export default function AddCategoryDialog({ setIsUpdated }) {
       </Dialog>
     </>
   );
-}
+};
+
+export default AddCarousel2;

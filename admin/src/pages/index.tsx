@@ -1,14 +1,10 @@
-import { Box, Stack } from "@mui/material";
-import { useContext } from "react";
-import { MiscellaneousContext } from "../../context/MiscellaneousContext";
+import { Stack } from "@mui/material";
 import CardLarge from "../components/CardLarge";
 import CardMedium from "../components/CardMedium";
 import CardSmall from "../components/CardSmall";
 import Header from "../components/Header";
-import { getSession, useSession } from "next-auth/react";
 
 export default function Home() {
-
   return (
     <Stack spacing={2}>
       <Header />
@@ -68,21 +64,3 @@ export default function Home() {
     </Stack>
   );
 }
-
-// protected route
-// export async function getServerSideProps({ req }:any) {
-//   const session = await getSession({ req });
-
-//   if (!session) {
-//     return {
-//       redirect: {
-//         destination: "/signin",
-//         permanent: false,
-//       },
-//     };
-//   }
-
-//   return {
-//     props: { session },
-//   };
-// }

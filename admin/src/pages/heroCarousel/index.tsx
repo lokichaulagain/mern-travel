@@ -1,18 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState, useContext } from "react";
 import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
-import EventBannerTable from "../../components/eventBanner/EventBannerTable";
+import BannerTable from "../../components/BannerTable";
 import Header from "../../components/Header";
 
-export default function EventBanner() {
+export default function HeroCarousel() {
   const { deleteSuccess, somethingWentWrong } = useContext(MiscellaneousContext);
   const [isUpdated, setIsUpdated] = useState(0);
+  const [banners, setBanners] = useState([]);
 
-  const [eventBanners, setEventBanners] = useState([]);
-  const fetchAllEventBanner = async () => {
+  const fetchAllBanner = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/eventBanner");
-      setEventBanners(res.data);
+      const res = await axios.get("http://localhost:4000/api/homeCarousel");
+      setBanners(res.data);
       setIsUpdated(1);
     } catch (error) {
       console.log(error);
@@ -21,13 +21,13 @@ export default function EventBanner() {
   };
 
   useEffect(() => {
-    fetchAllEventBanner();
+    fetchAllBanner();
   }, [isUpdated]);
 
-  const deleteEventBanner = async (id: any) => {
+  const deleteBanner = async (id: any) => {
     try {
-      const res = await axios.delete("http://localhost:4000/api/eventBanner/" + id);
-      setIsUpdated(4);
+      const res = await axios.delete(`http://localhost:4000/api/homeCarousel/${id}`);
+      setIsUpdated(2);
       deleteSuccess();
       console.log("Delete success");
     } catch (error) {
@@ -39,10 +39,10 @@ export default function EventBanner() {
   return (
     <>
       <Header pageTitle={"Banner"} />
-      <EventBannerTable
+      <BannerTable
         setIsUpdated={setIsUpdated}
-        eventBanners={eventBanners}
-        deleteEventBanner={deleteEventBanner}
+        banners={banners}
+        deleteBanner={deleteBanner}
       />
     </>
   );

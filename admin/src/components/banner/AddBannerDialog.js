@@ -25,17 +25,12 @@ export default function AddBannerDialog({ setIsUpdated }) {
 
   const createBanner = async () => {
     const formData = new FormData();
-    formData.append("title", allFields.title);
-    formData.append("status", allFields.status);
-    formData.append("description", allFields.description);
     if (images) {
       formData.append("thumbnail", images[0].file, images[0].file.name);
     }
 
     try {
-      // const res = await axios.post("http://localhost:4000/api/banner/", formData);
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/banner`, formData);
-      // 
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/homeCarousel`, formData);
       setIsUpdated(3);
       handleClose();
       reset();
@@ -118,51 +113,6 @@ export default function AddBannerDialog({ setIsUpdated }) {
                 </div>
               )}
             </ImageUploading>
-          </div>
-
-          <div className="row">
-            <label
-              htmlFor="title"
-              className="form-label px-0 mt-2 h6 ">
-              Banner Title
-            </label>
-            <input
-              className=" input_field_style form-control form-control-lg mb-0  border-0  rounded-0"
-              {...register("title", { required: "Title is required" })}
-              placeholder="Banner title"
-            />
-            {errors.title && <p className="form_hook_error">{`${errors.title.message}`}</p>}
-          </div>
-
-          <div className="row ">
-            <label
-              htmlFor="description"
-              className="form-label px-0 mt-2 h6   ">
-              Description
-            </label>
-            <input
-              className=" input_field_style form-control form-control-lg mb-0  border-0  rounded-0"
-              {...register("description", { required: "description is required" })}
-              placeholder="Description"
-            />
-            {errors.description && <p className="form_hook_error">{`${errors.description.message}`}</p>}
-          </div>
-
-          <div className="row">
-            <label
-              htmlFor="description"
-              className="form-label px-0 mt-2 h6 ">
-              Active Status
-            </label>
-
-            <select
-              {...register("status", { required: "status is required" })}
-              className="form-select input_field_style form-control form-control-lg mb-0 border-0  rounded-0"
-              aria-label="Banner hide show status ">
-              <option value="0">Inactive</option>
-              <option value="1">Active</option>
-            </select>
-            {errors.status && <p className="form_hook_error">{`${errors.status.message}`}</p>}
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">

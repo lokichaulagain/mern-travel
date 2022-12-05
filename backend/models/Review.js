@@ -6,10 +6,6 @@ const reviewSchema = new mongoose.Schema(
       type: String,
     },
 
-    subtitle: {
-      type: String,
-    },
-
     description: {
       type: String,
     },

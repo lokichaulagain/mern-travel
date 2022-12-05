@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { MiscellaneousContextProvider } from "../../context/MiscellaneousContext";
-import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -19,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const location = router.pathname.split("/")[2];
 
   return (
-    <SessionProvider session={pageProps.session}>
+    <>
       <MiscellaneousContextProvider>
         <div className="customBg h100">
           <>
@@ -66,7 +65,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         pauseOnHover
         theme="dark"
       />
-    </SessionProvider>
+    </>
   );
 }
 

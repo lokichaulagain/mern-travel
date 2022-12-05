@@ -3,16 +3,16 @@ import TableHeading from "./TableHeading";
 import Link from "next/link";
 import { AiTwotoneEdit } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
-import AddBannerDialog from "./banner/AddBannerDialog";
 import Image from "next/image";
+import AddCarousel1 from "../components/AddCarousel1";
 
-export default function BannerTable({ banners, deleteBanner, setIsUpdated }: any) {
+export default function CarouselTable1({ banners, deleteBanner, setIsUpdated }: any) {
   console.log(banners);
   return (
     <>
       <div className="d-flex align-items-center  ">
-        <TableHeading heading={"All Banners"} />
-        <AddBannerDialog setIsUpdated={setIsUpdated} />
+        <TableHeading heading={"Carousel table 1"} />
+        <AddCarousel1 setIsUpdated={setIsUpdated} />
       </div>
 
       <div className="customCard mt-2 mb-5 ">

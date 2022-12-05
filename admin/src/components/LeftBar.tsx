@@ -31,51 +31,31 @@ const navItems = [
 
   {
     icon: <RiTeamFill />,
-    label: "Banner",
-    route: "/banner",
+    label: "Hero Carousel",
+    route: "/heroCarousel",
   },
 
+  
   {
-    icon: <ImHome />,
-    label: "Category",
-    route: "/category",
-  },
-
-  {
-    icon: <ImHome />,
-    label: "Product",
-    route: "/product",
-  },
-
-  {
-    icon: <MdOutlineEventAvailable />,
-    label: "Partners",
-    route: "/partner",
+    icon: <RiProfileLine />,
+    label: "Carousel 1",
+    route: "/carousel1",
   },
 
 
+  
   {
-    icon: <MdOutlineEventAvailable />,
-    label: "Event Banner",
-    route: "/eventBanner",
+    icon: <RiProfileLine />,
+    label: "Carousel 2",
+    route: "/carousel2",
   },
 
-  {
-    icon: <MdOutlineHomeRepairService />,
-    label: "Our Services",
-    route: "/ourServices",
-  },
 
+  
   {
-    icon: <ImPriceTags />,
-    label: "standard",
-    route: "/standard",
-  },
-
-  {
-    icon: <BsInfoCircleFill />,
-    label: "About",
-    route: "/about",
+    icon: <RiProfileLine />,
+    label: "Carousel 3",
+    route: "/carousel3",
   },
 
   {
@@ -83,6 +63,7 @@ const navItems = [
     label: "Review",
     route: "/review",
   },
+
   {
     icon: <ImBlogger2 />,
     label: "Blog",

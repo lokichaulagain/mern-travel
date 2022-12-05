@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
-import Header from "../Header";
+import React, { useContext, useState } from "react";
+import { Grid, Dialog, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { Button } from "@mui/material";
 import axios from "axios";
-import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
-import ImageUploading from "react-images-uploading";
+import { MiscellaneousContext } from "../../context/MiscellaneousContext";
 import Image from "next/image";
+import ImageUploading from "react-images-uploading";
 
-const EditPartnerTable = ({ singlePartner, setIsUpdated, id }) => {
-  const { updatedSuccess, somethingWentWrong } = useContext(MiscellaneousContext);
+const AddCarousel3 = ({ setIsUpdated }) => {
+  const { handleClickOpen, handleClose, open, somethingWentWrong } = useContext(MiscellaneousContext);
 
   const {
     register,
@@ -17,32 +16,26 @@ const EditPartnerTable = ({ singlePartner, setIsUpdated, id }) => {
     formState: { errors },
     reset,
   } = useForm();
-  const handleAllField = watch();
-
-  useEffect(() => {
-    reset(singlePartner);
-  }, [singlePartner]);
+  let allFields = watch();
 
   const [images, setImages] = useState();
   const onChange = (imageList) => {
     setImages(imageList);
   };
 
-  const updatePartner = async () => {
+  const createBanner = async () => {
     const formData = new FormData();
-    formData.append("title", handleAllField.title);
-    formData.append("subtitle", handleAllField.subtitle);
     if (images) {
       formData.append("thumbnail", images[0].file, images[0].file.name);
     }
+
     try {
-      // const res = await axios.put(`http://localhost:4000/api/partner/${id}`, formData);
-      const res = await axios.put(`${process.env.NEXT_PUBLIC_API_URL}/partner/${id}`, formData);
-      //
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/homeCarousel`, formData);
+      setIsUpdated(3);
+      handleClose();
       reset();
-      updatedSuccess();
-      setIsUpdated(2);
-      console.log("Update success");
+      console.log("Banner create success");
+      console.log(res);
     } catch (error) {
       console.log(error);
       somethingWentWrong();
@@ -50,51 +43,33 @@ const EditPartnerTable = ({ singlePartner, setIsUpdated, id }) => {
   };
 
   return (
-    <div>
-      <Header pageTitle={`Partner / ${id}`} />
+    <>
+      <Grid
+        container
+        justifyContent="end">
+        <Button
+          size="large"
+          onClick={handleClickOpen}
+          className="customCard px-4">
+          Add New
+        </Button>
+      </Grid>
 
-      <div>
+      <Dialog
+        open={open}
+        onClose={handleClose}>
         <form
-          onSubmit={handleSubmit(updatePartner)}
-          className="customCard p-3 overflow_hidden">
-          <h4>Edit Partner </h4>
+          className="customCard p-3 overflow_hidden"
+          onSubmit={handleSubmit(createBanner)}>
+          <h4>Carousel 3 </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
 
-          <div className="row ">
-            <label
-              htmlFor="title"
-              className="form-label p_zero_first_cap mt-3 h6 ">
-              Partner Name
-            </label>
-            <input
-              className=" input_field_style form-control form-control-lg px-2  border-0  rounded-0"
-              placeholder="Partner Name"
-              {...register("title", { required: "title is required" })}
-            />
-            {errors.title && <p className="form_hook_error">{`${errors.title.message}`}</p>}
-          </div>
-
-          <div className="row">
-            <label
-              htmlFor="subtitle"
-              className="form-label p_zero_first_cap mt-3 h6 ">
-              Partner Description
-            </label>
-            <input
-              type="text"
-              className=" input_field_style form-control form-control-lg px-2  border-0  rounded-0"
-              placeholder="Partner Description"
-              {...register("subtitle", { required: "subtitle is required" })}
-            />
-            {errors.subtitle && <p className="form_hook_error">{`${errors.subtitle.message}`}</p>}
-          </div>
           <div className="row">
             <label
               htmlFor="formFile"
               className="form-label px-0 mt-2 h6 ">
               Banner Image
             </label>
-
             <ImageUploading
               value={images}
               onChange={onChange}
@@ -102,7 +77,6 @@ const EditPartnerTable = ({ singlePartner, setIsUpdated, id }) => {
               dataURLKey="data_url"
               acceptType={["jpg", "png", "jpeg", "webp"]}>
               {({ imageList, onImageUpload, onImageUpdate, onImageRemove, isDragging, dragProps }) => (
-                // write your building UI
                 <div className="upload__image-wrapper  px-0  w-100">
                   <button
                     type="button"
@@ -110,7 +84,7 @@ const EditPartnerTable = ({ singlePartner, setIsUpdated, id }) => {
                     // style={isDragging ? { color: "red" } : null}
                     onClick={onImageUpload}
                     {...dragProps}>
-                    Select New Banner
+                    Click or Drop here
                   </button>
                   &nbsp;
                   {imageList.map((image, index) => (
@@ -139,28 +113,24 @@ const EditPartnerTable = ({ singlePartner, setIsUpdated, id }) => {
                 </div>
               )}
             </ImageUploading>
-            {handleAllField.thumbnail && (
-              <Image
-                src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL_SECURE}${handleAllField.thumbnail}`}
-                alt=""
-                width="80"
-                height={80}
-                className="img-fluid custom-border-radius-50-per"
-              />
-            )}
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">
             <Button
+              className="customCard px-3"
+              onClick={handleClose}>
+              Cancel
+            </Button>
+            <Button
               type="submit"
               className="customCard px-4">
-              Update
+              Add
             </Button>
           </div>
         </form>
-      </div>
-    </div>
+      </Dialog>
+    </>
   );
 };
 
-export default EditPartnerTable;
+export default AddCarousel3;
