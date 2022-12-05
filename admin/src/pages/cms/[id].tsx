@@ -1,52 +1,39 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import EditCmsTable from "../../components/cms/EditCmsTable";
+import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
+import axios from "axios";
 import { useRouter } from "next/router";
-import { CmsContext } from "../../../context/CmsContext";
-import SingleRowTableItem from "../../components/SingleRowTableItem";
 
 const Id = () => {
-  const { singleData, fetchCmsDataById } = useContext(CmsContext);
   const router = useRouter();
   const id = router.query.id;
+  const { handleClose } = useContext(MiscellaneousContext);
+  const [isUpdated, setIsUpdated] = useState(0);
+  const [cmsData, setCmsData] = useState({});
+
+  const fetchCmsData = async () => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/cms/${id}`);
+      setCmsData(res.data);
+      setIsUpdated(1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    fetchCmsDataById(id);
-  }, [id]);
+    fetchCmsData();
+  }, [isUpdated, id]);
 
   return (
-    <div className="row customCard">
-      <SingleRowTableItem
-        name={"Company Name"}
-        value={singleData.companyName}
+    <>
+      <EditCmsTable
+        cmsData={cmsData}
+        handleClose={handleClose}
+        id={id}
+        setIsUpdated={setIsUpdated}
       />
-      <SingleRowTableItem
-        name={"Company Logo"}
-        value={singleData.companyLogo}
-      />
-      <SingleRowTableItem
-        name={"Phone 1"}
-        value={singleData.phone1}
-      />
-      <SingleRowTableItem
-        name={"Email"}
-        value={singleData.email}
-      />
-      <SingleRowTableItem
-        name={"WhatsApp"}
-        value={singleData.whatsapp}
-      />
-      <SingleRowTableItem
-        name={"Twitter"}
-        value={singleData.twitterUrl}
-      />
-      <SingleRowTableItem
-        name={"Facebook"}
-        value={singleData.facebookUrl}
-      />
-      <SingleRowTableItem
-        name={"Instagram"}
-        value={singleData.instagramUrl}
-      />
-    </div>
+    </>
   );
 };
 

@@ -1,9 +1,20 @@
 import Blog from "../models/Blog.js";
 import createError from "../utils/error.js";
+import slugify from "slugify";
+import { uploadTocloudinary } from "../utils/uploadFile.js";
 
 const createBlog = async (req, res, next) => {
   try {
-    const newService = new Blog(req.body);
+    let data = {
+      ...req.body,
+      url: slugify(req.body.title, "-"),
+    };
+    if (req.file) {
+      data.image = req.file.path;
+      uploadTocloudinary(req.file.path);
+    }
+
+    const newService = new Blog(data);
     const savedService = await newService.save();
     res.status(200).json(savedService);
   } catch (error) {
@@ -13,7 +24,15 @@ const createBlog = async (req, res, next) => {
 
 const updateBlog = async (req, res, next) => {
   try {
-    const updatedService = await Blog.findByIdAndUpdate(req.params.id, req.body, {
+    let data = {
+      ...req.body,
+    };
+    if (req.file) {
+      data.image = req.file.path;
+      uploadTocloudinary(req.file.path);
+    }
+
+    const updatedService = await Blog.findByIdAndUpdate(req.params.id, data, {
       new: true,
     });
     res.status(200).json(updatedService);
@@ -42,7 +61,15 @@ const getBlogById = async (req, res, next) => {
 
 const getAllBlog = async (req, res, next) => {
   try {
-    const allService = await Blog.find();
+    let allService = [];
+    if (req.query.slug) {
+      allService = await Blog.find({ url: req.query.slug });
+    } else if (req.query.category) {
+      allService = await Blog.find({ category: req.query.category });
+    } else {
+      const allService = await Blog.find();
+      res.status(200).json(allService);
+    }
     res.status(200).json(allService);
   } catch (error) {
     return next(createError(500, "Server Error while getting all Blog !"));

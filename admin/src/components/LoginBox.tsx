@@ -1,54 +1,91 @@
-import * as React from "react";
-import { Box, CardContent, Typography, TextField, Button, Grid } from "@mui/material";
+import React, { useContext } from "react";
+import { useForm } from "react-hook-form";
+import Link from "next/link";
+import { MiscellaneousContext } from "../../context/MiscellaneousContext";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 export default function LoginBox() {
+  const { invalidCredential, loginSuccess, isAuthenticated } = useContext(MiscellaneousContext);
   const router = useRouter();
 
-  const handleLogin=()=>{
-    router.push("/")
-  }
+  const login = async () => {
+    try {
+      const res = await signIn("credentials", {
+        email: handleAllField.email,
+        password: handleAllField.password,
+        redirect: false,
+      });
+      isAuthenticated && loginSuccess();
+      isAuthenticated && router.push("/");
+    } catch (error) {
+      console.log(error);
+      invalidCredential();
+    }
+  };
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  let handleAllField = watch();
 
   return (
-    <Grid minWidth="500px" className="customCard">
-      <CardContent>
-        <Grid container direction="column" alignItems="center">
-          <Typography variant="h4">Login</Typography>
-          <Typography variant="subtitle1">Access to our dashboard</Typography>
-        </Grid>
+    <div className="customCard w-50 p-5">
+      <div>
+        <h3 className="text-center">Login</h3>
+        <p className="text-center">Access to our dashboard</p>
+      </div>
 
-        <Box mt={3}>
-          <Typography className="customLabel">Email Address</Typography>
-          <TextField fullWidth id="fullWidth" className="customInput" type="email" autoComplete="off" />
-        </Box>
+      <form
+        action=""
+        onSubmit={handleSubmit(login)}>
+        <div className="mb-3">
+          <label
+            htmlFor="email"
+            className="form-label  h6">
+            Email Address
+          </label>
+          <input
+            type="email"
+            className="form-control form-control-lg rounded-1"
+            {...register("email", { required: "email is required" })}
+            placeholder="Email Address "
+          />
+          {errors.email && <p className="form_hook_error">{`${errors.email.message}`}</p>}
+        </div>
 
-        <Box mt={3}>
-          <Grid container justifyContent="space-between">
-            <Typography className="customLabel">Password</Typography>
-            <Typography className="txtMuted cp">Forgot Password</Typography>
-          </Grid>
-          <TextField fullWidth id="fullWidth" className="customInput" type="password" autoComplete="current-password" />
-        </Box>
+        <div className="mb-3">
+          <label
+            htmlFor="email"
+            className="form-label g h6">
+            Email Address
+          </label>
+          <input
+            type="text"
+            className="form-control form-control-lg rounded-1"
+            {...register("password", { required: "password is required" })}
+            placeholder="Password "
+          />
+          {errors.password && <p className="form_hook_error">{`${errors.password.message}`}</p>}
+        </div>
 
-        <Box mt={3}>
-          <Button fullWidth size="large" variant="contained" onClick={handleLogin}   >
+        <div className="pt-3">
+          <button
+            type="submit"
+            className="btn btn-primary w-100 btn-lg rounded-1">
             Login
-          </Button>
-        </Box>
+          </button>
+        </div>
+      </form>
 
-        <Box mt={3}>
-          <Grid container justifyContent="center">
-            <Typography>Dont have an account yet? </Typography>
-            <Typography
-              className="customSecondaryColor cp"
-              onClick={() => {
-                router.push("/register");
-              }}>
-              Register
-            </Typography>
-          </Grid>
-        </Box>
-      </CardContent>
-    </Grid>
+      <h6 className="pt-4 text-center">
+        Dont have an account yet ?
+        <Link href={"/auth/signup"}>
+          <a className="register_span"> Register</a>
+        </Link>
+      </h6>
+    </div>
   );
 }

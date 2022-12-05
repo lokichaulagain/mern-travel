@@ -30,33 +30,34 @@ const navItems = [
   },
 
   {
-    icon: <ImHome />,
-    label: "Home",
-    route: "/home",
-  },
-
-  {
     icon: <RiTeamFill />,
-    label: "Our Team",
-    route: "/team",
+    label: "Banner",
+    route: "/banner",
   },
 
   {
-    icon: <GiFamilyHouse />,
-    label: "Shelter",
-    route: "/shelter",
+    icon: <ImHome />,
+    label: "Category",
+    route: "/category",
   },
 
   {
-    icon: <MdFastfood />,
-    label: "Foods",
-    route: "/food",
+    icon: <ImHome />,
+    label: "Product",
+    route: "/product",
   },
 
   {
     icon: <MdOutlineEventAvailable />,
-    label: "Events",
-    route: "/event",
+    label: "Partners",
+    route: "/partner",
+  },
+
+
+  {
+    icon: <MdOutlineEventAvailable />,
+    label: "Event Banner",
+    route: "/eventBanner",
   },
 
   {
@@ -67,8 +68,8 @@ const navItems = [
 
   {
     icon: <ImPriceTags />,
-    label: "Price Packages",
-    route: "/pricePackages",
+    label: "standard",
+    route: "/standard",
   },
 
   {
@@ -79,13 +80,19 @@ const navItems = [
 
   {
     icon: <RiProfileLine />,
-    label: "Portfolio",
-    route: "/portfolio",
+    label: "Review",
+    route: "/review",
   },
   {
     icon: <ImBlogger2 />,
     label: "Blog",
     route: "/blog",
+  },
+
+  {
+    icon: <RiProfileLine />,
+    label: "Vacancy",
+    route: "/vacancy",
   },
 
   {
@@ -98,6 +105,12 @@ const navItems = [
     icon: <GrMail />,
     label: "Mails",
     route: "/mail",
+  },
+
+  {
+    icon: <GrMail />,
+    label: "Subscriber",
+    route: "/subscriber",
   },
 ];
 

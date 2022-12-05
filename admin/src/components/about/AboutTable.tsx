@@ -2,7 +2,6 @@ import * as React from "react";
 import { IconButton } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-import DeleteAlert from "../DeleteAlert";
 import AddAboutDialog from "./AddAboutDialog";
 
 export default function AboutTable() {
@@ -44,7 +43,6 @@ export default function AboutTable() {
                     </IconButton>
                   </Link>
 
-                  <DeleteAlert />
                 </div>
               </td>
             </tr>
@@ -67,7 +65,6 @@ export default function AboutTable() {
                     </IconButton>
                   </Link>
 
-                  <DeleteAlert />
                 </div>
               </td>
             </tr>
@@ -90,7 +87,6 @@ export default function AboutTable() {
                     </IconButton>
                   </Link>
 
-                  <DeleteAlert />
                 </div>
               </td>
             </tr>

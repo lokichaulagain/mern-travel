@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 const createSubscriber = async (req, res, next) => {
   try {
-    const newSubscriber = new Contact(req.body);
+    const newSubscriber = new Subscriber(req.body);
     const savedSubscriber = await newSubscriber.save();
     res.status(200).json(savedSubscriber);
 
@@ -28,13 +28,12 @@ const createSubscriber = async (req, res, next) => {
       }
     });
 
-    const name = req.body.name;
     const email = req.body.email;
     const mail = {
       // from: name,
       to: "lokendrachaulagain803@gmail.com",
       subject: "Contact Form Submission",
-      html: `<p>Name: ${name}</p>
+      html: `
              <p>Email: ${email}</p>`,
     };
 
@@ -47,37 +46,26 @@ const createSubscriber = async (req, res, next) => {
     });
     // Nodemailer email send end
   } catch (error) {
-    return next(createError(500, "Server Error while creating contact !!!"));
+    return next(createError(500, "Server Error while creating Subscriber !!!"));
   }
 };
-
-
 
 const deleteSubscriber = async (req, res, next) => {
   try {
-    const deletedContact = await Contact.findByIdAndDelete(req.params.id);
-    res.status(200).json(deletedContact);
+    const deletedSubscriber = await Subscriber.findByIdAndDelete(req.params.id);
+    res.status(200).json(deletedSubscriber);
   } catch (error) {
-    return next(createError(500, "Server Error while deleting contact !!!"));
+    return next(createError(500, "Server Error while deleting Subscriber !!!"));
   }
 };
 
-const getContactById = async (req, res, next) => {
+const getAllSubscriber = async (req, res, next) => {
   try {
-    const contact = await Contact.findById(req.params.id);
-    res.status(200).json(contact);
+    const allSubscriber = await Subscriber.find();
+    res.status(200).json(allSubscriber);
   } catch (error) {
-    return next(createError(500, "Server Error while getting Contact by Id !!!"));
+    return next(createError(500, "Server Error while getting all Subscriber !!!"));
   }
 };
 
-const getAllContact = async (req, res, next) => {
-  try {
-    const allContact = await Contact.find();
-    res.status(200).json(allContact);
-  } catch (error) {
-    return next(createError(500, "Server Error while getting all aboutUsContent !!!"));
-  }
-};
-
-export { createSubscriber, updateContact, deleteSubscriber, getContactById, getAllContact };
+export { createSubscriber, deleteSubscriber, getAllSubscriber };

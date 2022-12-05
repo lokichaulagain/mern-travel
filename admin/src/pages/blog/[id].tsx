@@ -1,43 +1,34 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import EditBlogTable from "../../components/blog/EditBlogTable";
+import axios from "axios";
 import { useRouter } from "next/router";
-import SingleRowTableItem from "../../components/SingleRowTableItem";
-import Header from "../../components/Header";
-import { EventContext } from "../../../context/EventContext";
-import { BlogContext } from "../../../context/BlogContext";
 
 const Id = () => {
-  const { fetchSingleBlog, singleBlog, blogs, deleteBlog, newBlog, handleBlogInputChange, handleBlogFormSubmit } = useContext(BlogContext);
+  const [isUpdated, setIsUpdated] = useState(0);
   const router = useRouter();
   const id = router.query.id;
 
+  const [singleBlog, setSingleBlog] = useState({});
+  const fetchSingleBlog = async () => {
+    try {
+      const res = await axios.get(`http://localhost:4000/api/blog/${id}`);
+      setSingleBlog(res.data);
+      setIsUpdated(1);
+      console.log("Update success");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    fetchSingleBlog(id);
-  }, [id]);
+    fetchSingleBlog();
+  }, [isUpdated, id]);
 
   return (
-    <>
-      <Header pageTitle={`Blog / ${id}`} />
-
-      <div className="row customCard">
-        <SingleRowTableItem
-          name={"Title"}
-          value={singleBlog.title}
-        />
-        <SingleRowTableItem
-          name={"Thumbnail"}
-          value={singleBlog.thumbnail}
-        />
-
-        <SingleRowTableItem
-          name={"Description"}
-          value={singleBlog.description}
-        />
-        <SingleRowTableItem
-          name={"createdAt"}
-          value={singleBlog.createdAt}
-        />
-      </div>
-    </>
+    <EditBlogTable
+      singleBlog={singleBlog}
+      id={id}
+    />
   );
 };
 

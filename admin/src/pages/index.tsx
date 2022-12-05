@@ -1,19 +1,13 @@
 import { Box, Stack } from "@mui/material";
 import { useContext } from "react";
-import { BlogContext } from "../../context/BlogContext";
-import { OurServicesContext } from "../../context/OurServicesContext";
-import { PricePackageContext } from "../../context/PricePackageContext";
-import { TeamContext } from "../../context/TeamContext";
+import { MiscellaneousContext } from "../../context/MiscellaneousContext";
 import CardLarge from "../components/CardLarge";
 import CardMedium from "../components/CardMedium";
 import CardSmall from "../components/CardSmall";
 import Header from "../components/Header";
+import { getSession, useSession } from "next-auth/react";
 
 export default function Home() {
-  const { members } = useContext(TeamContext);
-  const { sec5 } = useContext(OurServicesContext);
-  const { pricePackages } = useContext(PricePackageContext);
-  const { blogs } = useContext(BlogContext);
 
   return (
     <Stack spacing={2}>
@@ -23,17 +17,17 @@ export default function Home() {
         spacing={2}>
         <CardMedium
           title={"Team Members"}
-          item={members.length}
+          item={8}
         />
 
         <CardMedium
           title={"Total Services"}
-          item={sec5.length}
+          item={11}
         />
 
         <CardMedium
           title={"Total Packages"}
-          item={pricePackages.length}
+          item={5}
         />
 
         <CardMedium
@@ -51,7 +45,7 @@ export default function Home() {
         />
         <CardSmall
           title={"Total Blogs"}
-          item={blogs.length}
+          item={12}
         />
         <CardSmall
           title={"Pending  Tour"}
@@ -74,3 +68,21 @@ export default function Home() {
     </Stack>
   );
 }
+
+// protected route
+// export async function getServerSideProps({ req }:any) {
+//   const session = await getSession({ req });
+
+//   if (!session) {
+//     return {
+//       redirect: {
+//         destination: "/signin",
+//         permanent: false,
+//       },
+//     };
+//   }
+
+//   return {
+//     props: { session },
+//   };
+// }

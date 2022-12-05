@@ -2,7 +2,6 @@ import * as React from "react";
 import { IconButton } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
-import DeleteAlert from "../DeleteAlert";
 import AddTeamDialog from "./AddTeamDialog";
 
 export default function TeamTable() {
@@ -39,7 +38,6 @@ export default function TeamTable() {
                       <VisibilityIcon fontSize="inherit" color="warning" />
                     </IconButton>
                   </Link>
-                  <DeleteAlert />
                 </div>
               </td>
             </tr>
@@ -60,7 +58,6 @@ export default function TeamTable() {
                     </IconButton>
                   </Link>
 
-                  <DeleteAlert />
                 </div>
               </td>
             </tr>
@@ -81,7 +78,6 @@ export default function TeamTable() {
                     </IconButton>
                   </Link>
 
-                  <DeleteAlert />
                 </div>
               </td>
             </tr>

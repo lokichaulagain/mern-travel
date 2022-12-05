@@ -1,0 +1,200 @@
+import React, { useContext, useState } from "react";
+import { Button } from "@mui/material";
+import axios from "axios";
+import dynamic from "next/dynamic";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
+import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
+import Image from "next/image";
+import ImageUploading from "react-images-uploading";
+const JoditEditor = dynamic(() => import("jodit-react"), {
+  ssr: false,
+});
+
+export default function CreateVacancyTable() {
+  const router = useRouter();
+  const { handleClose, createSuccess } = useContext(MiscellaneousContext);
+  const [content, setContent] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const handleAllField = watch();
+  console.log(handleAllField);
+
+  const [images, setImages] = useState();
+  const onChange = (imageList) => {
+    setImages(imageList);
+  };
+
+  const createVacancy = async () => {
+    const formData = new FormData();
+    formData.append("position", handleAllField.position);
+    formData.append("location", handleAllField.location);
+    formData.append("qualification", handleAllField.qualification);
+    formData.append("description", content);
+    formData.append("jobType", handleAllField.jobType);
+    if (images) {
+      formData.append("thumbnail", images[0].file, images[0].file.name);
+    }
+
+    try {
+      // const res = await axios.post("http://localhost:4000/api/vacancy", formData);
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/vacancy`, formData);
+      //
+      handleClose();
+      createSuccess();
+      reset();
+      console.log("Form has been submitted");
+      router.push("/vacancy");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <>
+      <div>
+        <form
+          onSubmit={handleSubmit(createVacancy)}
+          className="customCard p-3 overflow_hidden">
+          <h4 className="text-center h4">Create Vacancy </h4>
+
+          <div className="row ">
+            <label
+              htmlFor="position"
+              className="form-label mt-3 h6 p_zero_first_cap ">
+              position
+            </label>
+            <input
+              className="  input_field_style form-control form-control-lg px-2    border-0  rounded-0"
+              {...register("position", { required: "position is required" })}
+              placeholder="position"
+            />
+            {errors.position && <p className="form_hook_error">{`${errors.position.message}`}</p>}
+          </div>
+
+          <div className="row">
+            <label
+              htmlFor="formFile"
+              className="form-label px-0 mt-2 h6 ">
+              Banner Image
+            </label>
+            <ImageUploading
+              value={images}
+              onChange={onChange}
+              maxNumber={1}
+              dataURLKey="data_url"
+              acceptType={["jpg", "png", "jpeg", "webp"]}>
+              {({ imageList, onImageUpload, onImageUpdate, onImageRemove, isDragging, dragProps }) => (
+                <div className="upload__image-wrapper  px-0  w-100">
+                  <button
+                    type="button"
+                    className=" input_field_style form-control form-control-lg mb-0  border-0  rounded-0"
+                    // style={isDragging ? { color: "red" } : null}
+                    onClick={onImageUpload}
+                    {...dragProps}>
+                    Click or Drop here
+                  </button>
+                  &nbsp;
+                  {imageList.map((image, index) => (
+                    <div
+                      key={index}
+                      className="image-item margin_minus  d-flex gap-3">
+                      <div className="banner_table_image_div">
+                        <Image
+                          src={image.data_url}
+                          alt=""
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </div>
+
+                      <div className="image-item__btn-wrapper">
+                        <button
+                          type="button"
+                          onClick={() => onImageRemove(index)}
+                          className="btn btn-danger btn rounded-0">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </ImageUploading>
+          </div>
+
+          <div className="row ">
+            <label
+              htmlFor="jobType"
+              className="form-label mt-3 h6 p_zero_first_cap ">
+              jobType
+            </label>
+            <input
+              className=" input_field_style form-control form-control-lg px-2    border-0  rounded-0"
+              {...register("jobType", { required: "jobType is required" })}
+              placeholder="placeholder"
+            />
+            {errors.jobType && <p className="form_hook_error">{`${errors.jobType.message}`}</p>}
+          </div>
+
+          <div className="row">
+            <label
+              htmlFor="location"
+              className="form-label mt-3 h6 p_zero_first_cap ">
+              location
+            </label>
+            <input
+              className=" input_field_style form-control form-control-lg px-2    border-0  rounded-0"
+              {...register("location", { required: "location is required" })}
+              placeholder="location"
+            />
+            {errors.location && <p className="form_hook_error">{`${errors.location.message}`}</p>}
+          </div>
+
+          <div className="row ">
+            <label
+              htmlFor="qualification"
+              className="form-label mt-3 h6 p_zero_first_cap ">
+              Qualification
+            </label>
+            <input
+              className=" input_field_style form-control form-control-lg px-2    border-0  rounded-0"
+              {...register("qualification", { required: "qualification is required" })}
+              placeholder="qualification"
+            />
+            {errors.qualification && <p className="form_hook_error">{`${errors.qualification.message}`}</p>}
+          </div>
+
+          <div className="row">
+            <label
+              htmlFor="description"
+              className="form-label mt-3 h6 p_zero_first_cap ">
+              Description
+            </label>
+
+            <JoditEditor
+              value={content}
+              onChange={(newContent) => {
+                setContent(newContent);
+              }}
+            />
+          </div>
+
+          <div className="mt-3 d-flex justify-content-end  gap-2">
+            <Button
+              type="submit"
+              className="customCard px-4">
+              Create
+            </Button>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+}

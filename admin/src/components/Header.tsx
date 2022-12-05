@@ -11,7 +11,7 @@ const Header = ({ pageTitle }: any) => {
         <Typography
           variant="h4"
           className="customPrimaryTxtColor">
-          Ancient Himalayan
+          Gem Plasticrafts
         </Typography>
         <Typography
           variant="h6"
