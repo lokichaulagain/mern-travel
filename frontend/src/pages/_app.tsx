@@ -4,6 +4,8 @@ import "../styles/main.scss";
 import "swiper/css/bundle";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -12,7 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Navbar />
       <Component {...pageProps} />
+      <Footer />
       <ToastContainer
         position="top-right"
         autoClose={5000}

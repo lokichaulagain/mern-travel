@@ -12,22 +12,9 @@ const contactSchema = new mongoose.Schema(
       required: true,
     },
 
-    phone: {
-      type: String,
-      required: true,
-    },
-
     message: {
       type: String,
       required: true,
-    },
-
-    resume: {
-      type: String,
-    },
-
-    jobPostId: {
-      type: String,
     },
   },
   { timestamps: true }

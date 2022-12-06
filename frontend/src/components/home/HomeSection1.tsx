@@ -9,97 +9,11 @@ import Image from "next/image";
 import person1 from "../../../public/images/6.jpeg";
 import { RiCalendar2Fill } from "react-icons/ri";
 
+import Link from "next/link";
+import packages from "../../packages.json"
+
+
 const HomeSection1 = () => {
-  const packages = [
-    {
-      id: "1",
-      heading: "Annapurna Circuit Trek",
-      description: "The Annapurna Circuit is perhaps the best trip in Nepal, in the event that not the world. This exemplary circuit journey .",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "17",
-      groupSize: "12-15",
-      difficultyLevel: "Easy",
-      price: "USD 2200 per person",
-    },
-
-    {
-      id: "2",
-      heading: "Manaslu Circuit",
-      description: "The Manaslu Circuit journey is a dazzling 13-day venture (18 days remembering travel and days for Kathmandu) which journey all",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "14",
-      groupSize: "20-25",
-      difficultyLevel: "Medium",
-      price: "USD 2500 per person",
-    },
-
-    {
-      id: "3",
-      heading: "Langtang Trek",
-      description: "The Langtang journey is one of the more limited climbing courses in Nepal. It offers phenomenal view from the wilderness with. ",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "8",
-      groupSize: "8-10",
-      difficultyLevel: "Hard",
-      price: "USD 1400 per person",
-    },
-
-    {
-      id: "4",
-      heading: "Annapurna Base Camp",
-      description: "Annapurna Base Camp Trek is one of the most beautiful treks on earth that takes you through different climates, diverse landscapes.",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "13",
-      groupSize: "12-15",
-      difficultyLevel: "Medium",
-      price: "USD 1350 per person",
-    },
-
-    {
-      id: "5",
-      heading: "Mardi Himal Trek",
-      description: "he Mardi Himal Trek is a short, recently opened course, moderate sort and secret fortune in the Annapurna locale. Mardi Himal’s journey .",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "10",
-      groupSize: "12-15",
-      difficultyLevel: "Easy",
-      price: "USD 1150 per person",
-    },
-
-    {
-      id: "6",
-      heading: "Everest Base Camp",
-      description: "In an optimal world, the majority of us couldn't want anything more than to remain on the world’s highest point, 8,848m high on Mt Everest.",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "14",
-      groupSize: "12-15",
-      difficultyLevel: "Medium",
-      price: "USD 1800 per person",
-    },
-
-    {
-      id: "7",
-      heading: "Everest 3 passes",
-      description: "The three high passes journey Starts at Lukla (2828m/9278 feet) and follows the Dudh Koshi valley which scales to the Sherpa capital of Namche, ",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "13",
-      groupSize: "12-15",
-      difficultyLevel: "Medium",
-      price: "USD 2500 per person",
-    },
-
-    {
-      id: "8",
-      heading: "Annapurna Base Camp",
-      description: "The shimmering, perfect blue and green waters of the Gokyo Lakes are one of Nepal's most vital sights. They include the most noteworthy freshwater lake framework ",
-      dateTime: " 01 October 2019 at 8.00 PM",
-      days: "13",
-      groupSize: "12-15",
-      difficultyLevel: "Medium",
-      price: "USD 1600 per person",
-    },
-  ];
-
   return (
     <div
       style={{ backgroundColor: "white" }}
@@ -131,50 +45,55 @@ const HomeSection1 = () => {
               className="mySwiper swiper-container">
               {/* Card 1============================== */}
               {packages &&
-                packages.map((packages, index: any) => (
+                packages.map((packages: any, index: any) => (
                   <SwiperSlide key={index}>
-                    <div className="card mb-5 border-0 rounded">
-                      <Image
-                        src={person1}
-                        className=" rounded"
-                        alt=""
-                      />
+                    <Link href={`/trek/${packages.id}`}>
+                      <div className="card mb-5 border-0 rounded">
+                        
+                        <Image
+                          src={packages.image}
+                          height={250}
+                          width={200}
+                          className=" rounded"
+                          alt=""
+                        />
 
-                      <div
-                        className="card mx-2 "
-                        style={{ backgroundColor: "#12314a" }}>
-                        <div className="card-body">
-                          <div className="row ">
-                            <div className="col">
-                              <h5 className="primaryColor h5">{packages.days}</h5>
-                              <p className="whiteColor">Days</p>
-                            </div>
-                            <div className="col">
-                              <h5 className="primaryColor h5">{packages.groupSize}</h5>
-                              <p className="whiteColor">Group Size</p>
-                            </div>
-                            <div className="col">
-                              <h5 className="primaryColor h5">{packages.difficultyLevel}</h5>
-                              <p className="whiteColor">Difficulty</p>
+                        <div
+                          className="card mx-2 "
+                          style={{ backgroundColor: "#12314a" }}>
+                          <div className="card-body">
+                            <div className="row ">
+                              <div className="col">
+                                <h5 className="primaryColor h5">{packages.days}</h5>
+                                <p className="whiteColor">Days</p>
+                              </div>
+                              <div className="col">
+                                <h5 className="primaryColor h5">{packages.groupSize}</h5>
+                                <p className="whiteColor">Group Size</p>
+                              </div>
+                              <div className="col">
+                                <h5 className="primaryColor h5">{packages.difficultyLevel}</h5>
+                                <p className="whiteColor">Difficulty</p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="card-body">
-                        <h4 className="mainColor pt-3  h4 fw-bold">{packages.heading}</h4>
-                        <p className="mainColor pt-3 lh-lg  card-text">{packages.description}</p>
-                        <div className="col">
-                          <h6 className="mainColor h6 ">
-                            <RiCalendar2Fill
-                              style={{ fontSize: "20px" }}
-                              className="primaryColor me-2"
-                            />
-                            {packages.dateTime}
-                          </h6>
+                        <div className="card-body">
+                          <h4 className="mainColor pt-3  h4 fw-bold">{packages.heading}</h4>
+                          <p className="mainColor pt-3 lh-lg  card-text">{packages.description}</p>
+                          <div className="col">
+                            <h6 className="mainColor h6 ">
+                              <RiCalendar2Fill
+                                style={{ fontSize: "20px" }}
+                                className="primaryColor me-2"
+                              />
+                              {packages.dateTime}
+                            </h6>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </SwiperSlide>
                 ))}
               {/* ========================== */}

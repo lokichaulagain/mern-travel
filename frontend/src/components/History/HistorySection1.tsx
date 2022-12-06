@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import img1 from "../../../public/images/8.jpeg";
 import Image from "next/image";
 
-const HistorySection1 = () => {
+const HistorySection1 = ({singlepackage}:any) => {
+  console.log(singlepackage)
   return (
     <div style={{ overflow: "hidden" }} className="container-fluid ">
       <div className="container ">
@@ -137,21 +137,19 @@ const HistorySection1 = () => {
                 modules={[Pagination]}
                 className="mySwiper"
               >
-                <SwiperSlide>
-                  <Image src={img1} alt="" />
+               {singlepackage &&
+              singlepackage.map((item: any, index: any) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={item.image}
+                    height={300}
+                    width={500}
+                    objectFit="cover"
+                    // className=" rounded"
+                    alt=""
+                  />
                 </SwiperSlide>
-
-                <SwiperSlide>
-                  <Image src={img1} alt="" />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Image src={img1} alt="" />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Image src={img1} alt="" />
-                </SwiperSlide>
+              ))}
               </Swiper>
             </div>
           </div>

@@ -2,7 +2,7 @@ import Contact from "../models/Contact.js";
 import createError from "../utils/error.js";
 import nodemailer from "nodemailer";
 
-const createContact = async (req, res, next) => {
+const createContact = async (req, res) => {
   try {
     const newContact = new Contact(req.body);
     const savedContact = await newContact.save();
@@ -49,7 +49,7 @@ const createContact = async (req, res, next) => {
     });
     // Nodemailer email send end
   } catch (error) {
-    return next(createError(500, "Server Error while creating contact !!!"));
+   console.log(error)
   }
 };
 
@@ -60,7 +60,7 @@ const updateContact = async (req, res, next) => {
     });
     res.status(200).json(updateContact);
   } catch (error) {
-    return next(createError(500, "Server Error while updating ccontact!!!"));
+    console.log(error)
   }
 };
 
@@ -69,7 +69,7 @@ const deleteContact = async (req, res, next) => {
     const deletedContact = await Contact.findByIdAndDelete(req.params.id);
     res.status(200).json(deletedContact);
   } catch (error) {
-    return next(createError(500, "Server Error while deleting contact !!!"));
+    console.log(error)
   }
 };
 
@@ -78,7 +78,7 @@ const getContactById = async (req, res, next) => {
     const contact = await Contact.findById(req.params.id);
     res.status(200).json(contact);
   } catch (error) {
-    return next(createError(500, "Server Error while getting Contact by Id !!!"));
+    console.log(error)
   }
 };
 
@@ -87,7 +87,7 @@ const getAllContact = async (req, res, next) => {
     const allContact = await Contact.find();
     res.status(200).json(allContact);
   } catch (error) {
-    return next(createError(500, "Server Error while getting all aboutUsContent !!!"));
+    console.log(error)
   }
 };
 

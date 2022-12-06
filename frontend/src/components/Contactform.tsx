@@ -3,39 +3,38 @@ import style from "../styles/scss/Contactform.module.scss";
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
 
 const Contactform = () => {
-  const mailSendSuccess = () => toast.success("Email send Successfully!");
-  const mailSendError = () => toast.error("Field cannot be empty!");
+  const mailSendSuccess = () => toast.success("We will notify our updates");
+  const sendMailError = () => toast.error("Something Went Wrong");
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const handleAllField = watch();
 
-  const [mail, setMail] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e: any) => {
-    setMail((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const sendMail = async () => {
+    try {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact`, handleAllField);
+      mailSendSuccess();
+      console.log("Mail send successfully");
+      reset();
+    } catch (error) {
+      console.log(error);
+      sendMailError();
+    }
   };
-
-  const handleSendMail = async (e: any) => {
-    e.preventDefault();
-    const res = await axios.post("http://localhost:4000/api/contact", mail);
-    setMail(res.data);
-    mail.name != "" && mail.email != "" && mail.message != "" ? mailSendSuccess() : mailSendError();
-    setMail({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-
-  console.log(mail);
 
   return (
     <div className={`${style.formBody} container mb-5`}>
       <div className="row g-5">
-        <form className={`${style.contactForm} col-md-7`}>
+        <form
+          onSubmit={handleSubmit(sendMail)}
+          className={`${style.contactForm} col-md-7`}>
           <div className={style.title}>
             <h4>WRITE US</h4>
             <p>Contact us from here</p>
@@ -47,15 +46,12 @@ const Contactform = () => {
               Full Name
             </label>
             <input
-              required
               type="text"
-              name="name"
-              value={mail.name}
-              onChange={handleChange}
-              id="name"
+              {...register("name", { required: true })}
               className="form-control"
-              aria-describedby="emailHelp"
+              placeholder="Full Name"
             />
+            {errors.name && <span className="field_required_warning">This field is required</span>}
           </div>
           <div className="mb-3">
             <label
@@ -64,15 +60,12 @@ const Contactform = () => {
               Email
             </label>
             <input
-              required
-              type="email"
-              name="email"
-              value={mail.email}
-              onChange={handleChange}
-              id="email"
+              type="text"
+              {...register("email", { required: true })}
               className="form-control"
-              aria-describedby="emailHelp"
+              placeholder="Email Address"
             />
+            {errors.email && <span className="field_required_warning">This field is required</span>}
           </div>
           <div className="mb-3">
             <label
@@ -81,30 +74,17 @@ const Contactform = () => {
               Message
             </label>
             <textarea
-              required
-              name="message"
-              value={mail.message}
-              onChange={handleChange}
+              {...register("message", { required: true })}
               className="form-control"
-              id="exampleFormControlTextarea1"
+              placeholder="Message"
             />
+            {errors.message && <span className="field_required_warning">This field is required</span>}
           </div>
-
-          {mail.name != "" && mail.email != "" && mail.message != "" ? (
-            <button
-              onClick={handleSendMail}
-              type="submit"
-              className="btn btn-primary">
-              Send Message
-            </button>
-          ) : (
-            <button
-              onClick={() => mailSendError()}
-              type="submit"
-              className="btn btn-primary">
-              Send Message
-            </button>
-          )}
+          <button
+            type="submit"
+            className="btn btn-primary w-25">
+            Send
+          </button>
         </form>
         <div className={`${style.contactInfo} col`}>
           <div className={style.infoTitle}>
@@ -127,28 +107,6 @@ const Contactform = () => {
             <div className={style.infoText}>
               <h6>Skype</h6>
               <p>skype.name</p>
-            </div>
-            <div
-              className="btn-group mt-4"
-              role="group">
-              <button className={`${style.myButton}`}>
-                <BsFacebook
-                  fontSize="1.3em"
-                  style={{ color: "#379cf4" }}
-                />
-              </button>
-              <button className={`${style.myButton}`}>
-                <BsTwitter
-                  fontSize="1.3em"
-                  style={{ color: "#379cf4" }}
-                />
-              </button>
-              <button className={`${style.myButton}`}>
-                <BsInstagram
-                  fontSize="1.3em"
-                  style={{ color: "#379cf4" }}
-                />
-              </button>
             </div>
           </div>
         </div>

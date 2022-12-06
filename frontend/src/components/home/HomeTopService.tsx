@@ -1,17 +1,12 @@
 import styles from "../../styles/scss/Home.module.scss";
-
-import { BsFlower2, BsGlobe } from "react-icons/bs";
+import { BsFlower2 } from "react-icons/bs";
 import { FaRegFlag } from "react-icons/fa";
-import { MdOutlineEditLocationAlt, MdShareLocation } from "react-icons/md";
-import { RiTeamFill } from "react-icons/ri";
+import { MdOutlineEditLocationAlt } from "react-icons/md";
 import { RiTreasureMapLine } from "react-icons/ri";
-import { FaHiking } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { BiTime } from "react-icons/bi";
-import { GiWalkingBoot } from "react-icons/gi";
 import { TbActivityHeartbeat } from "react-icons/tb";
-import { GrMapLocation } from "react-icons/gr";
-
+import { RiTeamFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 const HomeTopService = () => {
@@ -19,46 +14,86 @@ const HomeTopService = () => {
     {
       title: " Experienced Team ",
       description: " We provide you with an experienced team helping you throughout your journey to complete your trip with comfort and fun. ",
-      icon: " ",
+      icon: (
+        <RiTeamFill
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
 
     {
       title: "Easy Planning",
       description: "The trip itineraries are planned to keep in mind your easiness and availability. You can also make changes by adding some extra days. ",
-      icon: " ",
+      icon: (
+        <BsFlower2
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
     {
       title: "Expert Hikers",
       description: "We have a successful team of guides and experts who are very enthusiastic about trekking and hiking uphill ",
-      icon: " ",
+      icon: (
+        <FaRegFlag
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
 
     {
       title: " Customized Tours  ",
       description: "We also provide the service of customized trips to the destination you prefer with your team.  ",
-      icon: " ",
+      icon: (
+        <MdOutlineEditLocationAlt
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
 
     {
       title: "Personalized Service",
       description: "Besides a group, you can also take a personalized trip with our guide if you desire.",
-      icon: " ",
+      icon: (
+        <BiTime
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
     {
       title: "Professional Support 24/7",
       description: " The ancient Himalayas is ready to provide you with 24/7 service throughout your journey as well as any other time you need us. ",
-      icon: " ",
+      icon: (
+        <RiCustomerService2Fill
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
     {
       title: " Various Activities",
       description: "Besides trekking and hiking, we also provide other adventurous activities like Bungee, Paragliding, Rafting, and many more.",
-      icon: " ",
+      icon: (
+        <TbActivityHeartbeat
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
 
     {
       title: " Secret locations",
       description: "Besides trekking and hiking, we also provide other adventurous activities like Bungee, Paragliding, Rafting, and many more.",
-      icon: " ",
+      icon: (
+        <RiTreasureMapLine
+          className="primaryColor"
+          size={40}
+        />
+      ),
     },
   ];
 
@@ -82,10 +117,11 @@ const HomeTopService = () => {
                   <motion.div
                     whileHover={{ scale: 0.9 }}
                     className={styles.iconDiv}>
-                    <GiWalkingBoot
+                    {/* <GiWalkingBoot
                       className="primaryColor"
                       style={{ fontSize: "50px" }}
-                    />
+                    /> */}
+                    {service.icon}
 
                     <h5 className="h5 mainColor mt-2 ">{service.title}</h5>
                     <p className="lh-base paraColor">{service.description}</p>

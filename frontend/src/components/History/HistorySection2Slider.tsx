@@ -7,9 +7,11 @@ import { Pagination } from "swiper";
 import person1 from "../../../public/images/6.jpeg";
 import Image from "next/image";
 
-const HistorySection2Slider = () => {
+const HistorySection2Slider = ({ singlepackage }: any) => {
   return (
-    <div style={{ backgroundColor: "#EFF2F7" }} className="container-fluid">
+    <div
+      style={{ backgroundColor: "#EFF2F7" }}
+      className="container-fluid">
       <div className="container py-5 ">
         <div className="container row ">
           <Swiper
@@ -48,35 +50,19 @@ const HistorySection2Slider = () => {
               },
             }}
             modules={[Pagination]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={person1} className=" rounded" alt="" />
-            </SwiperSlide>
+            className="mySwiper">
+            {singlepackage &&
+              singlepackage.map((item: any, index: any) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={item.image}
+                    height={200}
+                    width={200}
+                    // className=" rounded"
+                    alt=""
+                  />
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>
